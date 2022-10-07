@@ -10,7 +10,7 @@ export default function IndexPage() {
   return (
     <div>
       <Hero />
-      <DishOfDay />
+      {/* <DishOfDay /> */}
 
       <img
         class="max-w-full h-auto mx-auto"
