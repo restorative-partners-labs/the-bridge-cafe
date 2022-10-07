@@ -17,20 +17,20 @@ body {
     width: 64%;
 }
 .button-transparent:hover {
-    background-color: #ea4d24;
+    background-color: #0c706c;
     color: white;
 }
 .text-color-orange {
-    color: #ea4d24;
+    color: #0c706c;
 }
 .border-color-orange {
-    border-color: #ea4d24;
+    border-color: #0c706c;
 }
 .height-main-hero{
     height: 718px;
 }
 .bg-color-orange {
-    background-color: #ea4d24;
+    background-color: #0c706c;
 }
 .text-color-black {
     color: #0f0f0f;
@@ -49,7 +49,7 @@ body {
 }
 /* text-hover */
 .text-hover:hover {
-    color: #ea4d24;
+    color: #0c706c;
 }
 /* bg-menu-img-height */
 .bg-img-height {

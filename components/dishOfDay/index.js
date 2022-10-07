@@ -12,14 +12,14 @@ const Index = (props) => (
                     <img loading="lazy" src="https://cdn.tuk.dev/assets/templates/foodies/dishofday.png" className="relative" />
                     <div className="flex items-center relative justify-center w-full lg:hidden block">
                         <div className="absolute flex items-center justify-center -mt-40 -ml-48 md:-mt-64 md:-ml-64">
-                            <img loading="lazy" src="https://cdn.tuk.dev/assets/templates/foodies/text-text.png" alt className="absolute md:w-48 w-40" />
-                            <p className="lg:text-2xl text-xs font-bold text-white ml-8 mr-2 relative">EGG FENEL SALAD</p>
+                            <img loading="lazy" src="/dish-of-the-day-holder.png" alt className="absolute md:w-48 w-40" />
+                            <p className="lg:text-2xl text-xs font-bold text-white ml-8 mr-2 relative">AVOCADO TOAST</p>
                         </div>
                     </div>
                     <div className="absolute lg:block hidden bg-strip bottom-40 xl:left-20 left-10 xl:ml-8 xl:pt-0 pt-16">
                         <div className="flex items-center justify-center">
-                            <img loading="lazy" src="https://cdn.tuk.dev/assets/templates/foodies/text-text.png" alt className="absolute" />
-                            <div className="text-2xl font-bold text-white relative">EGG FENEL SALAD</div>
+                            <img loading="lazy" src="/dish-of-the-day-holder.png" alt className="absolute" />
+                            <div className="text-2xl font-bold text-white relative">AVOCADO TOAST</div>
                         </div>
                     </div>
                 </div>
