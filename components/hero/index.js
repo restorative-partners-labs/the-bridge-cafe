@@ -168,7 +168,7 @@ const Index = () => {
                 American style eatery located in the heart of downtown San Luis
                 Obispo, CA focused on delivering restorative justice to the
                 community via culinary excellence. Join our mailing list below
-                to stay up to date!.
+                to stay up to date!
               </h1>
               <div className="flex items-center justify-center mt-12">
                 <a href="/menu">
