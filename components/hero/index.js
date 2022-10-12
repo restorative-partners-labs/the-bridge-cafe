@@ -157,11 +157,19 @@ const Index = () => {
           <div className="flex lg:flex-row flex-col-reverse items-center justify-between lg:mt-24">
             <div className="lg:w-1/2">
               <h1 className="text-6xl lg:block hidden leading-115 border-l-8 border-color-orange pl-12">
+                Coming Soon!
+                <br />
+              </h1>
+              <h1 className="text-6xl lg:block hidden leading-115 border-l-8 border-color-orange pl-12">
                 Meals with a Mission
                 <br />
               </h1>
               <h1 className="text-3xl lg:hidden block leading-8 border-l-8 border-color-orange pt-4 pl-2 xl:mt-0 mt-8">
-                Food with a Purpose
+                Coming Soon!
+                <br />
+              </h1>
+              <h1 className="text-3xl lg:hidden block leading-8 border-l-8 border-color-orange pt-4 pl-2 xl:mt-0 mt-8">
+                Meals with a Mission
                 <br />
               </h1>
               <h1 className="lg:text-2xl text-lg text-color-gray lg:leading-8 leading-6 mt-6 border-l-8 border-color-orange lg:pl-12 pl-2 py-2">
