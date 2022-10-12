@@ -28,9 +28,9 @@ const Index = () => {
                   <hr className="border-4 border-color-orange bg-color-orange w-10 absolute right-0" />
                 </li>
               </a>
-              <a href="#">
+              <a href="/contact">
                 <li className="xl:text-2xl text-xl leading-8 mr-10 text-color-black flex flex-col items-end justify-end font-normal cursor-pointer text-hover">
-                  About
+                  Contact
                 </li>
               </a>
               {/* <a href="/contact">
@@ -81,8 +81,8 @@ const Index = () => {
                   </a>
                 </li>
                 <li className="flex cursor-pointer text-hover text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
-                  <a href="#">
-                    <span className="ml-2 font-bold">About</span>
+                  <a href="/contact">
+                    <span className="ml-2 font-bold">Contact</span>
                   </a>
                 </li>
                 {/* <li
