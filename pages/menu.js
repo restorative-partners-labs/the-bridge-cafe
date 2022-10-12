@@ -9,7 +9,7 @@ const Index = () => {
         <nav>
           <div className="xl:flex hidden items-center justify-between py-4">
             <a href="/">
-            <img
+              <img
                 loading="lazy"
                 src="/bridge-cafe-logo.png"
                 className="w-1/4"
@@ -51,7 +51,7 @@ const Index = () => {
         <nav className="xl:hidden z-40 relative">
           <div className="flex py-4 justify-between items-center px-4">
             <div>
-            <img
+              <img
                 loading="lazy"
                 src="/bridge-cafe-logo.png"
                 alt="logo"
@@ -163,7 +163,10 @@ const Index = () => {
             src="https://cdn.tuk.dev/assets/templates/foodies/menu-hero.png"
             className="w-full h-full absolute"
           />
-          <button style={{ color: 'white' }} className="text-5xl text-white rounded-lg bg-color-orange px-14 py-2 relative hover:opacity-90">
+          <button
+            style={{ color: 'white' }}
+            className="text-5xl text-white rounded-lg bg-color-orange px-14 py-2 relative hover:opacity-90"
+          >
             MENU
           </button>
         </div>
@@ -174,7 +177,10 @@ const Index = () => {
           src="https://cdn.tuk.dev/assets/templates/foodies/menu-hero.png"
           className="w-full h-full absolute"
         />
-        <button style={{ color: 'white' }} className="text-base text-white rounded-lg bg-color-orange px-6 py-2 relative hover:opacity-90">
+        <button
+          style={{ color: 'white' }}
+          className="text-base text-white rounded-lg bg-color-orange px-6 py-2 relative hover:opacity-90"
+        >
           MENU
         </button>
       </div>
@@ -280,7 +286,7 @@ const Index = () => {
         <div className="flex items-center justify-center">
           <hr className="w-2.5 h-16 bg-color-orange" />
           <h1 className="text-3xl font-bold text-color-black pl-7">
-            Toasted Items
+            GRAB & GO
           </h1>
         </div>
         {/* Prices  */}
@@ -290,58 +296,24 @@ const Index = () => {
             <div className="xl:w-2/5 xl:py-0 py-4 xl:mr-14">
               <div className="w-full flex items-center justify-between">
                 <h1 className="xl:text-2xl text-xl font-semibold">
-                  Quiche Lorraine
+                  HARD-BOILED EGG BENTO BOX
                 </h1>
-                <p className="px-5 text-color-orange xl:block hidden">
-                  --------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:hidden block">
-                  -----------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:block lg:hidden hidden">
-                  ------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:block sm:hidden lg:hidden hidden">
-                  -----------------------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:block hidden">
-                  ------------------------------------------------------------------------------------------------------------------------------------------
-                </p>
-                <p className="xl:text-2xl text-xl font-semibold">$31</p>
               </div>
               <div>
                 <p className="xl:text-lg text-sm xl:pr-16 pt-4">
-                  White bread, Pastrami bacon, Swiss cheese, Lettuce, Tomatoes,
-                  Mayonnaise
+                  eggs, cucumber, cherry tomato, basil aioli
                 </p>
               </div>
             </div>
             <div className="xl:w-2/5 xl:py-0 py-4">
               <div className="w-full flex items-center justify-between">
                 <h1 className="xl:text-2xl text-xl font-semibold">
-                  Quiche Lorraine
+                  OVERNIGHT OATS
                 </h1>
-                <p className="px-5 text-color-orange xl:block hidden">
-                  --------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:hidden block">
-                  -----------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:block lg:hidden hidden">
-                  ------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:block sm:hidden lg:hidden hidden">
-                  -----------------------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:block hidden">
-                  ------------------------------------------------------------------------------------------------------------------------------------------
-                </p>
-                <p className="xl:text-2xl text-xl font-semibold">$31</p>
               </div>
               <div>
                 <p className="xl:text-lg text-sm xl:pr-16 pt-4">
-                  White bread, Pastrami bacon, Swiss cheese, Lettuce, Tomatoes,
-                  Mayonnaise
+                  gf oats, oat milk, honey, vanilla with choice of toppings
                 </p>
               </div>
             </div>
@@ -352,65 +324,31 @@ const Index = () => {
             <div className="xl:w-2/5 xl:py-0 py-4 xl:mr-14">
               <div className="w-full flex items-center justify-between">
                 <h1 className="xl:text-2xl text-xl font-semibold">
-                  Quiche Lorraine
+                  YOGURT PARFAIT
                 </h1>
-                <p className="px-5 text-color-orange xl:block hidden">
-                  --------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:hidden block">
-                  -----------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:block lg:hidden hidden">
-                  ------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:block sm:hidden lg:hidden hidden">
-                  -----------------------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:block hidden">
-                  ------------------------------------------------------------------------------------------------------------------------------------------
-                </p>
-                <p className="xl:text-2xl text-xl font-semibold">$31</p>
               </div>
               <div>
                 <p className="xl:text-lg text-sm xl:pr-16 pt-4">
-                  White bread, Pastrami bacon, Swiss cheese, Lettuce, Tomatoes,
-                  Mayonnaise
+                  Wgreek yogurt, house granola, maple syrup, fruit compote
                 </p>
               </div>
             </div>
             <div className="xl:w-2/5 xl:py-0 py-4">
               <div className="w-full flex items-center justify-between">
                 <h1 className="xl:text-2xl text-xl font-semibold">
-                  Quiche Lorraine
+                  ASSORTED PASTRIES
                 </h1>
-                <p className="px-5 text-color-orange xl:block hidden">
-                  --------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:hidden block">
-                  -----------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:block lg:hidden hidden">
-                  ------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:block sm:hidden lg:hidden hidden">
-                  -----------------------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:block hidden">
-                  ------------------------------------------------------------------------------------------------------------------------------------------
-                </p>
-                <p className="xl:text-2xl text-xl font-semibold">$31</p>
               </div>
               <div>
                 <p className="xl:text-lg text-sm xl:pr-16 pt-4">
-                  White bread, Pastrami bacon, Swiss cheese, Lettuce, Tomatoes,
-                  Mayonnaise
+                  fresh baked daily pastries
                 </p>
               </div>
             </div>
           </div>
           {/* row2 */}
           {/* row3 */}
-          <div className="xl:flex items-center justify-center w-full xl:pb-9">
+          {/* <div className="xl:flex items-center justify-center w-full xl:pb-9">
             <div className="xl:w-2/5 xl:py-0 py-4 xl:mr-14">
               <div className="w-full flex items-center justify-between">
                 <h1 className="xl:text-2xl text-xl font-semibold">
@@ -472,48 +410,6 @@ const Index = () => {
           </div>
           {/* row3 */}
           {/* row4 */}
-          <div className="xl:flex items-center justify-center w-full xl:pb-9">
-            <div className="xl:w-2/5 xl:py-0 py-4 xl:mr-14">
-              <div className="w-full flex items-center justify-between">
-                <h1 className="xl:text-2xl text-xl font-semibold">
-                  Quiche Lorraine
-                </h1>
-                <p className="px-5 text-color-orange xl:block hidden">
-                  --------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:hidden block">
-                  -----------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:block lg:hidden hidden">
-                  ------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:block sm:hidden lg:hidden hidden">
-                  -----------------------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:block hidden">
-                  ------------------------------------------------------------------------------------------------------------------------------------------
-                </p>
-                <p className="xl:text-2xl text-xl font-semibold">$31</p>
-              </div>
-              <div>
-                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
-                  White bread, Pastrami bacon, Swiss cheese, Lettuce, Tomatoes,
-                  Mayonnaise
-                </p>
-              </div>
-            </div>
-            <div className="xl:w-2/5 xl:py-0 py-4">
-              {/* <div class="w-full flex items-center justify-between">
-                      <h1 class="xl:text-2xl text-xl font-semibold">Quiche Lorraine</h1>
-                      <p class="px-5 text-color-orange xl:block hidden">----------------------------------------------</p>
-                      <p class="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:hidden block">--------</p>
-                      <p class="xl:text-2xl text-xl font-semibold">$31</p>
-                  </div>
-                  <div>
-                      <p class="xl:text-lg text-sm xl:pr-16 pt-4">White bread, Pastrami bacon, Swiss cheese, Lettuce, Tomatoes, Mayonnaise</p>
-                  </div> */}
-            </div>
-          </div>
           {/* row4 */}
         </div>
         {/* Prices  */}
@@ -524,7 +420,7 @@ const Index = () => {
         <div className="flex items-center justify-center">
           <hr className="w-2.5 h-16 bg-color-orange" />
           <h1 className="text-3xl font-bold text-color-black pl-7">
-            Main Course
+            SANDWICHES
           </h1>
         </div>
         {/* Prices  */}
@@ -533,59 +429,24 @@ const Index = () => {
           <div className="xl:flex items-center justify-center w-full xl:pb-9">
             <div className="xl:w-2/5 xl:py-0 py-4 xl:mr-14">
               <div className="w-full flex items-center justify-between">
-                <h1 className="xl:text-2xl text-xl font-semibold">
-                  Burger Vegetarian
-                </h1>
-                <p className="px-5 text-color-orange xl:block hidden">
-                  --------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:hidden block">
-                  -------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:block lg:hidden hidden">
-                  --------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:block sm:hidden lg:hidden hidden">
-                  ------------------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:block hidden">
-                  ------------------------------------------------------------------------------------------------------------------------------------------
-                </p>
-                <p className="xl:text-2xl text-xl font-semibold">$31</p>
+                <h1 className="xl:text-2xl text-xl font-semibold">B.A.A.T</h1>
               </div>
               <div>
                 <p className="xl:text-lg text-sm xl:pr-16 pt-4">
-                  Lettuce, Tomatoes, White sauce, Carrot, Onion, Corn, Potatoes,
-                  Cucumber, Cheddar cheese
+                  bacon, avocado, arugula, tomato with choice of spread
                 </p>
               </div>
             </div>
             <div className="xl:w-2/5 xl:py-0 py-4">
               <div className="w-full flex items-center justify-between">
                 <h1 className="xl:text-2xl text-xl font-semibold">
-                  Burger Vegetarian
+                  TURK - E - DELIGHT
                 </h1>
-                <p className="px-5 text-color-orange xl:block hidden">
-                  --------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:hidden block">
-                  -------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:block lg:hidden hidden">
-                  --------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:block sm:hidden lg:hidden hidden">
-                  ------------------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:block hidden">
-                  ------------------------------------------------------------------------------------------------------------------------------------------
-                </p>
-                <p className="xl:text-2xl text-xl font-semibold">$31</p>
               </div>
               <div>
                 <p className="xl:text-lg text-sm xl:pr-16 pt-4">
-                  Lettuce, Tomatoes, White sauce, Carrot, Onion, Corn, Potatoes,
-                  Cucumber, Cheddar cheese
+                  turkey, cheese, English cucumber, spinach, with choice of
+                  spread
                 </p>
               </div>
             </div>
@@ -596,58 +457,25 @@ const Index = () => {
             <div className="xl:w-2/5 xl:py-0 py-4 xl:mr-14">
               <div className="w-full flex items-center justify-between">
                 <h1 className="xl:text-2xl text-xl font-semibold">
-                  Burger Vegetarian
+                  BIRD - A - PEST
                 </h1>
-                <p className="px-5 text-color-orange xl:block hidden">
-                  --------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:hidden block">
-                  -------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:block lg:hidden hidden">
-                  --------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:block sm:hidden lg:hidden hidden">
-                  ------------------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:block hidden">
-                  ------------------------------------------------------------------------------------------------------------------------------------------
-                </p>
-                <p className="xl:text-2xl text-xl font-semibold">$31</p>
               </div>
               <div>
                 <p className="xl:text-lg text-sm xl:pr-16 pt-4">
-                  Lettuce, Tomatoes, White sauce, Carrot, Onion, Corn, Potatoes,
-                  Cucumber, Cheddar cheese
+                  turkey, chicken, avocado, pesto, arugula, onion, tomato,
+                  spread
                 </p>
               </div>
             </div>
             <div className="xl:w-2/5 xl:py-0 py-4">
               <div className="w-full flex items-center justify-between">
                 <h1 className="xl:text-2xl text-xl font-semibold">
-                  Burger Vegetarian
+                  HAM - LETT
                 </h1>
-                <p className="px-5 text-color-orange xl:block hidden">
-                  --------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:hidden block">
-                  -------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:block lg:hidden hidden">
-                  --------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:block sm:hidden lg:hidden hidden">
-                  ------------------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:block hidden">
-                  ------------------------------------------------------------------------------------------------------------------------------------------
-                </p>
-                <p className="xl:text-2xl text-xl font-semibold">$31</p>
               </div>
               <div>
                 <p className="xl:text-lg text-sm xl:pr-16 pt-4">
-                  Lettuce, Tomatoes, White sauce, Carrot, Onion, Corn, Potatoes,
-                  Cucumber, Cheddar cheese
+                  ham, butter lettuce, cheese, tomato, onion, spread
                 </p>
               </div>
             </div>
@@ -658,248 +486,27 @@ const Index = () => {
             <div className="xl:w-2/5 xl:py-0 py-4 xl:mr-14">
               <div className="w-full flex items-center justify-between">
                 <h1 className="xl:text-2xl text-xl font-semibold">
-                  Burger Vegetarian
+                  CALI - GOUCHEESE
                 </h1>
-                <p className="px-5 text-color-orange xl:block hidden">
-                  --------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:hidden block">
-                  -------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:block lg:hidden hidden">
-                  --------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:block sm:hidden lg:hidden hidden">
-                  ------------------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:block hidden">
-                  ------------------------------------------------------------------------------------------------------------------------------------------
-                </p>
-                <p className="xl:text-2xl text-xl font-semibold">$31</p>
               </div>
               <div>
                 <p className="xl:text-lg text-sm xl:pr-16 pt-4">
-                  Lettuce, Tomatoes, White sauce, Carrot, Onion, Corn, Potatoes,
-                  Cucumber, Cheddar cheese
+                  mozzarella, gouda, cheddar, avocado, bacon jam, spread
                 </p>
               </div>
             </div>
             <div className="xl:w-2/5 xl:py-0 py-4">
               <div className="w-full flex items-center justify-between">
-                <h1 className="xl:text-2xl text-xl font-semibold">
-                  Burger Vegetarian
-                </h1>
-                <p className="px-5 text-color-orange xl:block hidden">
-                  --------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:hidden block">
-                  -------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:block lg:hidden hidden">
-                  --------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:block sm:hidden lg:hidden hidden">
-                  ------------------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:block hidden">
-                  ------------------------------------------------------------------------------------------------------------------------------------------
-                </p>
-                <p className="xl:text-2xl text-xl font-semibold">$31</p>
+                <h1 className="xl:text-2xl text-xl font-semibold">TUNA CLUB</h1>
               </div>
               <div>
                 <p className="xl:text-lg text-sm xl:pr-16 pt-4">
-                  Lettuce, Tomatoes, White sauce, Carrot, Onion, Corn, Potatoes,
-                  Cucumber, Cheddar cheese
+                  tuna salad, bacon, butter lettuce, tomato, spread
                 </p>
               </div>
             </div>
           </div>
-          {/* row3 */}
-          {/* row4 */}
-          <div className="xl:flex items-center justify-center w-full xl:pb-9">
-            <div className="xl:w-2/5 xl:py-0 py-4 xl:mr-14">
-              <div className="w-full flex items-center justify-between">
-                <h1 className="xl:text-2xl text-xl font-semibold">
-                  Burger Vegetarian
-                </h1>
-                <p className="px-5 text-color-orange xl:block hidden">
-                  --------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:hidden block">
-                  -------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:block lg:hidden hidden">
-                  --------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:block sm:hidden lg:hidden hidden">
-                  ------------------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:block hidden">
-                  ------------------------------------------------------------------------------------------------------------------------------------------
-                </p>
-                <p className="xl:text-2xl text-xl font-semibold">$31</p>
-              </div>
-              <div>
-                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
-                  Lettuce, Tomatoes, White sauce, Carrot, Onion, Corn, Potatoes,
-                  Cucumber, Cheddar cheese
-                </p>
-              </div>
-            </div>
-            <div className="xl:w-2/5 xl:py-0 py-4">
-              <div className="w-full flex items-center justify-between">
-                <h1 className="xl:text-2xl text-xl font-semibold">
-                  Burger Vegetarian
-                </h1>
-                <p className="px-5 text-color-orange xl:block hidden">
-                  --------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:hidden block">
-                  -------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:block lg:hidden hidden">
-                  --------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:block sm:hidden lg:hidden hidden">
-                  ------------------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:block hidden">
-                  ------------------------------------------------------------------------------------------------------------------------------------------
-                </p>
-                <p className="xl:text-2xl text-xl font-semibold">$31</p>
-              </div>
-              <div>
-                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
-                  Lettuce, Tomatoes, White sauce, Carrot, Onion, Corn, Potatoes,
-                  Cucumber, Cheddar cheese
-                </p>
-              </div>
-            </div>
-          </div>
-          {/* row4 */}
-          {/* row5 */}
-          <div className="xl:flex items-center justify-center w-full xl:pb-9">
-            <div className="xl:w-2/5 xl:py-0 py-4 xl:mr-14">
-              <div className="w-full flex items-center justify-between">
-                <h1 className="xl:text-2xl text-xl font-semibold">
-                  Burger Vegetarian
-                </h1>
-                <p className="px-5 text-color-orange xl:block hidden">
-                  --------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:hidden block">
-                  -------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:block lg:hidden hidden">
-                  --------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:block sm:hidden lg:hidden hidden">
-                  ------------------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:block hidden">
-                  ------------------------------------------------------------------------------------------------------------------------------------------
-                </p>
-                <p className="xl:text-2xl text-xl font-semibold">$31</p>
-              </div>
-              <div>
-                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
-                  Lettuce, Tomatoes, White sauce, Carrot, Onion, Corn, Potatoes,
-                  Cucumber, Cheddar cheese
-                </p>
-              </div>
-            </div>
-            <div className="xl:w-2/5 xl:py-0 py-4">
-              <div className="w-full flex items-center justify-between">
-                <h1 className="xl:text-2xl text-xl font-semibold">
-                  Burger Vegetarian
-                </h1>
-                <p className="px-5 text-color-orange xl:block hidden">
-                  --------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:hidden block">
-                  -------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:block lg:hidden hidden">
-                  --------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:block sm:hidden lg:hidden hidden">
-                  ------------------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:block hidden">
-                  ------------------------------------------------------------------------------------------------------------------------------------------
-                </p>
-                <p className="xl:text-2xl text-xl font-semibold">$31</p>
-              </div>
-              <div>
-                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
-                  Lettuce, Tomatoes, White sauce, Carrot, Onion, Corn, Potatoes,
-                  Cucumber, Cheddar cheese
-                </p>
-              </div>
-            </div>
-          </div>
-          {/* row5 */}
-          {/* row6 */}
-          <div className="xl:flex items-center justify-center w-full xl:pb-9">
-            <div className="xl:w-2/5 xl:py-0 py-4 xl:mr-14">
-              <div className="w-full flex items-center justify-between">
-                <h1 className="xl:text-2xl text-xl font-semibold">
-                  Burger Vegetarian
-                </h1>
-                <p className="px-5 text-color-orange xl:block hidden">
-                  --------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:hidden block">
-                  -------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:block lg:hidden hidden">
-                  --------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:block sm:hidden lg:hidden hidden">
-                  ------------------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:block hidden">
-                  ------------------------------------------------------------------------------------------------------------------------------------------
-                </p>
-                <p className="xl:text-2xl text-xl font-semibold">$31</p>
-              </div>
-              <div>
-                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
-                  Lettuce, Tomatoes, White sauce, Carrot, Onion, Corn, Potatoes,
-                  Cucumber, Cheddar cheese
-                </p>
-              </div>
-            </div>
-            <div className="xl:w-2/5 xl:py-0 py-4">
-              <div className="w-full flex items-center justify-between">
-                <h1 className="xl:text-2xl text-xl font-semibold">
-                  Burger Vegetarian
-                </h1>
-                <p className="px-5 text-color-orange xl:block hidden">
-                  --------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:hidden block">
-                  -------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:block lg:hidden hidden">
-                  --------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:block sm:hidden lg:hidden hidden">
-                  ------------------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:block hidden">
-                  ------------------------------------------------------------------------------------------------------------------------------------------
-                </p>
-                <p className="xl:text-2xl text-xl font-semibold">$31</p>
-              </div>
-              <div>
-                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
-                  Lettuce, Tomatoes, White sauce, Carrot, Onion, Corn, Potatoes,
-                  Cucumber, Cheddar cheese
-                </p>
-              </div>
-            </div>
-          </div>
+
           {/* row6 */}
         </div>
         {/* Prices  */}
@@ -909,9 +516,7 @@ const Index = () => {
       <div className="mx-auto container xl:px-0 px-4 mt-36">
         <div className="flex items-center justify-center">
           <hr className="w-2.5 h-16 bg-color-orange" />
-          <h1 className="text-3xl font-bold text-color-black pl-7">
-            Sweet Corn
-          </h1>
+          <h1 className="text-3xl font-bold text-color-black pl-7">BURGERS</h1>
         </div>
         {/* Prices  */}
         <div className="mt-16">
@@ -920,58 +525,28 @@ const Index = () => {
             <div className="xl:w-2/5 xl:py-0 py-4 xl:mr-14">
               <div className="w-full flex items-center justify-between">
                 <h1 className="xl:text-2xl text-xl font-semibold">
-                  Le Paris-st Raphel
+                THE BRIDGE
                 </h1>
-                <p className="px-5 text-color-orange xl:block hidden">
-                  --------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:hidden block">
-                  -----------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:block lg:hidden hidden">
-                  -----------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:block sm:hidden lg:hidden hidden">
-                  -----------------------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:block hidden">
-                  ------------------------------------------------------------------------------------------------------------------------------------------
-                </p>
-                <p className="xl:text-2xl text-xl font-semibold">$31</p>
+
               </div>
               <div>
                 <p className="xl:text-lg text-sm xl:pr-16 pt-4">
-                  Crunchy puff pastry, Light hazelnut cream filling, Almond,
-                  Molten heart, Grilled hazelnuts
+                cheddar, bacon jam, grilled onions,
+butter lettuce, tomato aioli
                 </p>
               </div>
             </div>
             <div className="xl:w-2/5 xl:py-0 py-4">
               <div className="w-full flex items-center justify-between">
                 <h1 className="xl:text-2xl text-xl font-semibold">
-                  Le Paris-st Raphel
+                THE CAPRESE
                 </h1>
-                <p className="px-5 text-color-orange xl:block hidden">
-                  --------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:hidden block">
-                  -----------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:block lg:hidden hidden">
-                  -----------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:block sm:hidden lg:hidden hidden">
-                  -----------------------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:block hidden">
-                  ------------------------------------------------------------------------------------------------------------------------------------------
-                </p>
-                <p className="xl:text-2xl text-xl font-semibold">$31</p>
+
               </div>
               <div>
                 <p className="xl:text-lg text-sm xl:pr-16 pt-4">
-                  Crunchy puff pastry, Light hazelnut cream filling, Almond,
-                  Molten heart, Grilled hazelnuts
+                fresh mozzarella, basil leaves, balsamic
+glaze, heirloom tomato, basil aioli
                 </p>
               </div>
             </div>
@@ -982,125 +557,21 @@ const Index = () => {
             <div className="xl:w-2/5 xl:py-0 py-4 xl:mr-14">
               <div className="w-full flex items-center justify-between">
                 <h1 className="xl:text-2xl text-xl font-semibold">
-                  Le Paris-st Raphel
+                THE VEGAN
                 </h1>
-                <p className="px-5 text-color-orange xl:block hidden">
-                  --------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:hidden block">
-                  -----------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:block lg:hidden hidden">
-                  -----------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:block sm:hidden lg:hidden hidden">
-                  -----------------------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:block hidden">
-                  ------------------------------------------------------------------------------------------------------------------------------------------
-                </p>
-                <p className="xl:text-2xl text-xl font-semibold">$31</p>
+               
               </div>
               <div>
                 <p className="xl:text-lg text-sm xl:pr-16 pt-4">
-                  Crunchy puff pastry, Light hazelnut cream filling, Almond,
-                  Molten heart, Grilled hazelnuts
+                fried tofu, butter lettuce, grilled onions,
+heirloom tomato, avocado, kale
+chickpea spread
                 </p>
               </div>
             </div>
-            <div className="xl:w-2/5 xl:py-0 py-4">
-              <div className="w-full flex items-center justify-between">
-                <h1 className="xl:text-2xl text-xl font-semibold">
-                  Le Paris-st Raphel
-                </h1>
-                <p className="px-5 text-color-orange xl:block hidden">
-                  --------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:hidden block">
-                  -----------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:block lg:hidden hidden">
-                  -----------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:block sm:hidden lg:hidden hidden">
-                  -----------------------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:block hidden">
-                  ------------------------------------------------------------------------------------------------------------------------------------------
-                </p>
-                <p className="xl:text-2xl text-xl font-semibold">$31</p>
-              </div>
-              <div>
-                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
-                  Crunchy puff pastry, Light hazelnut cream filling, Almond,
-                  Molten heart, Grilled hazelnuts
-                </p>
-              </div>
-            </div>
+
           </div>
-          {/* row2 */}
-          {/* row3 */}
-          <div className="xl:flex items-center justify-center w-full xl:pb-9">
-            <div className="xl:w-2/5 xl:py-0 py-4 xl:mr-14">
-              <div className="w-full flex items-center justify-between">
-                <h1 className="xl:text-2xl text-xl font-semibold">
-                  Le Paris-st Raphel
-                </h1>
-                <p className="px-5 text-color-orange xl:block hidden">
-                  --------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:hidden block">
-                  -----------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:block lg:hidden hidden">
-                  -----------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:block sm:hidden lg:hidden hidden">
-                  -----------------------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:block hidden">
-                  ------------------------------------------------------------------------------------------------------------------------------------------
-                </p>
-                <p className="xl:text-2xl text-xl font-semibold">$31</p>
-              </div>
-              <div>
-                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
-                  Crunchy puff pastry, Light hazelnut cream filling, Almond,
-                  Molten heart, Grilled hazelnuts
-                </p>
-              </div>
-            </div>
-            <div className="xl:w-2/5 xl:py-0 py-4">
-              <div className="w-full flex items-center justify-between">
-                <h1 className="xl:text-2xl text-xl font-semibold">
-                  Le Paris-st Raphel
-                </h1>
-                <p className="px-5 text-color-orange xl:block hidden">
-                  --------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:hidden block">
-                  -----------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:block lg:hidden hidden">
-                  -----------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:block sm:hidden lg:hidden hidden">
-                  -----------------------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:block hidden">
-                  ------------------------------------------------------------------------------------------------------------------------------------------
-                </p>
-                <p className="xl:text-2xl text-xl font-semibold">$31</p>
-              </div>
-              <div>
-                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
-                  Crunchy puff pastry, Light hazelnut cream filling, Almond,
-                  Molten heart, Grilled hazelnuts
-                </p>
-              </div>
-            </div>
-          </div>
-          {/* row3 */}
+          
         </div>
         {/* Prices  */}
       </div>
@@ -1109,174 +580,10 @@ const Index = () => {
       <div className="mx-auto container xl:px-0 px-4 mt-36">
         <div className="flex items-center justify-center">
           <hr className="w-2.5 h-16 bg-color-orange" />
-          <h1 className="text-3xl font-bold text-color-black pl-7">Tea Time</h1>
+          <h1 className="text-3xl font-bold text-color-black pl-7">SOUPS</h1>
         </div>
         {/* Prices  */}
-        <div className="mt-16">
-          {/* row1 */}
-          <div className="xl:flex items-center justify-center w-full xl:pb-9">
-            <div className="xl:w-2/5 xl:py-0 py-4 xl:mr-14">
-              <div className="w-full flex items-center justify-between">
-                <h1 className="xl:text-2xl text-xl font-semibold">
-                  MANDARIAN JASMIN
-                </h1>
-                <p className="px-5 text-color-orange xl:block hidden">
-                  -------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:hidden block">
-                  ---------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:block lg:hidden hidden">
-                  -----------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:block sm:hidden lg:hidden hidden">
-                  -----------------------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:block hidden">
-                  ------------------------------------------------------------------------------------------------------------------------------------------
-                </p>
-                <p className="xl:text-2xl text-xl font-semibold">$31</p>
-              </div>
-              <div>
-                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
-                  Jasmine green tea, Subtil and Fragnant
-                </p>
-              </div>
-            </div>
-            <div className="xl:w-2/5 xl:py-0 py-4">
-              <div className="w-full flex items-center justify-between">
-                <h1 className="xl:text-2xl text-xl font-semibold">
-                  MANDARIAN JASMIN
-                </h1>
-                <p className="px-5 text-color-orange xl:block hidden">
-                  -------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:hidden block">
-                  ---------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:block lg:hidden hidden">
-                  -----------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:block sm:hidden lg:hidden hidden">
-                  -----------------------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:block hidden">
-                  ------------------------------------------------------------------------------------------------------------------------------------------
-                </p>
-                <p className="xl:text-2xl text-xl font-semibold">$31</p>
-              </div>
-              <div>
-                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
-                  Jasmine green tea, Subtil and Fragnant
-                </p>
-              </div>
-            </div>
-          </div>
-          {/* row1 */}
-          {/* row2 */}
-          <div className="xl:flex items-center justify-center w-full xl:pb-9">
-            <div className="xl:w-2/5 xl:py-0 py-4 xl:mr-14">
-              <div className="w-full flex items-center justify-between">
-                <h1 className="xl:text-2xl text-xl font-semibold">
-                  MANDARIAN JASMIN
-                </h1>
-                <p className="px-5 text-color-orange xl:block hidden">
-                  -------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:hidden block">
-                  ---------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:block lg:hidden hidden">
-                  -----------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:block sm:hidden lg:hidden hidden">
-                  -----------------------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:block hidden">
-                  ------------------------------------------------------------------------------------------------------------------------------------------
-                </p>
-                <p className="xl:text-2xl text-xl font-semibold">$31</p>
-              </div>
-              <div>
-                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
-                  Jasmine green tea, Subtil and Fragnant
-                </p>
-              </div>
-            </div>
-            <div className="xl:w-2/5 xl:py-0 py-4">
-              <div className="w-full flex items-center justify-between">
-                <h1 className="xl:text-2xl text-xl font-semibold">
-                  MANDARIAN JASMIN
-                </h1>
-                <p className="px-5 text-color-orange xl:block hidden">
-                  -------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:hidden block">
-                  ---------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:block lg:hidden hidden">
-                  -----------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:block sm:hidden lg:hidden hidden">
-                  -----------------------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:block hidden">
-                  ------------------------------------------------------------------------------------------------------------------------------------------
-                </p>
-                <p className="xl:text-2xl text-xl font-semibold">$31</p>
-              </div>
-              <div>
-                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
-                  Jasmine green tea, Subtil and Fragnant
-                </p>
-              </div>
-            </div>
-          </div>
-          {/* row2 */}
-          {/* row3 */}
-          <div className="xl:flex items-center justify-center w-full xl:pb-9">
-            <div className="xl:w-2/5 xl:py-0 py-4 xl:mr-14">
-              <div className="w-full flex items-center justify-between">
-                <h1 className="xl:text-2xl text-xl font-semibold">
-                  MANDARIAN JASMIN
-                </h1>
-                <p className="px-5 text-color-orange xl:block hidden">
-                  ----------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:hidden block">
-                  ---------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:block lg:hidden hidden">
-                  -------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:block sm:hidden lg:hidden hidden">
-                  -----------------------------------------------------------------------------------------
-                </p>
-                <p className="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:block hidden">
-                  ------------------------------------------------------------------------------------------------------------------------------------------
-                </p>
-                <p className="xl:text-2xl text-xl font-semibold">$31</p>
-              </div>
-              <div>
-                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
-                  Jasmine green tea, Subtil and Fragnant
-                </p>
-              </div>
-            </div>
-            <div className="xl:w-2/5 xl:py-0 py-4">
-              {/* <div class="w-full flex items-center justify-between">
-                      <h1 class="xl:text-2xl text-xl font-semibold">MANDARIAN JASMIN</h1>
-                      <p class="px-5 text-color-orange xl:block hidden">------------------------------------</p>
-                      <p class="px-5 text-color-orange xl:hidden md:hidden sm:hidden lg:hidden block">p>
-                      <p class="xl:text-2xl text-xl font-semibold">$31</p>
-                  </div>
-                  <div>
-                      <p class="xl:text-lg text-sm xl:pr-16 pt-4">Jasmine green tea, Subtil and Fragnant</p>
-                  </div> */}
-            </div>
-          </div>
-          {/* row3 */}
-        </div>
+
         {/* Prices  */}
       </div>
       {/* section5 */}

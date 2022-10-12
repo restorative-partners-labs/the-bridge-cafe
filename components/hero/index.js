@@ -24,7 +24,7 @@ const Index = () => {
                 alt="logo"
               />
             </a>
-            <ul className="flex leading-loose">
+            <ul className="flex leading-loose pr-20">
               <a href="/">
                 <li className="text-2xl leading-8 mr-10 text-color-orange relative font-normal cursor-pointer text-hover">
                   Home
@@ -36,11 +36,11 @@ const Index = () => {
                   Menu
                 </li>
               </a>
-              <a href="#">
+              {/* <a href="#">
                 <li className="text-2xl leading-8 mr-10 text-color-black flex flex-col items-end justify-end font-normal cursor-pointer text-hover">
                   About
                 </li>
-              </a>
+              </a> */}
               <a href="/contact">
                 <li className="text-2xl leading-8 mr-10 text-color-black flex flex-col items-end justify-end font-normal cursor-pointer text-hover">
                   Contact
@@ -84,11 +84,11 @@ const Index = () => {
                     <span className="ml-2 font-bold">Menu</span>
                   </a>
                 </li>
-                <li className="flex cursor-pointer text-hover text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+                {/* <li className="flex cursor-pointer text-hover text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
                   <a href="#">
                     <span className="ml-2 font-bold">About</span>
                   </a>
-                </li>
+                </li> */}
                 <li
                   className="flex flex-col cursor-pointer text-hover text-gray-600 text-sm leading-3 tracking-normal py-2 flex justify-center"
                   onclick="dropdownHandler(this)"
@@ -180,9 +180,11 @@ const Index = () => {
                     View Menu
                   </button>
                 </a>
-                <button className="xl:py-5 py-2 xl:px-16 px-6 border-color-orange 2xl:text-3xl lg:text-xl text-base font-semibold leading-loose text-color-orange focus:outline-none button-transparent border-2 border-color-orange b-r-10">
-                  Join Mailing List
-                </button>
+                <a href="https://restorativepartnersinc.salsalabs.org/TheBridgeCafeNewsletter">
+                  <button className="xl:py-5 py-2 xl:px-16 px-6 border-color-orange 2xl:text-3xl lg:text-xl text-base font-semibold leading-loose text-color-orange focus:outline-none button-transparent border-2 border-color-orange b-r-10">
+                    Join Mailing List
+                  </button>
+                </a>
               </div>
               <div className="flex space-x-4 2xl:mt-24 mt-12 items-center 2xl:pl-16 xl:pl-16 lg:pl-12 md:pl-0 sm:pl-0 pl-16 md:flex hidden">
                 <a
@@ -250,7 +252,10 @@ const Index = () => {
                 </a>
               </div>
               <div className="flex space-x-4 mt-12 items-center justify-center md:hidden">
-                <a href="https://www.facebook.com/TheBridgeCafeSLO" className="cursor-pointer">
+                <a
+                  href="https://www.facebook.com/TheBridgeCafeSLO"
+                  className="cursor-pointer"
+                >
                   <div className="w-12 h-12 bg-white fb-hover flex items-center justify-center shadow-xl rounded-full">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -286,7 +291,10 @@ const Index = () => {
                     </svg>
                   </div>
                 </a> */}
-                <a className="cursor-pointer" href="https://www.instagram.com/thebridgecafeslo">
+                <a
+                  className="cursor-pointer"
+                  href="https://www.instagram.com/thebridgecafeslo"
+                >
                   <div className="w-12 h-12 bg-white shadow-xl rounded-full flex items-center justify-center insta-hover">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -310,18 +318,10 @@ const Index = () => {
               </div>
             </div>
             <div className="  lg:w-1/2 height-main-hero xl:block hidden">
-              <img
-                loading="lazy"
-                src="/burger.png"
-                className="pl-20 w-full"
-              />
+              <img loading="lazy" src="/burger.png" className="pl-20 w-full" />
             </div>
             <div className="xl:w-1/2 xl:hidden block">
-              <img
-                loading="lazy"
-                src="/burger.png"
-                className="object-cover"
-              />
+              <img loading="lazy" src="/burger.png" className="object-cover" />
             </div>
           </div>
         </div>
