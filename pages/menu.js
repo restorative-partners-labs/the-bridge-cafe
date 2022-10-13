@@ -525,28 +525,26 @@ const Index = () => {
             <div className="xl:w-2/5 xl:py-0 py-4 xl:mr-14">
               <div className="w-full flex items-center justify-between">
                 <h1 className="xl:text-2xl text-xl font-semibold">
-                THE BRIDGE
+                  THE BRIDGE
                 </h1>
-
               </div>
               <div>
                 <p className="xl:text-lg text-sm xl:pr-16 pt-4">
-                cheddar, bacon jam, grilled onions,
-butter lettuce, tomato aioli
+                  cheddar, bacon jam, grilled onions, butter lettuce, tomato
+                  aioli
                 </p>
               </div>
             </div>
             <div className="xl:w-2/5 xl:py-0 py-4">
               <div className="w-full flex items-center justify-between">
                 <h1 className="xl:text-2xl text-xl font-semibold">
-                THE CAPRESE
+                  THE CAPRESE
                 </h1>
-
               </div>
               <div>
                 <p className="xl:text-lg text-sm xl:pr-16 pt-4">
-                fresh mozzarella, basil leaves, balsamic
-glaze, heirloom tomato, basil aioli
+                  fresh mozzarella, basil leaves, balsamic glaze, heirloom
+                  tomato, basil aioli
                 </p>
               </div>
             </div>
@@ -556,22 +554,17 @@ glaze, heirloom tomato, basil aioli
           <div className="xl:flex items-center justify-center w-full xl:pb-9">
             <div className="xl:w-2/5 xl:py-0 py-4 xl:mr-14">
               <div className="w-full flex items-center justify-between">
-                <h1 className="xl:text-2xl text-xl font-semibold">
-                THE VEGAN
-                </h1>
-               
+                <h1 className="xl:text-2xl text-xl font-semibold">THE VEGAN</h1>
               </div>
               <div>
                 <p className="xl:text-lg text-sm xl:pr-16 pt-4">
-                fried tofu, butter lettuce, grilled onions,
-heirloom tomato, avocado, kale
-chickpea spread
+                  fried tofu, butter lettuce, grilled onions, heirloom tomato,
+                  avocado, kale chickpea spread
                 </p>
               </div>
             </div>
-
+            <div className="xl:w-2/5 xl:py-0 py-4"></div>
           </div>
-          
         </div>
         {/* Prices  */}
       </div>
@@ -583,10 +576,374 @@ chickpea spread
           <h1 className="text-3xl font-bold text-color-black pl-7">SOUPS</h1>
         </div>
         {/* Prices  */}
-
+        <div className="mt-16">
+          {/* row1 */}
+          <div className="xl:flex items-center justify-center w-full xl:pb-9">
+            <div className="xl:w-2/5 xl:py-0 py-4 xl:mr-14">
+              <div className="w-full flex items-center justify-between">
+                <h1 className="xl:text-2xl text-xl font-semibold">
+                  FRENCH ONION
+                </h1>
+              </div>
+              <div>
+                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
+                  savory French onion topped with melted parmesan and fresh
+                  bread
+                </p>
+              </div>
+            </div>
+            <div className="xl:w-2/5 xl:py-0 py-4">
+              <div className="w-full flex items-center justify-between">
+                <h1 className="xl:text-2xl text-xl font-semibold">
+                  TOMATO BISQUE
+                </h1>
+              </div>
+              <div>
+                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
+                  creamy tomato bisque with fried basil leaves and homemade
+                  croutons
+                </p>
+              </div>
+            </div>
+          </div>
+          {/* row1 */}
+          {/* row2 */}
+          <div className="xl:flex items-center justify-center w-full xl:pb-9">
+            <div className="xl:w-2/5 xl:py-0 py-4 xl:mr-14">
+              <div className="w-full flex items-center justify-between">
+                <h1 className="xl:text-2xl text-xl font-semibold">
+                  ITALIAN TUSCAN
+                </h1>
+              </div>
+              <div>
+                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
+                  hearty potatoes, kale, Italian sausage, in a creamy broth and
+                  fresh bread
+                </p>
+              </div>
+            </div>
+            <div className="xl:w-2/5 xl:py-0 py-4">
+              <div className="w-full flex items-center justify-between">
+                <h1 className="xl:text-2xl text-xl font-semibold">
+                  CHICKEN COUSCOUS
+                </h1>
+              </div>
+              <div>
+                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
+                  shredded chicken, carrots, celery with Israeli couscous and
+                  fresh bread
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
         {/* Prices  */}
       </div>
       {/* section5 */}
+      <div className="mx-auto container xl:px-0 px-4 mt-36">
+        <div className="flex items-center justify-center">
+          <hr className="w-2.5 h-16 bg-color-orange" />
+          <h1 className="text-3xl font-bold text-color-black pl-7">SALADS</h1>
+        </div>
+        {/* Prices  */}
+        <div className="mt-16">
+          {/* row1 */}
+          <div className="xl:flex items-center justify-center w-full xl:pb-9">
+            <div className="xl:w-2/5 xl:py-0 py-4 xl:mr-14">
+              <div className="w-full flex items-center justify-between">
+                <h1 className="xl:text-2xl text-xl font-semibold">CEASAR</h1>
+              </div>
+              <div>
+                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
+                  butter lettuce, parmesan, homemade croutons, creamy Caesar
+                  dressing
+                </p>
+              </div>
+            </div>
+            <div className="xl:w-2/5 xl:py-0 py-4">
+              <div className="w-full flex items-center justify-between">
+                <h1 className="xl:text-2xl text-xl font-semibold">CAPRESE</h1>
+              </div>
+              <div>
+                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
+                  cherry tomatoes, fresh mozzarella, basil, balsamic glaze over
+                  butter lettuce
+                </p>
+              </div>
+            </div>
+          </div>
+          {/* row1 */}
+          {/* row2 */}
+          <div className="xl:flex items-center justify-center w-full xl:pb-9">
+            <div className="xl:w-2/5 xl:py-0 py-4 xl:mr-14">
+              <div className="w-full flex items-center justify-between">
+                <h1 className="xl:text-2xl text-xl font-semibold">WEDGE</h1>
+              </div>
+              <div>
+                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
+                  bacon, cherry tomatoes, blue cheese, red onion, egg, blue
+                  cheese dressing
+                </p>
+              </div>
+            </div>
+            <div className="xl:w-2/5 xl:py-0 py-4">
+              <div className="w-full flex items-center justify-between">
+                <h1 className="xl:text-2xl text-xl font-semibold">GARDEN</h1>
+              </div>
+              <div>
+                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
+                  cherry tomato, red onion, cucumber, carrot, citrus vinaigrette
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Prices  */}
+      </div>
+      <div className="mx-auto container xl:px-0 px-4 mt-36">
+        <div className="flex items-center justify-center">
+          <hr className="w-2.5 h-16 bg-color-orange" />
+          <h1 className="text-3xl font-bold text-color-black pl-7">
+            SPECIALTY DISHES
+          </h1>
+        </div>
+        {/* Prices  */}
+        <div className="mt-16">
+          <div className="xl:flex items-center justify-center w-full xl:pb-9">
+            <div className="xl:w-2/5 xl:py-0 py-4 xl:mr-14">
+              <div className="w-full flex items-center justify-between">
+                <h1 className="xl:text-2xl text-xl font-semibold">
+                  CARBONARA COUSCOUS
+                </h1>
+              </div>
+              <div>
+                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
+                  Israeli couscous, egg, parmesan, garlic, salt, pepper, basil
+                </p>
+              </div>
+            </div>
+            <div className="xl:w-2/5 xl:py-0 py-4">
+              <div className="w-full flex items-center justify-between">
+                <h1 className="xl:text-2xl text-xl font-semibold">
+                  LETTUCE WRAP
+                </h1>
+              </div>
+              <div>
+                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
+                  chicken or tofu, sesame, soy sauce, carrots, shallots, butter
+                  lettuce
+                </p>
+              </div>
+            </div>
+          </div>
+          {/* row1 */}
+          <div className="xl:flex items-center justify-center w-full xl:pb-9">
+            <div className="xl:w-2/5 xl:py-0 py-4 xl:mr-14">
+              <div className="w-full flex items-center justify-between">
+                <h1 className="xl:text-2xl text-xl font-semibold">
+                  MARGARITA PIZZA
+                </h1>
+              </div>
+              <div>
+                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
+                  fresh mozzarella, red sauce, basil, olive oil, heirloom
+                  tomatoes
+                </p>
+              </div>
+            </div>
+            <div className="xl:w-2/5 xl:py-0 py-4">
+              <div className="w-full flex items-center justify-between">
+                <h1 className="xl:text-2xl text-xl font-semibold">
+                  AVOCADO TOAST
+                </h1>
+              </div>
+              <div>
+                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
+                  avocado, cucumber, tomato, sprouts, arugula, olive oil, salt
+                </p>
+              </div>
+            </div>
+          </div>
+          {/* row1 */}
+          {/* row2 */}
+          <div className="xl:flex items-center justify-center w-full xl:pb-9">
+            <div className="xl:w-2/5 xl:py-0 py-4 xl:mr-14">
+              <div className="w-full flex items-center justify-between">
+                <h1 className="xl:text-2xl text-xl font-semibold">THE VEGAN</h1>
+              </div>
+              <div>
+                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
+                  fried tofu, butter lettuce, grilled onions, heirloom tomato,
+                  avocado, kale chickpea spread
+                </p>
+              </div>
+            </div>
+            <div className="xl:w-2/5 xl:py-0 py-4">
+              <div className="w-full flex items-center justify-between">
+                <h1 className="xl:text-2xl text-xl font-semibold">THE VEGAN</h1>
+              </div>
+              <div>
+                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
+                  fried tofu, butter lettuce, grilled onions, heirloom tomato,
+                  avocado, kale chickpea spread
+                </p>
+              </div>
+            </div>
+          </div>
+          {/* row3 */}
+          <div className="xl:flex items-center justify-center w-full xl:pb-9">
+            <div className="xl:w-2/5 xl:py-0 py-4 xl:mr-14">
+              <div className="w-full flex items-center justify-between">
+                <h1 className="xl:text-2xl text-xl font-semibold">
+                  FLAUTAS WITH MOLE
+                </h1>
+              </div>
+              <div>
+                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
+                  flour tortilla, chicken, cheese, onion, mole, crema
+                </p>
+              </div>
+            </div>
+            <div className="xl:w-2/5 xl:py-0 py-4">
+              <div className="w-full flex items-center justify-between">
+                <h1 className="xl:text-2xl text-xl font-semibold">
+                  GREEK QUESADILLA
+                </h1>
+              </div>
+              <div>
+                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
+                  spinach, tomato, feta cheese, kalamata olives, drizzled with
+                  tomato aioli
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="mx-auto container xl:px-0 px-4 mt-36">
+          <div className="flex items-center justify-center">
+            <hr className="w-2.5 h-16 bg-color-orange" />
+            <h1 className="text-3xl font-bold text-color-black pl-7">SIDES</h1>
+          </div>
+          {/* Prices  */}
+          <div className="mt-16">
+            {/* row1 */}
+            <div className="xl:flex items-center justify-center w-full xl:pb-9">
+              <div className="xl:w-2/5 xl:py-0 py-4 xl:mr-14">
+                <div className="w-full flex items-center justify-between">
+                  <h1 className="xl:text-2xl text-xl font-semibold">
+                    FRENCH FRIES
+                  </h1>
+                </div>
+                <div>
+                  <p className="xl:text-lg text-sm xl:pr-16 pt-4">
+                    served with signature seasoning and spread
+                  </p>
+                </div>
+              </div>
+              <div className="xl:w-2/5 xl:py-0 py-4">
+                <div className="w-full flex items-center justify-between">
+                  <h1 className="xl:text-2xl text-xl font-semibold">
+                    PAN CON TOMATE
+                  </h1>
+                </div>
+                <div>
+                  <p className="xl:text-lg text-sm xl:pr-16 pt-4">
+                    fresh grated tomato, olive oil, basil, salt on baked bread
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/* row1 */}
+            {/* row2 */}
+            <div className="xl:flex items-center justify-center w-full xl:pb-9">
+              <div className="xl:w-2/5 xl:py-0 py-4 xl:mr-14">
+                <div className="w-full flex items-center justify-between">
+                  <h1 className="xl:text-2xl text-xl font-semibold">
+                    FRIED TOFU
+                  </h1>
+                </div>
+                <div>
+                  <p className="xl:text-lg text-sm xl:pr-16 pt-4">
+                    crispy fried with signature seasoning and spread
+                  </p>
+                </div>
+              </div>
+              <div className="xl:w-2/5 xl:py-0 py-4"></div>
+            </div>
+          </div>
+          {/* Prices  */}
+        </div>
+        {/* Prices  */}
+      </div>
+      <div className="mx-auto container xl:px-0 px-4 mt-36">
+        <div className="flex items-center justify-center">
+          <hr className="w-2.5 h-16 bg-color-orange" />
+          <h1 className="text-3xl font-bold text-color-black pl-7">SPREADS</h1>
+        </div>
+        {/* Prices  */}
+        <div className="mt-16">
+          {/* row1 */}
+          <div className="xl:flex items-center justify-center w-full xl:pb-9">
+            <div className="xl:w-2/5 xl:py-0 py-4 xl:mr-14">
+              <div className="w-full flex items-center justify-between">
+                <h1 className="xl:text-2xl text-xl font-semibold">
+                  BASIL AIOLI (V)
+                </h1>
+              </div>
+              <div>
+                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
+                  vegan mayo, dijon, basil, lemon, garlic, salt
+                </p>
+              </div>
+            </div>
+            <div className="xl:w-2/5 xl:py-0 py-4">
+              <div className="w-full flex items-center justify-between">
+                <h1 className="xl:text-2xl text-xl font-semibold">
+                  SPICY CHILI AIOLI (V)
+                </h1>
+              </div>
+              <div>
+                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
+                  vegan mayo, dijon, chili pepper, lemon, garlic, salt
+                </p>
+              </div>
+            </div>
+          </div>
+          {/* row1 */}
+          {/* row2 */}
+          <div className="xl:flex items-center justify-center w-full xl:pb-9">
+            <div className="xl:w-2/5 xl:py-0 py-4 xl:mr-14">
+              <div className="w-full flex items-center justify-between">
+                <h1 className="xl:text-2xl text-xl font-semibold">
+                  KALE CHICKPEA (V)
+                </h1>
+              </div>
+              <div>
+                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
+                  kale, carrot, chickpea, nutritional yeast, tahini, lemon, salt
+                </p>
+              </div>
+            </div>
+            <div className="xl:w-2/5 xl:py-0 py-4">
+              <div className="w-full flex items-center justify-between">
+                <h1 className="xl:text-2xl text-xl font-semibold">
+                  GARLIC TOMATO HERB AIOLI (V)
+                </h1>
+              </div>
+              <div>
+                <p className="xl:text-lg text-sm xl:pr-16 pt-4">
+                  vegan mayo, tomato, garlic, Italian herbs, salt
+                </p>
+              </div>
+            </div>
+          </div>
+          {/* row2 */}
+          {/* row3 */}
+
+          {/* row6 */}
+        </div>
+        {/* Prices  */}
+      </div>
     </div>
   );
 };
