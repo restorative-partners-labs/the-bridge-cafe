@@ -173,10 +173,11 @@ const Index = () => {
                 <br />
               </h1>
               <h1 className="lg:text-2xl text-lg text-color-gray lg:leading-8 leading-6 mt-6 border-l-8 border-color-orange lg:pl-12 pl-2 py-2">
-                American style eatery located in the heart of downtown San Luis
-                Obispo, CA focused on delivering restorative justice to the
-                community via culinary excellence. Join our mailing list below
-                to stay up to date!
+                The Bridge Cafe is a social enterprise cafe run by Restoraive
+                Partners. We envision a safer community where everyone belongs
+                and strive to accomplish this through transforming lives
+                impacted by crime through healing services and relationships.
+                Join our mailing list below to stay up to date!
               </h1>
               <div className="flex items-center justify-center mt-12">
                 <a href="/menu">

@@ -77,7 +77,7 @@ export default function Footer() {
             <a href="/contact">
               <li
                 style={{ color: 'white' }}
-                className="lg:text-lg text-sm text-sm leading-5  text-white flex flex-col items-end justify-end font-normal cursor-pointer text-hover"
+                className="lg:text-lg text-sm text-sm leading-5 text-white flex flex-col items-end justify-end font-normal cursor-pointer text-hover"
               >
                 Contact
               </li>
@@ -85,7 +85,7 @@ export default function Footer() {
           </ul>
         </div>
         <div className="pt-16 flex items-center">
-          <p className="lg:text-base text-xs text-white leading-5">
+          <p style={{ color: 'white' }} className="lg:text-base text-xs text-white leading-5">
             2022 The Bridge Cafe, All rights reserved
           </p>
         </div>
