@@ -14,10 +14,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Pocket - Invest at the perfect time.</title>
+        <title>The Bridge Cafe</title>
         <meta
           name="description"
-          content="By leveraging insights from our network of industry insiders, you’ll know exactly when to buy to maximize profit, and exactly when to sell to avoid painful losses."
+          content="The Bridge Cafe is a social enterprise cafe run by Restoraive Partners. We envision a safer community where everyone belongs and strive to accomplish this through transforming lives impacted by crime through healing services and relationships."
         />
       </Head>
       <Header />

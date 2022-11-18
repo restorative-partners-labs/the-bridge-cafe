@@ -4,9 +4,9 @@ import { Container } from '@/components/Container'
 
 const features = [
   {
-    name: 'Invest any amount',
+    name: 'Quality Convenient Dining',
     description:
-      'Whether it’s $1 or $1,000,000, we can put your money to work for you.',
+      'Delicious food to gather around, whether grabbing to-go or dining on our patio admiring the community artwork',
     icon: DeviceArrowIcon,
   },
   {
@@ -196,11 +196,11 @@ export function SecondaryFeatures() {
       <Container>
         <div className="mx-auto max-w-2xl sm:text-center">
           <h2 className="text-3xl font-medium tracking-tight text-gray-900">
-            Now is the time to build your portfolio.
+            Social Enterprise
           </h2>
           <p className="mt-2 text-lg text-gray-600">
-            With typical market returns, you have to start young to secure your
-            future. With Pocket, it’s never too late to build your nest egg.
+            A business whose primary purpose is addressing a socail challenge
+            rather than creating profit for owners or shareholders.
           </p>
         </div>
         <ul
