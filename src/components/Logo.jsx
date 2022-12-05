@@ -12,13 +12,12 @@ export function Logomark(props) {
 
 export function Logo(props) {
   return (
-    <a href="/">
     <img
       loading="lazy"
       src="/bridge-cafe-logo.png"
       className="lg:w-full w-3/5"
       alt="logo"
+      href="/"
     />
-  </a>
   )
 }
