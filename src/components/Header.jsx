@@ -52,10 +52,10 @@ export function Header() {
         <Container className="relative z-50 flex justify-between py-8">
           <div className="relative z-10 flex items-center gap-16">
             <Link href="/" aria-label="Home">
-              <Logo className="h-10 w-auto" />
+              <Logo className="h-10 w-auto " />
             </Link>
             <div className="hidden lg:flex lg:gap-10">
-              <NavLinks />
+              {/* <NavLinks /> */}
             </div>
           </div>
           <div className="flex items-center gap-6">
@@ -98,22 +98,19 @@ export function Header() {
                           className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-gray-50 px-6 pb-6 pt-32 shadow-2xl shadow-gray-900/20"
                         >
                           <div className="space-y-4">
-                            <MobileNavLink href="#features">
-                              Home
-                            </MobileNavLink>
-                            <MobileNavLink href="#reviews">
-                              Menu
-                            </MobileNavLink>
-                            <MobileNavLink href="#pricing">
+                            <MobileNavLink href="/">Home</MobileNavLink>
+                            <MobileNavLink href="#menu">Menu</MobileNavLink>
+                            <MobileNavLink href="#contact">
                               Contact
                             </MobileNavLink>
-                            <MobileNavLink href="#faqs">FAQs</MobileNavLink>
                           </div>
                           <div className="mt-8 flex flex-col gap-4">
-                            <Button href="/login" variant="outline">
-                              Order (Coming Soon)
+                          <Button href="https://order.spoton.com/so-the-bridge-cafe-10987/san-luis-obispo-ca/63338b3bf3ebec0040438b39" variant="outline">
+                              Order
                             </Button>
-                            <Button href="#">Subscribe</Button>
+                            <Button style={{ background: '#05716c' }} href="https://restorativepartnersinc.salsalabs.org/TheBridgeCafeNewsletter/index.html">
+                              Subscribe
+                            </Button>
                           </div>
                         </Popover.Panel>
                       </>
@@ -122,11 +119,17 @@ export function Header() {
                 </>
               )}
             </Popover>
-            <Button href="/login" variant="outline" className="hidden lg:block">
-              Order (Coming Soon)
+            <Button href="/#about" variant="outline" className="hidden lg:block">
+              About
             </Button>
-            <Button href="#" className="hidden lg:block">
-              Subscribe
+            <Button href="/#contact" variant="outline" className="hidden lg:block">
+              Contact
+            </Button>
+            <Button href="/#menu" variant="outline" className="hidden lg:block">
+              View Menu
+            </Button>
+            <Button href="https://order.spoton.com/so-the-bridge-cafe-10987/san-luis-obispo-ca/63338b3bf3ebec0040438b39" className="hidden lg:block">
+              Order Online
             </Button>
           </div>
         </Container>

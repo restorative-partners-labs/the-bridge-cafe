@@ -2,42 +2,252 @@ import { useId } from 'react'
 
 import { Container } from '@/components/Container'
 
-const features = [
+const breakfast = [
   {
-    name: 'Quality Convenient Dining',
-    description:
-      'Delicious food to gather around, whether grabbing to-go or dining on our patio admiring the community artwork',
+    name: 'BACON BURRITO',
+    description: 'smoked bacon, egg, cheese, salsa, potato',
     icon: DeviceArrowIcon,
   },
   {
-    name: 'Build a balanced portfolio',
+    name: 'VEGGIE SCRAMBLE',
     description:
-      'Invest in different industries to find the most opportunities to win huge.',
+      'tomato, egg, spinach, onion, mushroom, cheese, and fresh bread.',
     icon: DeviceCardsIcon,
   },
   {
-    name: 'Trade in real-time',
-    description:
-      'Get insider tips on big stock moves and act on them within seconds.',
+    name: 'BREAKFAST SANDWICH',
+    description: 'bacon, egg, cheese, spinach on fresh baked bread',
     icon: DeviceClockIcon,
   },
   {
-    name: 'Profit from your network',
-    description:
-      'Invite new insiders to get tips faster and beat even other Pocket users.',
+    name: 'CHILIQUILES',
+    description: 'tortilla chips, onions, mole, sour cream, cotija cheese.',
     icon: DeviceListIcon,
   },
   {
-    name: 'Encrypted and anonymized',
-    description:
-      'Cutting-edge security technology that even the NSA doesn’t know about keeps you hidden.',
+    name: 'BUSCUITS & GRAVY',
+    description: 'fresh baked biscuit, house made gravy, bacon jam',
     icon: DeviceLockIcon,
   },
   {
-    name: 'Portfolio tracking',
-    description:
-      'Watch your investments grow exponentially, leaving other investors in the dust.',
+    name: 'BREAKFAST PIZZA',
+    description: 'Wbacon, egg, cheese, basil aioli, spinach',
     icon: DeviceChartIcon,
+  },
+]
+
+const sandwiches = [
+  {
+    name: 'B.A.A.T',
+    description: 'bacon, avocado, arugula, tomato with choice of spread',
+    icon: DeviceArrowIcon,
+  },
+  {
+    name: 'TURK - E - DELIGHT',
+    description:
+      'turkey, cheese, English cucumber, spinach, with choice of spread',
+    icon: DeviceCardsIcon,
+  },
+  {
+    name: 'BIRD - A - PEST',
+    description:
+      'turkey, chicken, avocado, pesto, arugula, onion, tomato, spread',
+    icon: DeviceClockIcon,
+  },
+  {
+    name: 'HAM - LETT',
+    description: 'ham, butter lettuce, cheese, tomato, onion, spread',
+    icon: DeviceListIcon,
+  },
+  {
+    name: 'CALI - GOUCHEESE',
+    description: 'mozzarella, gouda, cheddar, avocado, bacon jam, spread',
+    icon: DeviceLockIcon,
+  },
+  {
+    name: 'TUNA CLUB',
+    description: 'tuna salad, bacon, butter lettuce, tomato, spread',
+    icon: DeviceChartIcon,
+  },
+]
+
+const grabngo = [
+  {
+    name: 'HARD-BOILED EGG BENTO BOX',
+    description: 'eggs, cucumber, cherry tomato, basil aioli',
+    icon: DeviceArrowIcon,
+  },
+  {
+    name: 'OVERNIGHT OATS',
+    description: 'gf oats, oat milk, honey, vanilla with choice of toppings',
+    icon: DeviceCardsIcon,
+  },
+  {
+    name: 'YOGURT PARFAIT',
+    description: 'greek yogurt, house granola, maple syrup, fruit compote',
+    icon: DeviceClockIcon,
+  },
+  {
+    name: 'ASSORTED PASTRIES',
+    description: 'fresh baked daily pastries.',
+    icon: DeviceListIcon,
+  },
+]
+const burgers = [
+  {
+    name: 'THE BRIDGE',
+    description:
+      'cheddar, bacon jam, grilled onions, butter lettuce, tomato aioli',
+    icon: DeviceArrowIcon,
+  },
+  {
+    name: 'THE CAPRESE',
+    description:
+      'fresh mozzarella, basil leaves, balsamic glaze, heirloom tomato, basil aioli',
+    icon: DeviceCardsIcon,
+  },
+  {
+    name: 'THE VEGAN',
+    description:
+      'fried tofu, butter lettuce, grilled onions, heirloom tomato, avocado, kale chickpea spread',
+    icon: DeviceClockIcon,
+  },
+]
+const soups = [
+  {
+    name: 'FRENCH ONION',
+    description:
+      'savory French onion topped with melted parmesan and fresh bread',
+    icon: DeviceArrowIcon,
+  },
+  {
+    name: 'TOMATO BISQUE',
+    description:
+      'creamy tomato bisque with fried basil leaves and homemade croutons',
+    icon: DeviceCardsIcon,
+  },
+  {
+    name: 'ITALIAN TUSCAN',
+    description:
+      'hearty potatoes, kale, Italian sausage, in a creamy broth and fresh bread',
+    icon: DeviceClockIcon,
+  },
+  {
+    name: 'CHICKEN COUSCOUS',
+    description:
+      'shredded chicken, carrots, celery with Israeli couscous and fresh bread',
+    icon: DeviceListIcon,
+  },
+]
+
+const specialtydishes = [
+  {
+    name: 'CARBONARA COUSCOUS',
+    description: 'Israeli couscous, egg, parmesan, garlic, salt, pepper, basil',
+    icon: DeviceArrowIcon,
+  },
+  {
+    name: 'LETTUCE WRAP',
+    description:
+      'chicken or tofu, sesame, soy sauce, carrots, shallots, butter lettuce',
+    icon: DeviceCardsIcon,
+  },
+  {
+    name: 'MARGARITA PIZZA',
+    description:
+      'fresh mozzarella, red sauce, basil, olive oil, heirloom tomatoes',
+    icon: DeviceClockIcon,
+  },
+  {
+    name: 'AVOCADO TOAST',
+    description: 'avocado, cucumber, tomato, sprouts, arugula, olive oil, salt',
+    icon: DeviceListIcon,
+  },
+  {
+    name: 'THE VEGAN',
+    description:
+      'fried tofu, butter lettuce, grilled onions, heirloom tomato, avocado, kale chickpea spread',
+    icon: DeviceLockIcon,
+  },
+  {
+    name: 'FLAUTAS WITH MOLE',
+    description: 'flour tortilla, chicken, cheese, onion, mole, crema',
+    icon: DeviceChartIcon,
+  },
+  {
+    name: 'GREEK QUESADILLA',
+    description:
+      'spinach, tomato, feta cheese, kalamata olives, drizzled with tomato aioli',
+    icon: DeviceChartIcon,
+  },
+]
+
+const salads = [
+  {
+    name: 'CEASAR',
+    description:
+      'butter lettuce, parmesan, homemade croutons, creamy Caesar dressing',
+    icon: DeviceArrowIcon,
+  },
+  {
+    name: 'CAPRESE',
+    description:
+      'cherry tomatoes, fresh mozzarella, basil, balsamic glaze over butter lettuce',
+    icon: DeviceCardsIcon,
+  },
+  {
+    name: 'WEDGE',
+    description:
+      'bacon, cherry tomatoes, blue cheese, red onion, egg, blue cheese dressing',
+    icon: DeviceClockIcon,
+  },
+  {
+    name: 'GARDEN',
+    description:
+      'cherry tomato, red onion, cucumber, carrot, citrus vinaigrette',
+    icon: DeviceListIcon,
+  },
+]
+
+const sides = [
+  {
+    name: 'FRENCH FRIES',
+    description: 'served with signature seasoning and spread',
+    icon: DeviceArrowIcon,
+  },
+  {
+    name: 'PAN CON TOMATE',
+    description: 'fresh grated tomato, olive oil, basil, salt on baked bread',
+    icon: DeviceCardsIcon,
+  },
+  {
+    name: 'FRIED TOFU',
+    description: 'crispy fried with signature seasoning and spread',
+    icon: DeviceClockIcon,
+  },
+]
+
+const spreads = [
+  {
+    name: 'BASIL AIOLI (V)',
+    description: 'vegan mayo, dijon, basil, lemon, garlic, salt',
+    icon: DeviceArrowIcon,
+  },
+  {
+    name: 'SPICY CHILI AIOLI (V)',
+    description: 'vegan mayo, dijon, chili pepper, lemon, garlic, salt',
+    icon: DeviceCardsIcon,
+  },
+  {
+    name: 'KALE CHICKPEA (V)',
+    description:
+      'kale, carrot, chickpea, nutritional yeast, tahini, lemon, salt',
+    icon: DeviceClockIcon,
+  },
+  {
+    name: 'GARLIC TOMATO HERB AIOLI (V)',
+    description: 'vegan mayo, tomato, garlic, Italian herbs, salt',
+    icon: DeviceListIcon,
   },
 ]
 
@@ -188,39 +398,287 @@ function DeviceChartIcon(props) {
 
 export function SecondaryFeatures() {
   return (
-    <section
-      id="secondary-features"
-      aria-label="Features for building a portfolio"
-      className="py-20 sm:py-32"
-    >
-      <Container>
-        <div className="mx-auto max-w-2xl sm:text-center">
-          <h2 className="text-3xl font-medium tracking-tight text-gray-900">
-            Social Enterprise
-          </h2>
-          <p className="mt-2 text-lg text-gray-600">
-            A business whose primary purpose is addressing a socail challenge
-            rather than creating profit for owners or shareholders.
-          </p>
-        </div>
-        <ul
-          role="list"
-          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
-        >
-          {features.map((feature) => (
-            <li
-              key={feature.name}
-              className="rounded-2xl border border-gray-200 p-8"
-            >
-              <feature.icon className="h-8 w-8" />
-              <h3 className="mt-6 font-semibold text-gray-900">
-                {feature.name}
-              </h3>
-              <p className="mt-2 text-gray-700">{feature.description}</p>
-            </li>
-          ))}
-        </ul>
-      </Container>
-    </section>
+    <>
+      {' '}
+      <section
+        id="menu"
+        aria-label="breakfast for building a portfolio"
+        className="sm:py-10"
+      >
+        <Container>
+          <div className="mx-auto max-w-2xl sm:text-center">
+            <h2 className="text-3xl font-medium tracking-tight text-gray-900">
+              BREAKFAST
+            </h2>
+          </div>
+          <ul
+            role="list"
+            className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
+          >
+            {breakfast.map((feature) => (
+              <li
+                key={feature.name}
+                style={{ borderColor: '#05716c' }}
+                className="rounded-2xl border border-gray-200 p-8"
+              >
+                {/* <feature.icon className="h-8 w-8" /> */}
+                <h3 className="mt-6 font-semibold text-gray-900">
+                  {feature.name}
+                </h3>
+                <p className="mt-2 text-gray-700">{feature.description}</p>
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </section>
+      <section
+        id="secondary-breakfast"
+        aria-label="breakfast for building a portfolio"
+        className="py-10 sm:py-10"
+      >
+        <Container>
+          <div className="mx-auto max-w-2xl sm:text-center">
+            <h2 className="text-3xl font-medium tracking-tight text-gray-900">
+              GRAB-N-GO
+            </h2>
+          </div>
+          <ul
+            role="list"
+            className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
+          >
+            {grabngo.map((feature) => (
+              <li
+                key={feature.name}
+                className="rounded-2xl border p-8"
+                style={{ borderColor: '#05716c' }}
+              >
+                {/* <feature.icon className="h-8 w-8" /> */}
+                <h3 className="mt-6 font-semibold text-gray-900">
+                  {feature.name}
+                </h3>
+                <p className="mt-2 text-gray-700">{feature.description}</p>
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </section>
+      <section
+        id="secondary-breakfast"
+        aria-label="breakfast for building a portfolio"
+        className="py-10 sm:py-10"
+      >
+        <Container>
+          <div className="mx-auto max-w-2xl sm:text-center">
+            <h2 className="text-3xl font-medium tracking-tight text-gray-900">
+              SANDWICHES
+            </h2>
+          </div>
+          <ul
+            role="list"
+            className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
+          >
+            {sandwiches.map((feature) => (
+              <li
+                key={feature.name}
+                className="rounded-2xl border p-8"
+                style={{ borderColor: '#05716c' }}
+              >
+                {/* <feature.icon className="h-8 w-8" /> */}
+                <h3 className="mt-6 font-semibold text-gray-900">
+                  {feature.name}
+                </h3>
+                <p className="mt-2 text-gray-700">{feature.description}</p>
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </section>
+      <section
+        id="secondary-breakfast"
+        aria-label="breakfast for building a portfolio"
+        className="py-10 sm:py-10"
+      >
+        <Container>
+          <div className="mx-auto max-w-2xl sm:text-center">
+            <h2 className="text-3xl font-medium tracking-tight text-gray-900">
+              BURGERS
+            </h2>
+          </div>
+          <ul
+            role="list"
+            className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
+          >
+            {burgers.map((feature) => (
+              <li
+                key={feature.name}
+                className="rounded-2xl border p-8"
+                style={{ borderColor: '#05716c' }}
+              >
+                {/* <feature.icon className="h-8 w-8" /> */}
+                <h3 className="mt-6 font-semibold text-gray-900">
+                  {feature.name}
+                </h3>
+                <p className="mt-2 text-gray-700">{feature.description}</p>
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </section>
+      <section
+        id="secondary-breakfast"
+        aria-label="breakfast for building a portfolio"
+        className="py-10 sm:py-10"
+      >
+        <Container>
+          <div className="mx-auto max-w-2xl sm:text-center">
+            <h2 className="text-3xl font-medium tracking-tight text-gray-900">
+              SOUPS
+            </h2>
+          </div>
+          <ul
+            role="list"
+            className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
+          >
+            {soups.map((feature) => (
+              <li
+                key={feature.name}
+                className="rounded-2xl border p-8"
+                style={{ borderColor: '#05716c' }}
+              >
+                {/* <feature.icon className="h-8 w-8" /> */}
+                <h3 className="mt-6 font-semibold text-gray-900">
+                  {feature.name}
+                </h3>
+                <p className="mt-2 text-gray-700">{feature.description}</p>
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </section>
+      <section
+        id="secondary-breakfast"
+        aria-label="breakfast for building a portfolio"
+        className="py-10 sm:py-10"
+      >
+        <Container>
+          <div className="mx-auto max-w-2xl sm:text-center">
+            <h2 className="text-3xl font-medium tracking-tight text-gray-900">
+              SPECIALTY DISHES
+            </h2>
+          </div>
+          <ul
+            role="list"
+            className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
+          >
+            {specialtydishes.map((feature) => (
+              <li
+                key={feature.name}
+                className="rounded-2xl border p-8"
+                style={{ borderColor: '#05716c' }}
+              >
+                {/* <feature.icon className="h-8 w-8" /> */}
+                <h3 className="mt-6 font-semibold text-gray-900">
+                  {feature.name}
+                </h3>
+                <p className="mt-2 text-gray-700">{feature.description}</p>
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </section>
+      <section
+        id="secondary-breakfast"
+        aria-label="breakfast for building a portfolio"
+        className="py-10 sm:py-10"
+      >
+        <Container>
+          <div className="mx-auto max-w-2xl sm:text-center">
+            <h2 className="text-3xl font-medium tracking-tight text-gray-900">
+              SALADS
+            </h2>
+          </div>
+          <ul
+            role="list"
+            className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
+          >
+            {salads.map((feature) => (
+              <li
+                key={feature.name}
+                className="rounded-2xl border p-8"
+                style={{ borderColor: '#05716c' }}
+              >
+                {/* <feature.icon className="h-8 w-8" /> */}
+                <h3 className="mt-6 font-semibold text-gray-900">
+                  {feature.name}
+                </h3>
+                <p className="mt-2 text-gray-700">{feature.description}</p>
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </section>
+      <section
+        id="secondary-breakfast"
+        aria-label="breakfast for building a portfolio"
+        className="py-10 sm:py-10"
+      >
+        <Container>
+          <div className="mx-auto max-w-2xl sm:text-center">
+            <h2 className="text-3xl font-medium tracking-tight text-gray-900">
+              SIDES
+            </h2>
+          </div>
+          <ul
+            role="list"
+            className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
+          >
+            {sides.map((feature) => (
+              <li
+                key={feature.name}
+                className="rounded-2xl border p-8"
+                style={{ borderColor: '#05716c' }}
+              >
+                {/* <feature.icon className="h-8 w-8" /> */}
+                <h3 className="mt-6 font-semibold text-gray-900">
+                  {feature.name}
+                </h3>
+                <p className="mt-2 text-gray-700">{feature.description}</p>
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </section>
+      <section
+        id="secondary-breakfast"
+        aria-label="breakfast for building a portfolio"
+        className="py-10"
+      >
+        <Container>
+          <div className="mx-auto max-w-2xl sm:text-center">
+            <h2 className="text-3xl font-medium tracking-tight text-gray-900">
+              SPREADS
+            </h2>
+          </div>
+          <ul
+            role="list"
+            className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
+          >
+            {spreads.map((feature) => (
+              <li
+                key={feature.name}
+                className="rounded-2xl border p-8"
+                style={{ borderColor: '#05716c' }}
+              >
+                {/* <feature.icon className="h-8 w-8" /> */}
+                <h3 className="mt-6 font-semibold text-gray-900">
+                  {feature.name}
+                </h3>
+                <p className="mt-2 text-gray-700">{feature.description}</p>
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </section>
+    </>
   )
 }

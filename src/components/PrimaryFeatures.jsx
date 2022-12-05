@@ -24,23 +24,31 @@ const MotionAppScreenBody = motion(AppScreen.Body)
 
 const features = [
   {
-    name: 'Invite friends for better returns',
+    name: 'Social Enterprise',
     description:
-      'For every friend you invite to Pocket, you get insider notifications 5 seconds sooner. And it’s 10 seconds if you invite an insider.',
+      'A business whose primary purpose is addressing a socail challenge rather than creating profit for owners or shareholders. And it’s 10 seconds if you invite an insider.',
     icon: DeviceUserIcon,
     screen: InviteScreen,
   },
   {
-    name: 'Notifications on stock dips',
+    name: 'Quality Convenient Dining',
     description:
-      'Get a push notification every time we find out something that’s going to lower the share price on your holdings so you can sell before the information hits the public markets.',
+      'Delicious food to gather around, whether grabbing to-go or dining on our patio admiring the community artwork.',
     icon: DeviceNotificationIcon,
     screen: StocksScreen,
   },
   {
-    name: 'Invest what you want',
+    name: 'Employment & Job Skill Development',
     description:
-      'We hide your stock purchases behind thousands of anonymous trading accounts, so suspicious activity can never be traced back to you.',
+      'On-the-job training and certification for justice involved individuals in partnerships with Cuesta College. This creates employment options to the clients we serve and others who are justice involved',
+    icon: DeviceTouchIcon,
+    screen: InvestScreen,
+  },
+
+  {
+    name: 'Fundraising',
+    description:
+      'Ongoing fiscal support for maintaining and growing programming at Restorative Partners',
     icon: DeviceTouchIcon,
     screen: InvestScreen,
   },
@@ -396,52 +404,29 @@ function FeaturesDesktop() {
             {featureIndex === selectedIndex && (
               <motion.div
                 layoutId="activeBackground"
-                className="absolute inset-0 bg-gray-800"
+                className="absolute inset-0 bg-gray-800/30"
                 initial={{ borderRadius: 16 }}
               />
             )}
             <div className="relative z-10 p-8">
-              <feature.icon className="h-8 w-8" />
+              {/* <feature.icon className="h-8 w-8" /> */}
               <h3 className="mt-6 text-lg font-semibold text-white">
                 <Tab className="text-left [&:not(:focus-visible)]:focus:outline-none">
                   <span className="absolute inset-0 rounded-2xl" />
                   {feature.name}
                 </Tab>
               </h3>
-              <p className="mt-2 text-sm text-gray-400">
-                {feature.description}
-              </p>
+              <p className="mt-2 text-sm text-white">{feature.description}</p>
             </div>
           </div>
         ))}
       </Tab.List>
       <div className="relative col-span-6">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <CircleBackground color="#13B5C8" className="animate-spin-slower" />
+          <CircleBackground color="#fff" className="animate-spin-slower" />
         </div>
-        <PhoneFrame className="z-10 mx-auto w-full max-w-[366px]">
-          <Tab.Panels as={Fragment}>
-            <AnimatePresence
-              initial={false}
-              custom={{ isForwards, changeCount }}
-            >
-              {features.map((feature, featureIndex) =>
-                selectedIndex === featureIndex ? (
-                  <Tab.Panel
-                    static
-                    key={feature.name + changeCount}
-                    className="col-start-1 row-start-1 flex focus:outline-offset-[32px] [&:not(:focus-visible)]:focus:outline-none"
-                  >
-                    <feature.screen
-                      animated
-                      custom={{ isForwards, changeCount }}
-                    />
-                  </Tab.Panel>
-                ) : null
-              )}
-            </AnimatePresence>
-          </Tab.Panels>
-        </PhoneFrame>
+        <img loading="lazy" src="/bridge-cafe-logo-lg.png" alt="logo" />
+
       </div>
     </Tab.Group>
   )
@@ -491,24 +476,20 @@ function FeaturesMobile() {
             ref={(ref) => (slideRefs.current[featureIndex] = ref)}
             className="w-full flex-none snap-center px-4 sm:px-6"
           >
-            <div className="relative transform overflow-hidden rounded-2xl bg-gray-800 px-5 py-6">
+            <div className="relative transform overflow-hidden rounded-2xl px-5 py-6">
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                 <CircleBackground
                   color="#13B5C8"
                   className={featureIndex % 2 === 1 ? 'rotate-180' : undefined}
                 />
               </div>
-              <PhoneFrame className="relative mx-auto w-full max-w-[366px]">
-                <feature.screen />
-              </PhoneFrame>
-              <div className="absolute inset-x-0 bottom-0 bg-gray-800/95 p-6 backdrop-blur sm:p-10">
-                <feature.icon className="h-8 w-8" />
+
+              <div className="inset-x-0 bottom-0 bg-gray-800/95 p-6 backdrop-blur sm:p-10">
+                {/* <feature.icon className="h-8 w-8" /> */}
                 <h3 className="mt-6 text-sm font-semibold text-white sm:text-lg">
                   {feature.name}
                 </h3>
-                <p className="mt-2 text-sm text-gray-400">
-                  {feature.description}
-                </p>
+                <p className="mt-2 text-sm text-white">{feature.description}</p>
               </div>
             </div>
           </div>
@@ -542,20 +523,24 @@ function FeaturesMobile() {
 export function PrimaryFeatures() {
   return (
     <section
-      id="features"
+      id="about"
       aria-label="Features for investing all your money"
-      className="bg-gray-900 py-20 sm:py-32"
+      className="py-20 sm:py-32"
+      style={{ background: '#05716c' }}
     >
       <Container>
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-3xl">
           <h2 className="text-3xl font-medium tracking-tight text-white">
-            Every feature you need to win. Try it for yourself.
+            Transforming lives one bite at a time
           </h2>
-          <p className="mt-2 text-lg text-gray-400">
-            Pocket was built for investors like you who play by their own rules
-            and aren’t going to let SEC regulations get in the way of their
-            dreams. If other investing tools are afraid to build it, Pocket has
-            it.
+          <p className="mt-2 text-lg text-white">
+            The Bridge Cafe is a social enterprise venture providing a place of
+            employment and job skill development for individuals with justice
+            involvement. In parntership with Cuest College we are offering
+            clients an opportunity to participate in The Culinary Arts
+            Foundation Certificate of Specialization. Participants will attend
+            courses at Cuesta College and gain hands-on experience at The Bridge
+            Cafe in Downtown San Luis Obispo.
           </p>
         </div>
       </Container>
