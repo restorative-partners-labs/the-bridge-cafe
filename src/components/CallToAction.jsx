@@ -20,7 +20,7 @@ export function CallToAction() {
     <section
       id="get-free-shares-today"
       className="relative overflow-hidden bg-gray-900 py-20 sm:py-28"
-      style={{ background: "#C3D9CD" }}
+      style={{ background: '#C3D9CD' }}
     >
       <div className="absolute top-1/2 left-20 -translate-y-1/2 sm:left-1/2 sm:-translate-x-1/2">
         <CircleBackground color="#fff" className="animate-spin-slower" />
@@ -28,10 +28,13 @@ export function CallToAction() {
       <Container className="relative">
         <div className="mx-auto max-w-md sm:text-center">
           <h2 className="text-3xl font-medium tracking-tight text-white sm:text-4xl">
-            Opening December 2022
+            Grand Opening
+          </h2>
+          <h2 className="text-3xl font-medium tracking-tight text-white sm:text-4xl">
+            January 25 2023
           </h2>
           <p className="mt-4 text-lg text-white">
-            We are excited for you to dine with us! Please subscribe to our
+            We are excited for you join us for our Grand Opening! Please subscribe to our
             newsletter and follow our social medias for the latest updates.
           </p>
           <div className="mt-8 flex justify-center">

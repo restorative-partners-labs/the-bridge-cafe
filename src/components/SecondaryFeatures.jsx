@@ -4,14 +4,13 @@ import { Container } from '@/components/Container'
 
 const breakfast = [
   {
-    name: 'BACON BURRITO',
+    name: 'BREAKFAST BURRITO',
     description: 'smoked bacon, egg, cheese, salsa, potato',
     icon: DeviceArrowIcon,
   },
   {
-    name: 'VEGGIE SCRAMBLE',
-    description:
-      'tomato, egg, spinach, onion, mushroom, cheese, and fresh bread.',
+    name: 'BREAKFAST BOWL',
+    description: 'egg, cheese, potatoes, chives, sour cream, sausage or bacon.',
     icon: DeviceCardsIcon,
   },
   {
@@ -20,18 +19,23 @@ const breakfast = [
     icon: DeviceClockIcon,
   },
   {
-    name: 'CHILIQUILES',
+    name: 'FARMERS BREAKFAST',
     description: 'tortilla chips, onions, mole, sour cream, cotija cheese.',
     icon: DeviceListIcon,
   },
   {
-    name: 'BUSCUITS & GRAVY',
+    name: 'VEGAN & BOWL',
     description: 'fresh baked biscuit, house made gravy, bacon jam',
     icon: DeviceLockIcon,
   },
   {
-    name: 'BREAKFAST PIZZA',
-    description: 'Wbacon, egg, cheese, basil aioli, spinach',
+    name: 'OVERNIGHT OATS',
+    description: '',
+    icon: DeviceChartIcon,
+  },
+  {
+    name: 'YOGURT PARFAIT',
+    description: '',
     icon: DeviceChartIcon,
   },
 ]

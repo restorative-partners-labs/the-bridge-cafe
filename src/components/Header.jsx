@@ -99,7 +99,8 @@ export function Header() {
                         >
                           <div className="space-y-4">
                             <MobileNavLink href="/">Home</MobileNavLink>
-                            <MobileNavLink href="#menu">Menu</MobileNavLink>
+                            <MobileNavLink href="#menu">Food</MobileNavLink>
+                            <MobileNavLink href="/menu.png">View Menu</MobileNavLink>
                             <MobileNavLink href="#contact">
                               Contact
                             </MobileNavLink>
@@ -126,6 +127,9 @@ export function Header() {
               Contact
             </Button>
             <Button href="/#menu" variant="outline" className="hidden lg:block">
+              Food
+            </Button>
+            <Button href="/menu.png" variant="outline" className="hidden lg:block">
               View Menu
             </Button>
             <Button href="https://order.spoton.com/so-the-bridge-cafe-10987/san-luis-obispo-ca/63338b3bf3ebec0040438b39" className="hidden lg:block">
