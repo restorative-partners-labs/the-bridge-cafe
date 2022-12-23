@@ -9,6 +9,17 @@ import { Pricing } from '@/components/Pricing'
 import { PrimaryFeatures } from '@/components/PrimaryFeatures'
 import { Reviews } from '@/components/Reviews'
 import { SecondaryFeatures } from '@/components/SecondaryFeatures'
+import { createClient } from '../../prismicio'
+
+
+// export async function getStaticProps({ previewData }) {
+//   const client = createClient({ previewData })
+
+//   const menuItems = await client.getAllByType('menu_item')
+//   return {
+//     props: { menuItems },
+//   }
+// }
 
 export default function Home() {
   return (

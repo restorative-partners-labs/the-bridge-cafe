@@ -344,7 +344,7 @@ export function Hero() {
             <h1 className="text-4xl font-medium tracking-tight text-gray-900">
               Meals with a Mission.
             </h1>
-            <p className="mt-6 text-lg text-gray-600">
+            <p className="mt-6 text-2xl text-gray-600">
               The Bridge Cafe is a social enterprise cafe run by Restoraive
               Partners. We envision a safer community where everyone belongs and
               strive to accomplish this through transforming lives impacted by

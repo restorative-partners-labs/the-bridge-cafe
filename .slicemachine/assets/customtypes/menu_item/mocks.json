@@ -1,0 +1,52 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "dawn"
+  },
+  "image": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5",
+      "width": 5848,
+      "height": 3899
+    },
+    "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5",
+    "width": 5848,
+    "height": 3899,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  },
+  "type": {
+    "__TYPE__": "FieldContent",
+    "value": "BREAKFAST",
+    "type": "Select"
+  },
+  "description": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Exercitation dolor deserunt qui ipsum excepteur officia dolor. Nulla fugiat deserunt labore incididunt labore deserunt cupidatat ea ex. Ipsum in ullamco nulla occaecat sit nisi labore eiusmod nulla."
+        }
+      }
+    ]
+  },
+  "featured": {
+    "__TYPE__": "BooleanContent",
+    "value": true
+  },
+  "name": {
+    "__TYPE__": "FieldContent",
+    "value": "ate",
+    "type": "Text"
+  }
+}

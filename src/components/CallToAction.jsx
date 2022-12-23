@@ -31,7 +31,7 @@ export function CallToAction() {
             Grand Opening
           </h2>
           <h2 className="text-3xl font-medium tracking-tight text-white sm:text-4xl">
-            January 25 2023
+            January 2023
           </h2>
           <p className="mt-4 text-lg text-white">
             We are excited for you join us for our Grand Opening! Please subscribe to our
