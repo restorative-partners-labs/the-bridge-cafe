@@ -39,7 +39,7 @@ module.exports = {
         'bridge': '#04706D',
       }),
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        sans: ['Gill-Sans','Inter', ...defaultTheme.fontFamily.sans],
       },
       keyframes: {
         'fade-in': {

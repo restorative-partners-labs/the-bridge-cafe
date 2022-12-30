@@ -137,7 +137,7 @@ export function Header() {
               href="/#about"
               variant="outline"
               color="theme"
-              className="hidden lg:block w-32 text-center"
+              className="hidden lg:block w-32 text-center text-xl"
             >
               About
             </Button>
@@ -145,24 +145,26 @@ export function Header() {
               href="/#contact"
               variant="outline"
               color="theme"
-              className="hidden lg:block w-32 text-center"
+              className="hidden lg:block w-32 text-center text-xl"
             >
               Contact
             </Button>
-            <Button href="/#menu" variant="outline" color="theme" className="hidden lg:block w-32 text-center">
+            <Button href="/#menu" variant="outline" color="theme" className="hidden lg:block w-32 text-center text-xl">
               Food
             </Button>
             <Button
               href="/menu.png"
               variant="outline"
               color="theme"
-              className="hidden lg:block w-32 text-center"
+              className="hidden lg:block w-32 text-center text-xl"
             >
               View Menu
             </Button>
             <Button
               href="https://order.spoton.com/so-the-bridge-cafe-10987/san-luis-obispo-ca/63338b3bf3ebec0040438b39"
-              className="hidden lg:block w-32 text-center"
+              className="hidden lg:block w-40 text-center text-xl"
+              variant="outline"
+              color="themecta"
             >
               Order Online
             </Button>

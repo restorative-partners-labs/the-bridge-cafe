@@ -22,6 +22,7 @@ const variantStyles = {
   outline: {
     gray: 'border-gray-300 text-gray-700 hover:border-gray-900 active:bg-gray-100 active:text-gray-700/80',
     theme: 'border-bridge text-gray-700 hover:border-bridge hover:bg-bridge hover:text-white active:text-gray-700/80',
+    themecta: 'border-bridge bg-bridge text-white hover:border-bridge hover:bg-white hover:text-black',
   },
 }
 
