@@ -26,7 +26,7 @@ const features = [
   {
     name: 'Social Enterprise',
     description:
-      'A business whose primary purpose is addressing a socail challenge rather than creating profit for owners or shareholders. And it’s 10 seconds if you invite an insider.',
+      'A business whose primary purpose is addressing a socail challenge rather than creating profit for owners or shareholders.',
     icon: DeviceUserIcon,
     screen: InviteScreen,
   },
@@ -412,11 +412,11 @@ function FeaturesDesktop() {
               {/* <feature.icon className="h-8 w-8" /> */}
               <h3 className="mt-6 text-lg font-semibold text-white">
                 <Tab className="text-left [&:not(:focus-visible)]:focus:outline-none">
-                  <span className="absolute inset-0 rounded-2xl" />
-                  {feature.name}
+                  <span className="absolute inset-0 rounded-2xl text-4xl" />
+                  <p className="mt-2 text-2xl text-white">{feature.name}</p>
                 </Tab>
               </h3>
-              <p className="mt-2 text-sm text-white">{feature.description}</p>
+              <p className="mt-2 text-2xl text-white">{feature.description}</p>
             </div>
           </div>
         ))}
@@ -426,7 +426,6 @@ function FeaturesDesktop() {
           <CircleBackground color="#fff" className="animate-spin-slower" />
         </div>
         <img loading="lazy" src="/bridge-cafe-logo-lg.png" alt="logo" />
-
       </div>
     </Tab.Group>
   )
@@ -533,7 +532,7 @@ export function PrimaryFeatures() {
           <h2 className="text-3xl font-medium tracking-tight text-white">
             Transforming lives one bite at a time
           </h2>
-          <p className="mt-2 text-lg text-white">
+          <p className="mt-2 text-2xl text-white">
             The Bridge Cafe is a social enterprise venture providing a place of
             employment and job skill development for individuals with justice
             involvement. In parntership with Cuest College we are offering

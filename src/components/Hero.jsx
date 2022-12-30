@@ -100,6 +100,28 @@ function PlayIcon(props) {
   )
 }
 
+function MoneyIcon(props) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className="h-6 w-6"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+      />
+    </svg>
+  )
+}
+
+
+
+
 const prices = [
   997.56, 944.34, 972.25, 832.4, 888.76, 834.8, 805.56, 767.38, 861.21, 669.6,
   694.39, 721.32, 694.03, 610.1, 502.2, 549.56, 611.03, 583.4, 610.14, 660.6,
@@ -351,15 +373,29 @@ export function Hero() {
               crime through healing services and relationships. Join our mailing
               list below to stay up to date!
             </p>
-            <div className="mt-8 flex flex-wrap gap-x-4 gap-y-4">
+            <div className="mt-8 flex flex-wrap flex-col gap-x-4 gap-y-4 sm:flex-row items-center">
+              <Button
+                href="https://restorativepartners.org/donate/"
+                variant="outline"
+                className="w-56"
+              >
+                <MoneyIcon className="h-6 w-6 flex-none" />
+                <span className="ml-2.5">
+                  <p className="text-xl">Donate</p>
+                </span>
+              </Button>
               <Button
                 href="https://restorativepartnersinc.salsalabs.org/TheBridgeCafeNewsletter/index.html"
                 variant="outline"
+                className="w-56"
               >
                 <PlayIcon className="h-6 w-6 flex-none" />
-                <span className="ml-2.5">Join Mailing List</span>
+                <span className="ml-2.5">
+                  <p className="text-xl">Join Mailing List</p>
+                </span>
               </Button>
-              <div className="flex items-center justify-center space-x-4">
+
+              <div className="flex flex-row items-center justify-center space-x-4">
                 <a
                   href="https://www.facebook.com/TheBridgeCafeSLO"
                   className="cursor-pointer"

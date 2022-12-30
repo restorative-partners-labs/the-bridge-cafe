@@ -54,9 +54,7 @@ export function Header() {
             <Link href="/" aria-label="Home">
               <Logo className="h-10 w-auto " />
             </Link>
-            <div className="hidden lg:flex lg:gap-10">
-              {/* <NavLinks /> */}
-            </div>
+            <div className="hidden lg:flex lg:gap-10">{/* <NavLinks /> */}</div>
           </div>
           <div className="flex items-center gap-6">
             <Popover className="lg:hidden">
@@ -100,17 +98,32 @@ export function Header() {
                           <div className="space-y-4">
                             <MobileNavLink href="/">Home</MobileNavLink>
                             <MobileNavLink href="#menu">Food</MobileNavLink>
-                            <MobileNavLink href="/menu.png">View Menu</MobileNavLink>
+                            <MobileNavLink href="/menu.png">
+                              View Menu
+                            </MobileNavLink>
                             <MobileNavLink href="#contact">
                               Contact
                             </MobileNavLink>
                           </div>
+
                           <div className="mt-8 flex flex-col gap-4">
-                          <Button href="https://order.spoton.com/so-the-bridge-cafe-10987/san-luis-obispo-ca/63338b3bf3ebec0040438b39" variant="outline">
-                              Order
-                            </Button>
-                            <Button style={{ background: '#05716c' }} href="https://restorativepartnersinc.salsalabs.org/TheBridgeCafeNewsletter/index.html">
+                            <Button
+                              href="https://restorativepartnersinc.salsalabs.org/TheBridgeCafeNewsletter/index.html"
+                              variant="outline"
+                            >
                               Subscribe
+                            </Button>
+                            <Button
+                              href="https://restorativepartners.org/donate/"
+                              variant="outline"
+                            >
+                              Donate
+                            </Button>
+                            <Button
+                              style={{ background: '#05716c' }}
+                              href="https://order.spoton.com/so-the-bridge-cafe-10987/san-luis-obispo-ca/63338b3bf3ebec0040438b39"
+                            >
+                              Order
                             </Button>
                           </div>
                         </Popover.Panel>
@@ -120,19 +133,37 @@ export function Header() {
                 </>
               )}
             </Popover>
-            <Button href="/#about" variant="outline" className="hidden lg:block">
+            <Button
+              href="/#about"
+              variant="outline"
+              color="theme"
+              className="hidden lg:block w-32 text-center"
+            >
               About
             </Button>
-            <Button href="/#contact" variant="outline" className="hidden lg:block">
+            <Button
+              href="/#contact"
+              variant="outline"
+              color="theme"
+              className="hidden lg:block w-32 text-center"
+            >
               Contact
             </Button>
-            <Button href="/#menu" variant="outline" className="hidden lg:block">
+            <Button href="/#menu" variant="outline" color="theme" className="hidden lg:block w-32 text-center">
               Food
             </Button>
-            <Button href="/menu.png" variant="outline" className="hidden lg:block">
+            <Button
+              href="/menu.png"
+              variant="outline"
+              color="theme"
+              className="hidden lg:block w-32 text-center"
+            >
               View Menu
             </Button>
-            <Button href="https://order.spoton.com/so-the-bridge-cafe-10987/san-luis-obispo-ca/63338b3bf3ebec0040438b39" className="hidden lg:block">
+            <Button
+              href="https://order.spoton.com/so-the-bridge-cafe-10987/san-luis-obispo-ca/63338b3bf3ebec0040438b39"
+              className="hidden lg:block w-32 text-center"
+            >
               Order Online
             </Button>
           </div>

@@ -33,18 +33,21 @@ export function CallToAction() {
           <h2 className="text-3xl font-medium tracking-tight text-white sm:text-4xl">
             January 2023
           </h2>
-          <p className="mt-4 text-lg text-white">
-            We are excited for you join us for our Grand Opening! Please subscribe to our
-            newsletter and follow our social medias for the latest updates.
+          <p className="mt-4 text-2xl text-white">
+            We are excited for you join us for our Grand Opening! Please
+            subscribe to our newsletter and follow our social medias for the
+            latest updates.
           </p>
           <div className="mt-8 flex justify-center">
             <Button
               href="https://restorativepartnersinc.salsalabs.org/TheBridgeCafeNewsletter/index.html"
               variant="outline"
-              color="white"
+              color="theme"
             >
               <PlayIcon className="h-6 w-6 flex-none" />
-              <span className="ml-2.5">Join Mailing List</span>
+              <span className="ml-2.5">
+                <p className="text-xl">Join Mailing List</p>
+              </span>
             </Button>
           </div>
         </div>

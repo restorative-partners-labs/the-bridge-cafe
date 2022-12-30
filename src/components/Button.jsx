@@ -16,8 +16,12 @@ const variantStyles = {
       'bg-white text-cyan-900 hover:bg-white/90 active:bg-white/90 active:text-white',
     gray: 'bg-gray-800 text-white hover:bg-gray-900 active:bg-gray-800 active:text-white/80',
   },
+  theme: {
+    
+  },
   outline: {
-    gray: 'border-gray-300 text-gray-700 hover:border-gray-400 active:bg-gray-100 active:text-gray-700/80',
+    gray: 'border-gray-300 text-gray-700 hover:border-gray-900 active:bg-gray-100 active:text-gray-700/80',
+    theme: 'border-bridge text-gray-700 hover:border-bridge hover:bg-bridge hover:text-white active:text-gray-700/80',
   },
 }
 

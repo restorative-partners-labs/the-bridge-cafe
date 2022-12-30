@@ -2,7 +2,6 @@ import { useId } from 'react'
 
 import { Container } from '@/components/Container'
 
-
 const breakfast = [
   {
     name: 'BREAKFAST BURRITO',
@@ -41,64 +40,7 @@ const breakfast = [
   },
 ]
 
-const sandwiches = [
-  {
-    name: 'B.A.A.T',
-    description: 'bacon, avocado, arugula, tomato with choice of spread',
-    icon: DeviceArrowIcon,
-  },
-  {
-    name: 'TURK - E - DELIGHT',
-    description:
-      'turkey, cheese, English cucumber, spinach, with choice of spread',
-    icon: DeviceCardsIcon,
-  },
-  {
-    name: 'BIRD - A - PEST',
-    description:
-      'turkey, chicken, avocado, pesto, arugula, onion, tomato, spread',
-    icon: DeviceClockIcon,
-  },
-  {
-    name: 'HAM - LETT',
-    description: 'ham, butter lettuce, cheese, tomato, onion, spread',
-    icon: DeviceListIcon,
-  },
-  {
-    name: 'CALI - GOUCHEESE',
-    description: 'mozzarella, gouda, cheddar, avocado, bacon jam, spread',
-    icon: DeviceLockIcon,
-  },
-  {
-    name: 'TUNA CLUB',
-    description: 'tuna salad, bacon, butter lettuce, tomato, spread',
-    icon: DeviceChartIcon,
-  },
-]
-
-const grabngo = [
-  {
-    name: 'HARD-BOILED EGG BENTO BOX',
-    description: 'eggs, cucumber, cherry tomato, basil aioli',
-    icon: DeviceArrowIcon,
-  },
-  {
-    name: 'OVERNIGHT OATS',
-    description: 'gf oats, oat milk, honey, vanilla with choice of toppings',
-    icon: DeviceCardsIcon,
-  },
-  {
-    name: 'YOGURT PARFAIT',
-    description: 'greek yogurt, house granola, maple syrup, fruit compote',
-    icon: DeviceClockIcon,
-  },
-  {
-    name: 'ASSORTED PASTRIES',
-    description: 'fresh baked daily pastries.',
-    icon: DeviceListIcon,
-  },
-]
-const burgers = [
+const hotLunch = [
   {
     name: 'THE BRIDGE',
     description:
@@ -106,18 +48,69 @@ const burgers = [
     icon: DeviceArrowIcon,
   },
   {
-    name: 'THE CAPRESE',
-    description:
-      'fresh mozzarella, basil leaves, balsamic glaze, heirloom tomato, basil aioli',
-    icon: DeviceCardsIcon,
-  },
-  {
-    name: 'THE VEGAN',
+    name: 'THE VEGAN BURGER',
     description:
       'fried tofu, butter lettuce, grilled onions, heirloom tomato, avocado, kale chickpea spread',
     icon: DeviceClockIcon,
   },
+  {
+    name: 'CALI - GOUCHEESE SANDO',
+    description: 'mozzarella, gouda, cheddar, avocado, bacon jam, spread',
+    icon: DeviceLockIcon,
+  },
+  {
+    name: 'GRILLED CHICKEN SANDWICH',
+    description:
+      'brioche bun, grilled chicken, tomato, butterleaf lettuce, onion, cheddar cheese, the bridge sauce',
+    icon: DeviceLockIcon,
+  },
+  {
+    name: 'WESTERN BURGER',
+    description:
+      'brioche bun, 6oz beef patty, bacon, smoked cheddar, onion rings, bbq sauce',
+    icon: DeviceArrowIcon,
+  },
 ]
+
+const coldLunch = [
+  {
+    name: 'CHEF SALAD',
+    description:
+      'chicken, spring mix, bacon bits, tomato, red onion, cheddar, ranch',
+    icon: DeviceListIcon,
+  },
+  {
+    name: 'GARDEN SALAD',
+    description:
+      'cherry tomato, red onion, cucumber, carrot, citrus vinaigrette',
+    icon: DeviceListIcon,
+  },
+
+  {
+    name: 'CEASAR SALAD',
+    description:
+      'butter lettuce, parmesan, homemade croutons, creamy Caesar dressing',
+    icon: DeviceArrowIcon,
+  },
+
+  {
+    name: 'HAM-LETT SANDO',
+    description: 'ham, butter lettuce, cheese, tomato, onion, spread',
+    icon: DeviceListIcon,
+  },
+  {
+    name: 'BRIDGE CLUB SANDO',
+    description:
+      'chicken, bacon, provolone, butterleaf lettuce, avocado, tomato, onion, mayo',
+    icon: DeviceListIcon,
+  },
+  {
+    name: 'TURK-E-DELIGHT WRAP',
+    description: 'turkey, provolone, butterleaf lettuce, tomato, onion, mayo',
+    icon: DeviceCardsIcon,
+  },
+]
+
 const soups = [
   {
     name: 'FRENCH ONION',
@@ -145,44 +138,75 @@ const soups = [
   },
 ]
 
-const specialtydishes = [
+const bakedGoods = [
   {
-    name: 'CARBONARA COUSCOUS',
-    description: 'Israeli couscous, egg, parmesan, garlic, salt, pepper, basil',
+    name: 'SAVORY SCONE',
+    description: '',
     icon: DeviceArrowIcon,
   },
   {
-    name: 'LETTUCE WRAP',
-    description:
-      'chicken or tofu, sesame, soy sauce, carrots, shallots, butter lettuce',
+    name: 'SWEET SCONE',
+    description: '',
     icon: DeviceCardsIcon,
   },
   {
-    name: 'MARGARITA PIZZA',
-    description:
-      'fresh mozzarella, red sauce, basil, olive oil, heirloom tomatoes',
+    name: 'HAM & CHEESE CROISSANT',
+    description: '',
     icon: DeviceClockIcon,
   },
   {
-    name: 'AVOCADO TOAST',
-    description: 'avocado, cucumber, tomato, sprouts, arugula, olive oil, salt',
+    name: 'SPINACH & FETA CROISSANT',
+    description: '',
     icon: DeviceListIcon,
   },
   {
-    name: 'THE VEGAN',
-    description:
-      'fried tofu, butter lettuce, grilled onions, heirloom tomato, avocado, kale chickpea spread',
+    name: 'CHOCOLATE CROISSANT',
+    description: '',
     icon: DeviceLockIcon,
   },
   {
-    name: 'FLAUTAS WITH MOLE',
-    description: 'flour tortilla, chicken, cheese, onion, mole, crema',
+    name: 'ALMOND CROISSANT',
+    description: '',
     icon: DeviceChartIcon,
   },
   {
-    name: 'GREEK QUESADILLA',
-    description:
-      'spinach, tomato, feta cheese, kalamata olives, drizzled with tomato aioli',
+    name: 'PLAIN CROISSANT',
+    description: '',
+    icon: DeviceChartIcon,
+  },
+  {
+    name: 'COOKIES',
+    description: '',
+    icon: DeviceChartIcon,
+  },
+  {
+    name: '360 MUFFIN',
+    description: '',
+    icon: DeviceChartIcon,
+  },
+  {
+    name: 'BCC BUSCUITS',
+    description: '',
+    icon: DeviceChartIcon,
+  },
+  {
+    name: 'SWEET MUFFINS',
+    description: '',
+    icon: DeviceChartIcon,
+  },
+  {
+    name: 'TURNOVER',
+    description: '',
+    icon: DeviceChartIcon,
+  },
+  {
+    name: 'VEGGIE QUICHE',
+    description: '',
+    icon: DeviceChartIcon,
+  },
+  {
+    name: 'MEAT QUICHE',
+    description: '',
     icon: DeviceChartIcon,
   },
 ]
@@ -217,17 +241,17 @@ const salads = [
 const sides = [
   {
     name: 'FRENCH FRIES',
-    description: 'served with signature seasoning and spread',
+    description: '',
     icon: DeviceArrowIcon,
   },
   {
-    name: 'PAN CON TOMATE',
-    description: 'fresh grated tomato, olive oil, basil, salt on baked bread',
+    name: 'ONION RINGS',
+    description: '',
     icon: DeviceCardsIcon,
   },
   {
-    name: 'FRIED TOFU',
-    description: 'crispy fried with signature seasoning and spread',
+    name: 'SALSA',
+    description: '',
     icon: DeviceClockIcon,
   },
 ]
@@ -401,9 +425,7 @@ function DeviceChartIcon(props) {
   )
 }
 
-
-
-export function SecondaryFeatures({menuItems}) {
+export function SecondaryFeatures({ menuItems }) {
   return (
     <>
       {' '}
@@ -429,10 +451,12 @@ export function SecondaryFeatures({menuItems}) {
                 className="rounded-2xl border border-gray-200 p-8"
               >
                 {/* <feature.icon className="h-8 w-8" /> */}
-                <h3 className="mt-6 font-semibold text-gray-900">
+                <h3 className="mt-6 text-2xl font-semibold text-gray-900">
                   {feature.name}
                 </h3>
-                <p className="mt-2 text-gray-700">{feature.description}</p>
+                <p className="mt-2 text-2xl text-gray-700">
+                  {feature.description}
+                </p>
               </li>
             ))}
           </ul>
@@ -446,24 +470,26 @@ export function SecondaryFeatures({menuItems}) {
         <Container>
           <div className="mx-auto max-w-2xl sm:text-center">
             <h2 className="text-3xl font-medium tracking-tight text-gray-900">
-              GRAB-N-GO
+              HOT LUNCH
             </h2>
           </div>
           <ul
             role="list"
             className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
           >
-            {grabngo.map((feature) => (
+            {hotLunch.map((feature) => (
               <li
                 key={feature.name}
                 className="rounded-2xl border p-8"
                 style={{ borderColor: '#05716c' }}
               >
                 {/* <feature.icon className="h-8 w-8" /> */}
-                <h3 className="mt-6 font-semibold text-gray-900">
+                <h3 className="mt-6 text-2xl font-semibold text-gray-900">
                   {feature.name}
                 </h3>
-                <p className="mt-2 text-gray-700">{feature.description}</p>
+                <p className="mt-2 text-2xl text-gray-700">
+                  {feature.description}
+                </p>
               </li>
             ))}
           </ul>
@@ -477,24 +503,26 @@ export function SecondaryFeatures({menuItems}) {
         <Container>
           <div className="mx-auto max-w-2xl sm:text-center">
             <h2 className="text-3xl font-medium tracking-tight text-gray-900">
-              SANDWICHES
+              COLD LUNCH
             </h2>
           </div>
           <ul
             role="list"
             className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
           >
-            {sandwiches.map((feature) => (
+            {coldLunch.map((feature) => (
               <li
                 key={feature.name}
                 className="rounded-2xl border p-8"
                 style={{ borderColor: '#05716c' }}
               >
                 {/* <feature.icon className="h-8 w-8" /> */}
-                <h3 className="mt-6 font-semibold text-gray-900">
+                <h3 className="mt-6 text-2xl font-semibold text-gray-900">
                   {feature.name}
                 </h3>
-                <p className="mt-2 text-gray-700">{feature.description}</p>
+                <p className="mt-2 text-2xl text-gray-700">
+                  {feature.description}
+                </p>
               </li>
             ))}
           </ul>
@@ -508,117 +536,26 @@ export function SecondaryFeatures({menuItems}) {
         <Container>
           <div className="mx-auto max-w-2xl sm:text-center">
             <h2 className="text-3xl font-medium tracking-tight text-gray-900">
-              BURGERS
+              BAKED GOODS
             </h2>
           </div>
           <ul
             role="list"
             className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
           >
-            {burgers.map((feature) => (
+            {bakedGoods.map((feature) => (
               <li
                 key={feature.name}
                 className="rounded-2xl border p-8"
                 style={{ borderColor: '#05716c' }}
               >
                 {/* <feature.icon className="h-8 w-8" /> */}
-                <h3 className="mt-6 font-semibold text-gray-900">
+                <h3 className="mt-6 text-2xl font-semibold text-gray-900">
                   {feature.name}
                 </h3>
-                <p className="mt-2 text-gray-700">{feature.description}</p>
-              </li>
-            ))}
-          </ul>
-        </Container>
-      </section>
-      <section
-        id="secondary-breakfast"
-        aria-label="breakfast for building a portfolio"
-        className="py-10 sm:py-10"
-      >
-        <Container>
-          <div className="mx-auto max-w-2xl sm:text-center">
-            <h2 className="text-3xl font-medium tracking-tight text-gray-900">
-              SOUPS
-            </h2>
-          </div>
-          <ul
-            role="list"
-            className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
-          >
-            {soups.map((feature) => (
-              <li
-                key={feature.name}
-                className="rounded-2xl border p-8"
-                style={{ borderColor: '#05716c' }}
-              >
-                {/* <feature.icon className="h-8 w-8" /> */}
-                <h3 className="mt-6 font-semibold text-gray-900">
-                  {feature.name}
-                </h3>
-                <p className="mt-2 text-gray-700">{feature.description}</p>
-              </li>
-            ))}
-          </ul>
-        </Container>
-      </section>
-      <section
-        id="secondary-breakfast"
-        aria-label="breakfast for building a portfolio"
-        className="py-10 sm:py-10"
-      >
-        <Container>
-          <div className="mx-auto max-w-2xl sm:text-center">
-            <h2 className="text-3xl font-medium tracking-tight text-gray-900">
-              SPECIALTY DISHES
-            </h2>
-          </div>
-          <ul
-            role="list"
-            className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
-          >
-            {specialtydishes.map((feature) => (
-              <li
-                key={feature.name}
-                className="rounded-2xl border p-8"
-                style={{ borderColor: '#05716c' }}
-              >
-                {/* <feature.icon className="h-8 w-8" /> */}
-                <h3 className="mt-6 font-semibold text-gray-900">
-                  {feature.name}
-                </h3>
-                <p className="mt-2 text-gray-700">{feature.description}</p>
-              </li>
-            ))}
-          </ul>
-        </Container>
-      </section>
-      <section
-        id="secondary-breakfast"
-        aria-label="breakfast for building a portfolio"
-        className="py-10 sm:py-10"
-      >
-        <Container>
-          <div className="mx-auto max-w-2xl sm:text-center">
-            <h2 className="text-3xl font-medium tracking-tight text-gray-900">
-              SALADS
-            </h2>
-          </div>
-          <ul
-            role="list"
-            className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
-          >
-            {salads.map((feature) => (
-              <li
-                key={feature.name}
-                className="rounded-2xl border p-8"
-                style={{ borderColor: '#05716c' }}
-              >
-                {/* <feature.icon className="h-8 w-8" /> */}
-                <h3 className="mt-6 font-semibold text-gray-900">
-                  {feature.name}
-                </h3>
-                <p className="mt-2 text-gray-700">{feature.description}</p>
+                <p className="mt-2 text-2xl text-gray-700">
+                  {feature.description}
+                </p>
               </li>
             ))}
           </ul>
@@ -646,41 +583,12 @@ export function SecondaryFeatures({menuItems}) {
                 style={{ borderColor: '#05716c' }}
               >
                 {/* <feature.icon className="h-8 w-8" /> */}
-                <h3 className="mt-6 font-semibold text-gray-900">
+                <h3 className="mt-6 text-2xl font-semibold text-gray-900">
                   {feature.name}
                 </h3>
-                <p className="mt-2 text-gray-700">{feature.description}</p>
-              </li>
-            ))}
-          </ul>
-        </Container>
-      </section>
-      <section
-        id="secondary-breakfast"
-        aria-label="breakfast for building a portfolio"
-        className="py-10"
-      >
-        <Container>
-          <div className="mx-auto max-w-2xl sm:text-center">
-            <h2 className="text-3xl font-medium tracking-tight text-gray-900">
-              SPREADS
-            </h2>
-          </div>
-          <ul
-            role="list"
-            className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
-          >
-            {spreads.map((feature) => (
-              <li
-                key={feature.name}
-                className="rounded-2xl border p-8"
-                style={{ borderColor: '#05716c' }}
-              >
-                {/* <feature.icon className="h-8 w-8" /> */}
-                <h3 className="mt-6 font-semibold text-gray-900">
-                  {feature.name}
-                </h3>
-                <p className="mt-2 text-gray-700">{feature.description}</p>
+                <p className="mt-2 text-2xl text-gray-700">
+                  {feature.description}
+                </p>
               </li>
             ))}
           </ul>
