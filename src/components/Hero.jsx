@@ -454,7 +454,7 @@ export function Hero() {
                         href="https://www.amazon.com/registries/custom/3R36VQR64GJ03/guest-view?pldnSite=1"
                         variant="outline"
                         color="theme"
-                        className="inline-flex w-full justify-center rounded-md border border border-gray-300 px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-bridge focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:col-start-2 sm:text-sm"
+                        className="inline-flex w-full justify-center rounded-md border border border-gray-300 px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-bridge focus:outline-none focus:ring-2 focus:ring-bridge focus:ring-offset-2 sm:col-start-2 sm:text-sm"
                         ref={cancelButtonRef}
                       >
                         <span className="ml-2.5">
