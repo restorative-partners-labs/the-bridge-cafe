@@ -67,14 +67,14 @@ export function RestorativePartnersCallToAction() {
               {/* Testimonial card*/}
               <a href='https://restorativepartners.org/'>
                 {' '}
-                <div className="relative overflow-hidden rounded-2xl pt-64 pb-10 shadow-xl">
+                <div className="relative overflow-hidden rounded-2xl pt-80 pb-10 shadow-xl">
                   <img
                     className="absolute inset-0 h-full w-full object-cover"
                     src="/rp-heart-logo.png"
                     alt=""
                   />
                   <div className="absolute inset-0 bg-transparent bg-bridge mix-blend-multiply" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-bridge via-bridge opacity-90 hover:bg-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-bridge via-bridge opacity-70 hover:bg-transparent" />
                   <div className="relative px-8">
                     <blockquote className="mt-8">
                       <footer className="mt-4">
@@ -111,7 +111,7 @@ export function RestorativePartnersCallToAction() {
                   recidivism by providing a continuum of care from incarceration
                   through reincorporation to our community.
                 </p>
-                <p className="text-2xl leading-7">
+                <p className="text-2xl">
                   We envision a safer community where everyone belongs. We
                   strive to accomplish this through transforming lives impacted
                   by crime through healing services and relationships.

@@ -379,10 +379,11 @@ export function Hero() {
         <Transition.Root show={open} as={Fragment}>
           <Dialog
             as="div"
-            className="relative z-10"
+            className="relative z-40 flex justify-center items-center"
             initialFocus={cancelButtonRef}
-            onClose={() => {}}
+            onClose={() => setOpen(false)}
           >
+            <div className="fixed inset-0 bg-white/90" aria-hidden="true" />
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -395,7 +396,7 @@ export function Hero() {
               <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
             </Transition.Child>
 
-            <div className="fixed inset-0 z-10 overflow-y-auto">
+            <div className="fixed inset-0 z-40 overflow-y-auto">
               <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
                 <Transition.Child
                   as={Fragment}
@@ -406,8 +407,8 @@ export function Hero() {
                   leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                   leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                 >
-                  <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
-                    <div className="absolute top-0 right-0 hidden pt-4 pr-4 sm:block">
+                  <Dialog.Panel className="relative z-40 transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
+                    <div className="absolute top-0 right-0 pt-4 pr-4 sm:block">
                       <button
                         type="button"
                         className="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-bridge focus:ring-offset-2"
@@ -440,9 +441,9 @@ export function Hero() {
                             accountability and compassion.
                           </p>
                           <p className="text-xl text-gray-500">
-                            We could use your help via a donation ot our General
-                            Fund or through purchasing needed supplies throug
-                            hour Amazon Registry.
+                            We could use your help via a donation to our General
+                            Fund or through purchasing needed supplies through
+                            our Amazon Registry.
                           </p>
                           <p className="text-xl text-gray-500"></p>
                         </div>
