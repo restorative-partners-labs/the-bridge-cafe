@@ -25,7 +25,7 @@ export function CallToAction() {
       <div className="absolute top-1/2 left-20 -translate-y-1/2 sm:left-1/2 sm:-translate-x-1/2">
         <CircleBackground color="#fff" className="animate-spin-slower" />
       </div>
-      <Container className="relative">
+      <Container className="relative py-20">
         <div className="mx-auto max-w-md sm:text-center">
           <h2 className="text-3xl font-medium tracking-tight text-white sm:text-4xl">
             Grand Opening
