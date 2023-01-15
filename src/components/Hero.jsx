@@ -1,4 +1,4 @@
-import { useId, useRef, useState } from 'react'
+import { Fragment, useId, useRef, useState } from 'react'
 import Image from 'next/image'
 import clsx from 'clsx'
 import { motion, useInView, useMotionValue } from 'framer-motion'
@@ -17,6 +17,9 @@ import logoHuffpost from '@/images/logos/huffpost.svg'
 import logoTechcrunch from '@/images/logos/techcrunch.svg'
 import logoWired from '@/images/logos/wired.svg'
 import { SocialIcon } from 'react-social-icons'
+
+import { Dialog, Transition } from '@headlessui/react'
+import { CheckIcon, GiftIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 function BackgroundIllustration(props) {
   let id = useId()
@@ -366,9 +369,115 @@ function AppDemo() {
 }
 
 export function Hero() {
+  const [open, setOpen] = useState(false)
+
+  const cancelButtonRef = useRef(null)
+
   return (
     <div className="overflow-hidden py-20 sm:py-32 lg:pb-32 xl:pb-36">
       <Container>
+        <Transition.Root show={open} as={Fragment}>
+          <Dialog
+            as="div"
+            className="relative z-10"
+            initialFocus={cancelButtonRef}
+            onClose={() => {}}
+          >
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0"
+              enterTo="opacity-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100"
+              leaveTo="opacity-0"
+            >
+              <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+            </Transition.Child>
+
+            <div className="fixed inset-0 z-10 overflow-y-auto">
+              <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                <Transition.Child
+                  as={Fragment}
+                  enter="ease-out duration-300"
+                  enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                  enterTo="opacity-100 translate-y-0 sm:scale-100"
+                  leave="ease-in duration-200"
+                  leaveFrom="opacity-100 translate-y-0 sm:scale-100"
+                  leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                >
+                  <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
+                    <div className="absolute top-0 right-0 hidden pt-4 pr-4 sm:block">
+                      <button
+                        type="button"
+                        className="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-bridge focus:ring-offset-2"
+                        onClick={() => setOpen(false)}
+                      >
+                        <span className="sr-only">Close</span>
+                        <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div>
+                      <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-bridge">
+                        <GiftIcon
+                          className="h-6 w-6 text-white"
+                          aria-hidden="true"
+                        />
+                      </div>
+                      <div className="mt-3 text-center sm:mt-5">
+                        <Dialog.Title
+                          as="h3"
+                          className="text-3xl font-medium leading-6 text-gray-900"
+                        >
+                          Donate
+                        </Dialog.Title>
+                        <div className="mt-2">
+                          <p className="text-xl text-gray-500">
+                            Transform the lives of those impacted by crime
+                            today! Your donation will help us provide jobs for
+                            those who need and want to change their behavior,
+                            heal from their trauma and acquire new skills,
+                            accountability and compassion.
+                          </p>
+                          <p className="text-xl text-gray-500">
+                            We could use your help via a donation ot our General
+                            Fund or through purchasing needed supplies throug
+                            hour Amazon Registry.
+                          </p>
+                          <p className="text-xl text-gray-500"></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="mt-5 sm:mt-6 sm:grid sm:grid-flow-row-dense sm:grid-cols-2 sm:gap-3">
+                      <Button
+                        href="https://www.amazon.com/registries/custom/3R36VQR64GJ03/guest-view?pldnSite=1"
+                        variant="outline"
+                        color="theme"
+                        className="inline-flex w-full justify-center rounded-md border border border-gray-300 px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-bridge focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:col-start-2 sm:text-sm"
+                        ref={cancelButtonRef}
+                      >
+                        <span className="ml-2.5">
+                          <p className="text-xl">Amazon Registry</p>
+                        </span>
+                      </Button>
+                      <Button
+                        href="https://restorativepartners.org/donate/"
+                        variant="outline"
+                        color="theme"
+                        className="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-bridge focus:ring-offset-2 sm:col-start-1 sm:mt-0 sm:text-sm"
+                        ref={cancelButtonRef}
+                      >
+                        <span className="ml-2.5">
+                          <p className="text-xl">General Donation</p>
+                        </span>
+                      </Button>
+                    </div>
+                  </Dialog.Panel>
+                </Transition.Child>
+              </div>
+            </div>
+          </Dialog>
+        </Transition.Root>
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
           <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
             <h1 className="text-4xl font-medium tracking-tight text-gray-900">
@@ -383,10 +492,13 @@ export function Hero() {
             </p>
             <div className="mt-8 flex flex-col flex-wrap items-center gap-x-4 gap-y-4 sm:flex-row">
               <Button
-                href="https://restorativepartners.org/donate/"
+                //href="https://restorativepartners.org/donate/"
                 variant="outline"
                 color="theme"
                 className="w-56"
+                onClick={() => {
+                  setOpen(true)
+                }}
               >
                 <MoneyIcon className="h-6 w-6 flex-none" />
                 <span className="ml-2.5">

@@ -149,9 +149,9 @@ export function Header() {
             >
               Contact
             </Button>
-            {/* <Button href="/#menu" variant="outline" color="theme" className="hidden lg:block w-32 text-center text-xl">
-              Food
-            </Button> */}
+            <Button href="/#restorative-partners" variant="outline" color="theme" className="hidden lg:block w-50 text-center text-xl">
+              Restorative Partners
+            </Button>
             <Button
               href="/menu.png"
               variant="outline"
