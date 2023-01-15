@@ -96,13 +96,15 @@ export function Header() {
                           className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-gray-50 px-6 pb-6 pt-32 shadow-2xl shadow-gray-900/20"
                         >
                           <div className="space-y-4">
-                            <MobileNavLink href="/">Home</MobileNavLink>
-                            <MobileNavLink href="#menu">Food</MobileNavLink>
+                            <MobileNavLink href="/">
+                              <span className="text-2xl">Home</span>
+                            </MobileNavLink>
+
                             <MobileNavLink href="/menu.png">
-                              View Menu
+                              <span className="text-2xl">View Menu</span>
                             </MobileNavLink>
                             <MobileNavLink href="#contact">
-                              Contact
+                              <span className="text-2xl">Contact</span>
                             </MobileNavLink>
                           </div>
 
@@ -111,19 +113,19 @@ export function Header() {
                               href="https://restorativepartnersinc.salsalabs.org/TheBridgeCafeNewsletter/index.html"
                               variant="outline"
                             >
-                              Subscribe
+                              <span className="text-2xl">Subscribe</span>
                             </Button>
                             <Button
-                              href="https://restorativepartners.org/donate/"
+                              //href="https://restorativepartners.org/donate/"
                               variant="outline"
                             >
-                              Donate
+                              <span className="text-2xl">Donate</span>
                             </Button>
                             <Button
                               style={{ background: '#05716c' }}
                               href="https://order.spoton.com/so-the-bridge-cafe-10987/san-luis-obispo-ca/63338b3bf3ebec0040438b39"
                             >
-                              Order
+                              <span className="text-2xl">Order</span>
                             </Button>
                           </div>
                         </Popover.Panel>
@@ -137,7 +139,7 @@ export function Header() {
               href="/#about"
               variant="outline"
               color="theme"
-              className="hidden lg:block w-32 text-center text-xl"
+              className="hidden w-32 text-center text-xl lg:block"
             >
               About
             </Button>
@@ -145,24 +147,29 @@ export function Header() {
               href="/#contact"
               variant="outline"
               color="theme"
-              className="hidden lg:block w-32 text-center text-xl"
+              className="hidden w-32 text-center text-xl lg:block"
             >
               Contact
             </Button>
-            <Button href="/#restorative-partners" variant="outline" color="theme" className="hidden lg:block w-50 text-center text-xl">
+            <Button
+              href="/#restorative-partners"
+              variant="outline"
+              color="theme"
+              className="w-50 hidden text-center text-xl lg:block"
+            >
               Restorative Partners
             </Button>
             <Button
               href="/menu.png"
               variant="outline"
               color="theme"
-              className="hidden lg:block w-32 text-center text-xl"
+              className="hidden w-32 text-center text-xl lg:block"
             >
               View Menu
             </Button>
             <Button
               href="https://order.spoton.com/so-the-bridge-cafe-10987/san-luis-obispo-ca/63338b3bf3ebec0040438b39"
-              className="hidden lg:block w-40 text-center text-xl"
+              className="hidden w-40 text-center text-xl lg:block"
               variant="outline"
               color="themecta"
             >
