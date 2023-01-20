@@ -26,21 +26,21 @@ const features = [
   {
     name: 'Social Enterprise',
     description:
-      'A business whose primary purpose is addressing a socail challenge rather than creating profit for owners or shareholders.',
+      'A business whose primary purpose is addressing a social challenge rather than creating profit for owners or shareholders. All proceeds from the cafe are fed back into Restorative Partners’ programs and services.',
     icon: DeviceUserIcon,
     screen: InviteScreen,
   },
   {
     name: 'Quality Convenient Dining',
     description:
-      'Delicious food to gather around, whether grabbing to-go or dining on our patio admiring the community artwork.',
+      'Delicious food to gather around, whether grabbing to go or dining on our patio to admire the community artwork.',
     icon: DeviceNotificationIcon,
     screen: StocksScreen,
   },
   {
     name: 'Employment & Job Skill Development',
     description:
-      'On-the-job training and certification for justice involved individuals in partnerships with Cuesta College. This creates employment options to the clients we serve and others who are justice involved',
+      'In partnership with Cuesta College’s Culinary Arts Foundation, The Bridge Cafe provides paid experience for justice-involved individuals seeking a certificate of specialization in culinary arts. Upon completion of the program, Restorative Partners assists participants with finding culinary employment.',
     icon: DeviceTouchIcon,
     screen: InvestScreen,
   },
@@ -48,7 +48,7 @@ const features = [
   {
     name: 'Fundraising',
     description:
-      'Ongoing fiscal support for maintaining and growing programming at Restorative Partners',
+      "Your donation can support a justice-involved individual through Cuesta College's program and help maintain and grow Restorative Partners' other services and programs. Tax ID 47-4825349",
     icon: DeviceTouchIcon,
     screen: InvestScreen,
   },
@@ -530,16 +530,16 @@ export function PrimaryFeatures() {
       <Container>
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-3xl">
           <h2 className="text-3xl font-medium tracking-tight text-white">
-            Transforming lives one bite at a time
+            Transforming Lives One Bite at a Time
           </h2>
           <p className="mt-2 text-2xl text-white">
-            The Bridge Cafe is a social enterprise venture providing a place of
-            employment and job skill development for individuals with justice
-            involvement. In parntership with Cuest College we are offering
-            clients an opportunity to participate in The Culinary Arts
-            Foundation Certificate of Specialization. Participants will attend
-            courses at Cuesta College and gain hands-on experience at The Bridge
-            Cafe in Downtown San Luis Obispo.
+            Joining Restorative Partners’ dozens of other wraparound programs
+            and services, The Bridge Cafe creates a community for
+            justice-involved individuals to seek employment, gain empowered
+            education, and enter the workforce in a supported, sustainable way.
+            Simultaneously, The Bridge Cafe allows the community to change lives
+            and engage in restorative practices in a simple way: by grabbing a
+            bite to eat and meeting our staff.
           </p>
         </div>
       </Container>

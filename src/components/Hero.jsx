@@ -379,7 +379,7 @@ export function Hero() {
         <Transition.Root show={open} as={Fragment}>
           <Dialog
             as="div"
-            className="relative z-40 flex justify-center items-center"
+            className="relative z-40 flex items-center justify-center"
             initialFocus={cancelButtonRef}
             onClose={() => setOpen(false)}
           >
@@ -485,11 +485,12 @@ export function Hero() {
               Meals with a Mission.
             </h1>
             <p className="mt-6 text-2xl text-gray-600">
-              The Bridge Cafe is a social enterprise cafe run by Restoraive
-              Partners. We envision a safer community where everyone belongs and
-              strive to accomplish this through transforming lives impacted by
-              crime through healing services and relationships. Join our mailing
-              list below to stay up to date!
+              The Bridge Cafe is the Central Coast's first social enterprise
+              restaurant brought to you by Restorative Partners. We envision a
+              safer community where everyone belongs, and we strive to accomplish
+              this by transforming lives impacted by crime through healing
+              services and relationships. Join our mailing list below to stay up
+              to date!
             </p>
             <div className="mt-8 flex flex-col flex-wrap items-center gap-x-4 gap-y-4 sm:flex-row">
               <Button

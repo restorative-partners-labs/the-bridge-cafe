@@ -65,7 +65,7 @@ export function RestorativePartnersCallToAction() {
             </div>
             <div className="relative mx-auto max-w-md px-6 sm:max-w-3xl lg:max-w-none lg:px-0 lg:py-20">
               {/* Testimonial card*/}
-              <a href='https://restorativepartners.org/'>
+              <a href="https://restorativepartners.org/">
                 {' '}
                 <div className="relative overflow-hidden rounded-2xl pt-80 pb-10 shadow-xl">
                   <img
@@ -94,6 +94,7 @@ export function RestorativePartnersCallToAction() {
             <div className="pt-12 sm:pt-16 lg:pt-20">
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                 On a mission to Transform Lives Impacted by Crime through
+                Healing Services & Relationships
               </h2>
               <div className="mt-6 space-y-6 text-gray-500">
                 <p className="text-2xl">
@@ -114,7 +115,7 @@ export function RestorativePartnersCallToAction() {
                 <p className="text-2xl">
                   We envision a safer community where everyone belongs. We
                   strive to accomplish this through transforming lives impacted
-                  by crime through healing services and relationships.
+                  by crime through healing services and relationships. Tax ID 47-4825349
                 </p>
               </div>
             </div>

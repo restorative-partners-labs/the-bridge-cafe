@@ -60,7 +60,7 @@ export default function Home() {
         <title>The Bridge Cafe</title>
         <meta
           name="description"
-          content="The Bridge Cafe is a social enterprise cafe run by Restoraive Partners. We envision a safer community where everyone belongs and strive to accomplish this through transforming lives impacted by crime through healing services and relationships."
+          content="The Bridge Cafe is a social enterprise cafe run by Restorayive Partners. We envision a safer community where everyone belongs and strive to accomplish this through transforming lives impacted by crime through healing services and relationships."
         />
       </Head>
       <Header />

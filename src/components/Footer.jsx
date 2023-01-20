@@ -45,12 +45,12 @@ export function Footer() {
                   The Bridge Cafe
                 </Link>
               </p>
-              <p className="mt-1 text-sm text-gray-700">1074 Higuera St</p>
-              <p className="mt-1 text-sm text-gray-700">
+              <p className="mt-1 text-lg text-gray-700">1074 Higuera St</p>
+              <p className="mt-1 text-lg text-gray-700">
                 San Luis Obispo, CA 93401
               </p>
-              <p className="mt-1 text-sm text-gray-700">805-242-1272</p>
-              <p className="mt-1 text-sm text-gray-700">
+              <p className="mt-1 text-lg text-gray-700">805-439-1689</p>
+              <p className="mt-1 text-lg text-gray-700">
                 info@thebridgecafe.org
               </p>
             </div>
