@@ -36,11 +36,11 @@ export function Footer() {
           </div>
           <div
             id="contact"
-            className="group relative -mx-4 flex items-center self-stretch p-4 transition-colors hover:bg-gray-100 sm:self-auto sm:rounded-2xl lg:mx-0 lg:self-auto lg:p-6"
+            className="group relative -mx-4 items-center self-stretch p-4 transition-colors hover:bg-gray-100 lg:flex sm:flex-col sm:self-auto sm:rounded-2xl lg:mx-0 lg:flex-row lg:self-auto lg:p-6"
           >
-            <div className="ml-8 lg:w-64">
+            <div className="py-4 ml-8 lg:w-64">
               <p className="text-base font-semibold text-gray-900">
-                <Link href="#">
+                <Link href="">
                   <span className="absolute inset-0 sm:rounded-2xl" />
                   The Bridge Cafe
                 </Link>
@@ -54,8 +54,8 @@ export function Footer() {
                 info@thebridgecafe.org
               </p>
             </div>
-            <div className="ml-8 lg:w-64">
-              <p className="text-base font-semibold text-gray-900">
+            <div className="py-4 ml-8 lg:w-64">
+              <p className="text-lg font-semibold text-gray-900">
                 <Link href="#">
                   <span className="absolute inset-0 sm:rounded-2xl" />
                   Restorative Partners
@@ -84,7 +84,7 @@ export function Footer() {
             <span className="hidden lg:inline">
               <p classNames="text-2xl">Join our newsletter</p>
             </span>
-            <span className="lg:hidden text-2xl">Join newsletter</span>
+            <span className="text-2xl lg:hidden">Join newsletter</span>
           </Button>
           <p className="mt-6 text-sm text-gray-500 md:mt-0">
             &copy; Copyright {new Date().getFullYear()}. All rights reserved.

@@ -116,7 +116,7 @@ export function Header() {
                               <span className="text-2xl">Subscribe</span>
                             </Button>
                             <Button
-                              //href="https://restorativepartners.org/donate/"
+                              href="https://restorativepartners.org/donate/"
                               variant="outline"
                             >
                               <span className="text-2xl">Donate</span>
