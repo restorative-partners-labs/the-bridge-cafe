@@ -61,14 +61,14 @@ export function Footer() {
                   Restorative Partners
                 </Link>
               </p>
-              <p className="mt-1 text-sm text-gray-700">
+              <p className="mt-1 text-lg text-gray-700">
                 3196 S. Higuera St, Suite D
               </p>
-              <p className="mt-1 text-sm text-gray-700">
+              <p className="mt-1 text-lg text-gray-700">
                 San Luis Obispo, CA 93401
               </p>
-              <p className="mt-1 text-sm text-gray-700">805-242-1272</p>
-              <p className="mt-1 text-sm text-gray-700">
+              <p className="mt-1 text-lg text-gray-700">805-242-1272</p>
+              <p className="mt-1 text-lg text-gray-700">
                 info@restorativepartners.org
               </p>
             </div>
@@ -82,9 +82,9 @@ export function Footer() {
             className="ml-4 flex-none"
           >
             <span className="hidden lg:inline">
-              <p classNames="text-xl">Join our newsletter</p>
+              <p classNames="text-2xl">Join our newsletter</p>
             </span>
-            <span className="lg:hidden">Join newsletter</span>
+            <span className="lg:hidden text-2xl">Join newsletter</span>
           </Button>
           <p className="mt-6 text-sm text-gray-500 md:mt-0">
             &copy; Copyright {new Date().getFullYear()}. All rights reserved.
