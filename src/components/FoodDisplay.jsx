@@ -1,12 +1,15 @@
-import { Fragment, useState } from 'react'
-import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
-import {
-  Bars3Icon,
-  MagnifyingGlassIcon,
-  ShoppingBagIcon,
-  XMarkIcon,
-} from '@heroicons/react/24/outline'
 import { Button } from '@/components/Button'
+import Image from 'next/image'
+import biscuit from '../../public/images/food/bridge-cafe-biscuit-001.jpg'
+import burger from '../../public/images/food/bridge-cafe-burger-002.jpg'
+import chickenSalad from '../../public/images/food/bridge-cafe-chicken-salad-001.jpg'
+import chickenSandwich from '../../public/images/food/bridge-cafe-chicken-sandwich-001.jpg'
+import chickenWrap from '../../public/images/food/bridge-cafe-chicken-wrap-002.jpg'
+import chilaquilles from '../../public/images/food/bridge-cafe-chilaquiles-002.jpg'
+import crossiant from '../../public/images/food/bridge-cafe-croissant-002.jpg'
+import fries from '../../public/images/food/bridge-cafe-fried-001.jpg'
+import onionRings from '../../public/images/food/bridge-cafe-onion-rings-001.jpg'
+import quiche from '../../public/images/food/bridge-cafe-quiche-001.jpg'
 
 const favorites = [
   {
@@ -14,52 +17,48 @@ const favorites = [
     name: 'Black Basic Tee',
     price: '$32',
     href: '#',
-    imageSrc: '/images/food/bridge-cafe-biscuit-001.jpg',
-    imageAlt: "Model wearing women's black cotton crewneck tee.",
+    imageSrc: biscuit,
+    imageAlt: 'Bridge Cafe Biscuit',
   },
   {
     id: 2,
     name: 'Off-White Basic Tee',
     price: '$32',
     href: '#',
-    imageSrc: '/images/food/bridge-cafe-burger-002.jpg',
-    imageAlt: "Model wearing women's off-white cotton crewneck tee.",
+    imageSrc: burger,
+    imageAlt: 'Bridge Cafe Burger',
   },
   {
     id: 3,
     name: 'Mountains Artwork Tee',
     price: '$36',
     href: '#',
-    imageSrc: '/images/food/bridge-cafe-chicken-salad-001.jpg',
-    imageAlt:
-      "Model wearing women's burgundy red crewneck artwork tee with small white triangle overlapping larger black triangle.",
+    imageSrc: chickenSalad,
+    imageAlt: 'Bridge Cafe Chicken Salad',
   },
   {
     id: 4,
     name: 'Mountains Artwork Tee',
     price: '$36',
     href: '#',
-    imageSrc: '/images/food/bridge-cafe-chicken-salad-001.jpg',
-    imageAlt:
-      "Model wearing women's burgundy red crewneck artwork tee with small white triangle overlapping larger black triangle.",
+    imageSrc: chickenSalad,
+    imageAlt: 'Bridge Cafe Chicken Salad',
   },
   {
     id: 5,
     name: 'Mountains Artwork Tee',
     price: '$36',
     href: '#',
-    imageSrc: '/images/food/bridge-cafe-chicken-sandwich-001.jpg',
-    imageAlt:
-      "Model wearing women's burgundy red crewneck artwork tee with small white triangle overlapping larger black triangle.",
+    imageSrc: chickenSandwich,
+    imageAlt: 'Bridge Cafe Chicken Sandwich',
   },
   {
     id: 6,
     name: 'Mountains Artwork Tee',
     price: '$36',
     href: '#',
-    imageSrc: '/images/food/bridge-cafe-chicken-wrap-002.jpg',
-    imageAlt:
-      "Model wearing women's burgundy red crewneck artwork tee with small white triangle overlapping larger black triangle.",
+    imageSrc: chickenWrap,
+    imageAlt: 'Bridge Cafe Chicken Wrap',
   },
 
   {
@@ -67,47 +66,41 @@ const favorites = [
     name: 'Mountains Artwork Tee',
     price: '$36',
     href: '#',
-    imageSrc: '/images/food/bridge-cafe-chilaquiles-002.jpg',
-    imageAlt:
-      "Model wearing women's burgundy red crewneck artwork tee with small white triangle overlapping larger black triangle.",
+    imageSrc: chilaquilles,
+    imageAlt: 'Bridge Cafe Chilaquiles',
   },
   {
     id: 8,
     name: 'Mountains Artwork Tee',
     price: '$36',
     href: '#',
-    imageSrc: '/images/food/bridge-cafe-croissant-002.jpg',
-    imageAlt:
-      "Model wearing women's burgundy red crewneck artwork tee with small white triangle overlapping larger black triangle.",
+    imageSrc: crossiant,
+    imageAlt: 'Bridge Cafe Crossiant',
   },
   {
     id: 9,
     name: 'Mountains Artwork Tee',
     price: '$36',
     href: '#',
-    imageSrc: '/images/food/bridge-cafe-fried-001.jpg',
-    imageAlt:
-      "Model wearing women's burgundy red crewneck artwork tee with small white triangle overlapping larger black triangle.",
+    imageSrc: fries,
+    imageAlt: 'Bridge Cafe Fries',
   },
   {
     id: 10,
     name: 'Mountains Artwork Tee',
     price: '$36',
     href: '#',
-    imageSrc: '/images/food/bridge-cafe-onion-rings-001.jpg',
-    imageAlt:
-      "Model wearing women's burgundy red crewneck artwork tee with small white triangle overlapping larger black triangle.",
+    imageSrc: onionRings,
+    imageAlt: 'Bridge Cafe Onion Rings',
   },
   {
     id: 11,
     name: 'Mountains Artwork Tee',
     price: '$36',
     href: '#',
-    imageSrc: '/images/food/bridge-cafe-quiche-001.jpg',
-    imageAlt:
-      "Model wearing women's burgundy red crewneck artwork tee with small white triangle overlapping larger black triangle.",
+    imageSrc: quiche,
+    imageAlt: 'Bridge Cafe Quiche',
   },
-  //bridge-cafe-chilaquiles-002
 ]
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -141,7 +134,7 @@ export function FoodDisplay() {
               {favorites.map((favorite) => (
                 <div key={favorite.id} className="group relative py-6 sm:py-2">
                   <div className="sm:aspect-w-2 sm:aspect-h-3 h-96 w-full overflow-hidden rounded-lg group-hover:opacity-75 sm:h-auto">
-                    <img
+                    <Image
                       src={favorite.imageSrc}
                       alt={favorite.imageAlt}
                       className="h-full w-full object-cover object-center"
