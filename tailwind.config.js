@@ -2,9 +2,11 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{js,jsx}'],
+  content: [
+    './src/**/*.{js,jsx}',
+    './node_modules/tw-elements/dist/js/**/*.js',
+  ],
   theme: {
-   
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
       sm: ['0.875rem', { lineHeight: '1.5rem' }],
@@ -36,10 +38,10 @@ module.exports = {
       },
       colors: ({ colors }) => ({
         gray: colors.neutral,
-        'bridge': '#04706D',
+        bridge: '#04706D',
       }),
       fontFamily: {
-        sans: ['Gill-Sans','Inter', ...defaultTheme.fontFamily.sans],
+        sans: ['Gill-Sans', 'Inter', ...defaultTheme.fontFamily.sans],
       },
       keyframes: {
         'fade-in': {
@@ -66,5 +68,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [require('@tailwindcss/forms'), require('tw-elements/dist/plugin')],
 }

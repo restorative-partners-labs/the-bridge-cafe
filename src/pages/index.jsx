@@ -1,9 +1,11 @@
 import Head from 'next/head'
-
+import dynamic from 'next/dynamic'
+const {} = dynamic(import('tw-elements'), { ssr: false })
 import { CallToAction } from '@/components/CallToAction'
 import { RestorativePartnersCallToAction } from '@/components/RestorativePartnersCallToAction'
 import { ImagesDisplay } from '@/components/ImagesDisplay'
 import { FoodDisplay } from '@/components/FoodDisplay'
+import { Slider } from '@/components/Slider'
 import { Faqs } from '@/components/Faqs'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
@@ -68,10 +70,11 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <Slider />
         <PrimaryFeatures />
         {/* <SecondaryFeatures /> */}
         <RestorativePartnersCallToAction />
-        <FoodDisplay/>
+        <FoodDisplay />
         <CallToAction />
         {/* <Reviews />
         <Pricing />

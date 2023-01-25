@@ -30,6 +30,7 @@
     "react-awesome-slider": "^4.1.0",
     "react-dom": "18.2.0",
     "react-social-icons": "^5.15.0",
+    "tw-elements": "^1.0.0-alpha13",
     "use-debounce": "^8.0.4"
   },
   "devDependencies": {

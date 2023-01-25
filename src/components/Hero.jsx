@@ -20,6 +20,13 @@ import { SocialIcon } from 'react-social-icons'
 
 import { Dialog, Transition } from '@headlessui/react'
 import { CheckIcon, GiftIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import foodPrepColumn from '../../public/images/prep/02 Food Prep - Scrub.00_06_55_13.Still010.jpg'
+import foodPrepSalad from '../../public/images/prep/02 Food Prep - Scrub.00_13_25_21.Still024.jpg'
+import grandOpening from '../../public/images/grand-opening/county/01 County Preview - Scrub.00_08_12_22.Still015.jpg'
+import signage from '../../public/images/grand-opening/county/01 County Preview - Scrub.00_22_20_16.Still024.jpg'
+import celebration from '../../public/images/grand-opening/county/01 County Preview - Scrub.00_06_12_02.Still012.jpg'
+import crossiant from '../../public/images/food/bridge-cafe-croissant-001.jpg'
+import burger from '../../public/images/food/bridge-cafe-burger-001.jpg'
 
 function BackgroundIllustration(props) {
   let id = useId()
@@ -374,7 +381,7 @@ export function Hero() {
   const cancelButtonRef = useRef(null)
 
   return (
-    <div className="overflow-hidden py-20 sm:py-32 lg:pb-32 xl:pb-36">
+    <div className="overflow-hidden py-40 sm:py-32 lg:pb-32 xl:pb-36">
       <Container>
         <Transition.Root show={open} as={Fragment}>
           <Dialog
@@ -479,7 +486,7 @@ export function Hero() {
             </div>
           </Dialog>
         </Transition.Root>
-        <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
+        <div className="pb-40 lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
           <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
             <h1 className="text-4xl font-medium tracking-tight text-gray-900">
               Meals with a Mission.
@@ -487,10 +494,10 @@ export function Hero() {
             <p className="mt-6 text-2xl text-gray-600">
               The Bridge Cafe is the Central Coast&#39;s first social enterprise
               restaurant brought to you by Restorative Partners. We envision a
-              safer community where everyone belongs, and we strive to accomplish
-              this by transforming lives impacted by crime through healing
-              services and relationships. Join our mailing list below to stay up
-              to date!
+              safer community where everyone belongs, and we strive to
+              accomplish this by transforming lives impacted by crime through
+              healing services and relationships. Join our mailing list below to
+              stay up to date!
             </p>
             <div className="mt-8 flex flex-col flex-wrap items-center gap-x-4 gap-y-4 sm:flex-row">
               <Button
@@ -588,8 +595,68 @@ export function Hero() {
           </div>
           <div className="relative mt-10 sm:mt-20 lg:col-span-5 lg:row-span-2 lg:mt-0 xl:col-span-6">
             <BackgroundIllustration className="absolute left-1/2 top-4 h-[1026px] w-[1026px] -translate-x-1/3 stroke-gray-300/70 [mask-image:linear-gradient(to_bottom,white_20%,transparent_75%)] sm:top-16 sm:-translate-x-1/2 lg:-top-16 lg:ml-12 xl:-top-14 xl:ml-0" />
-            <img loading="lazy" src="/360-muffin.png" alt="logo" />
-            <div className="-mx-4 h-[448px] px-9 [mask-image:linear-gradient(to_bottom,white_60%,transparent)] sm:mx-0 lg:absolute lg:-inset-x-10 lg:-top-10 lg:-bottom-20 lg:h-auto lg:px-0 lg:pt-10 xl:-bottom-32"></div>
+            <div className="absolute -top-32 hidden -translate-x-1/2 transform sm:top-6 sm:translate-x-0 lg:block">
+              <div className="ml-24 flex min-w-max space-x-6 sm:ml-3 lg:space-x-8">
+                <div className="flex space-x-6 sm:flex-col sm:space-x-0 sm:space-y-6 lg:space-y-8">
+                  <div className="flex-shrink-0">
+                    <Image
+                      className="h-64 w-64 rounded-lg object-cover md:h-72 md:w-72"
+                      src={grandOpening}
+                      alt=""
+                    />
+                  </div>
+
+                  <div className="mt-6 flex-shrink-0 sm:mt-0">
+                    <Image
+                      className="h-64 w-64 rounded-lg object-cover md:h-72 md:w-72"
+                      src={foodPrepColumn}
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div className="flex space-x-6 sm:-mt-20 sm:flex-col sm:space-x-0 sm:space-y-6 lg:space-y-8">
+                  <div className="flex-shrink-0">
+                    <Image
+                      className="h-64 w-64 rounded-lg object-cover md:h-72 md:w-72"
+                      src={foodPrepSalad}
+                      alt=""
+                    />
+                  </div>
+
+                  <div className="mt-6 flex-shrink-0 sm:mt-0">
+                    <Image
+                      className="h-64 w-64 rounded-lg object-cover md:h-72 md:w-72"
+                      src={signage}
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div className="flex space-x-6 sm:flex-col sm:space-x-0 sm:space-y-6 lg:space-y-8">
+                  <div className="flex-shrink-0">
+                    <Image
+                      className="h-64 w-64 rounded-lg object-cover md:h-72 md:w-72"
+                      src={crossiant}
+                      alt=""
+                    />
+                  </div>
+
+                  <div className="mt-6 flex-shrink-0 sm:mt-0">
+                    <Image
+                      className="h-64 w-64 rounded-lg object-cover md:h-72 md:w-72"
+                      src={burger}
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img
+              className="lg:hidden"
+              loading="lazy"
+              src="/360-muffin.png"
+              alt="logo"
+            />
+            {/* <div className="-mx-4 h-[448px] px-9 [mask-image:linear-gradient(to_bottom,white_60%,transparent)] sm:mx-0 lg:absolute lg:-inset-x-10 lg:-top-10 lg:-bottom-20 lg:h-auto lg:px-0 lg:pt-10 xl:-bottom-32"></div> */}
           </div>
           {/* <div className="relative -mt-4 lg:col-span-7 lg:mt-0 xl:col-span-6">
             <p className="text-center text-sm font-semibold text-gray-900 lg:text-left">
