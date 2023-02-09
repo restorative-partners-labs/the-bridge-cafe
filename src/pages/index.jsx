@@ -1,23 +1,14 @@
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
 const {} = dynamic(import('tw-elements'), { ssr: false })
-import { CallToAction } from '@/components/CallToAction'
 import { RestorativePartnersCallToAction } from '@/components/RestorativePartnersCallToAction'
-import { ImagesDisplay } from '@/components/ImagesDisplay'
 import { FoodDisplay } from '@/components/FoodDisplay'
 import { Slider } from '@/components/Slider'
-import { Faqs } from '@/components/Faqs'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
-import { Pricing } from '@/components/Pricing'
 import { PrimaryFeatures } from '@/components/PrimaryFeatures'
-import { Reviews } from '@/components/Reviews'
-import { SecondaryFeatures } from '@/components/SecondaryFeatures'
-import { createClient } from '../../prismicio'
-import { Fragment, useState } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
-import { XMarkIcon } from '@heroicons/react/24/outline'
+import { useState } from 'react'
 
 const products = [
   {
@@ -73,9 +64,8 @@ export default function Home() {
         <Slider />
         <PrimaryFeatures />
         {/* <SecondaryFeatures /> */}
-        <RestorativePartnersCallToAction />
         <FoodDisplay />
-        <CallToAction />
+        <RestorativePartnersCallToAction />
         {/* <Reviews />
         <Pricing />
         <Faqs /> */}
