@@ -21,7 +21,7 @@ export function Banner() {
                 Now Open! 7AM - 3PM Mon-Fri
               </span>
               <span className="hidden md:inline">
-                Big news! We`&apos;`re now open! Come visit us 7 AM to 3 PM Monday thru
+                Big news! We&apos;re open! Come visit us 7 AM to 3 PM Monday thru
                 Friday
               </span>
             </p>
