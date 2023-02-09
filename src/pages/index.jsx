@@ -8,6 +8,7 @@ import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
 import { PrimaryFeatures } from '@/components/PrimaryFeatures'
+import { Banner } from '@/components/Banner'
 import { useState } from 'react'
 
 const products = [
@@ -58,6 +59,7 @@ export default function Home() {
           content="The Bridge Cafe is a social enterprise cafe run by Restorayive Partners. We envision a safer community where everyone belongs and strive to accomplish this through transforming lives impacted by crime through healing services and relationships."
         />
       </Head>
+      <Banner />
       <Header />
       <main>
         <Hero />
