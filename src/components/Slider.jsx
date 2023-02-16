@@ -4,6 +4,17 @@ import mealPrep from '../../public/images/prep/02 Food Prep - Scrub.00_04_25_07.
 import grandOpening from '../../public/images/grand-opening/county/01 County Preview - Scrub.00_08_12_22.Still015.jpg'
 
 import celebration from '../../public/images/grand-opening/county/01 County Preview - Scrub.00_06_12_02.Still012.jpg'
+import grandopening1 from '../../public/images/grand-opening/ceremony/bridge-cafe-grand-opening-002'
+import grandopening2 from '../../public/images/grand-opening/ceremony/bridge-cafe-grand-opening-006'
+import grandopening3 from '../../public/images/grand-opening/ceremony/bridge-cafe-grand-opening-045'
+import grandopening4 from '../../public/images/grand-opening/ceremony/bridge-cafe-grand-opening-058'
+import grandopening5 from '../../public/images/grand-opening/ceremony/bridge-cafe-grand-opening-063'
+import grandopening6 from '../../public/images/grand-opening/ceremony/bridge-cafe-grand-opening-064'
+import grandopening7 from '../../public/images/grand-opening/ceremony/bridge-cafe-grand-opening-065'
+import grandopening8 from '../../public/images/grand-opening/ceremony/bridge-cafe-grand-opening-066'
+import grandopening9 from '../../public/images/grand-opening/ceremony/bridge-cafe-grand-opening-067'
+import grandopening10 from '../../public/images/grand-opening/ceremony/bridge-cafe-grand-opening-121'
+
 
 import 'tw-elements'
 
@@ -27,6 +38,18 @@ export function Slider() {
       data-bs-ride="carousel"
     >
       <div class="carousel-inner relative w-full overflow-hidden">
+        <div class="carousel-item relative float-left w-full">
+          <Image src={grandopening3} class="block w-full" alt="Wild Landscape" />
+        </div>
+        <div class="carousel-item relative float-left w-full">
+          <Image src={grandopening4} class="block w-full" alt="Wild Landscape" />
+        </div>
+        <div class="carousel-item relative float-left w-full">
+          <Image src={grandopening5} class="block w-full" alt="Wild Landscape" />
+        </div>
+        <div class="carousel-item relative float-left w-full">
+          <Image src={grandopening6} class="block w-full" alt="Wild Landscape" />
+        </div>
         <div class="carousel-item active relative float-left w-full">
           <Image src={mealPrep} class="block w-full" alt="Wild Landscape" />
         </div>
@@ -35,6 +58,24 @@ export function Slider() {
         </div>
         <div class="carousel-item relative float-left w-full">
           <Image src={celebration} class="block w-full" alt="Wild Landscape" />
+        </div>
+        <div class="carousel-item relative float-left w-full">
+          <Image src={grandopening1} class="block w-full" alt="Wild Landscape" />
+        </div>
+        <div class="carousel-item relative float-left w-full">
+          <Image src={grandopening2} class="block w-full" alt="Wild Landscape" />
+        </div>
+        <div class="carousel-item relative float-left w-full">
+          <Image src={grandopening7} class="block w-full" alt="Wild Landscape" />
+        </div>
+        <div class="carousel-item relative float-left w-full">
+          <Image src={grandopening8} class="block w-full" alt="Wild Landscape" />
+        </div>
+        <div class="carousel-item relative float-left w-full">
+          <Image src={grandopening9} class="block w-full" alt="Wild Landscape" />
+        </div>
+        <div class="carousel-item relative float-left w-full">
+          <Image src={grandopening10} class="block w-full" alt="Wild Landscape" />
         </div>
       </div>
       <button
