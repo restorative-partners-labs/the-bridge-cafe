@@ -1,10 +1,12 @@
 import { useState } from 'react'
-import { RadioGroup } from '@headlessui/react'
-import clsx from 'clsx'
-
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
-import { Logomark } from '@/components/Logo'
+import { Tab } from '@headlessui/react'
+import Image from 'next/image'
+import rpStaff from '../../public/images/restorative-partners/admin-staff.jpg'
+import annasHomeOpening from '../../public/images/restorative-partners/annas-home-opening.jpg'
+import graduation from '../../public/images/restorative-partners/graduation.jpg'
+import prayerCircle from '../../public/images/restorative-partners/prayer-circle.jpg'
+import trustCircle from '../../public/images/restorative-partners/trust-circle.jpg'
+import womensGroup from '../../public/images/restorative-partners/womens-group.jpg'
 
 export function RestorativePartnersCallToAction() {
   let [activePeriod, setActivePeriod] = useState('Monthly')
@@ -15,6 +17,85 @@ export function RestorativePartnersCallToAction() {
     { label: 'Lives Changed', value: '1000' },
     { label: 'Jobs Landed', value: '300+' },
   ]
+  function classNames(...classes) {
+    return classes.filter(Boolean).join(' ')
+  }
+
+  const product = {
+    name: 'Zip Tote Basket',
+    price: '$140',
+    rating: 4,
+    images: [
+      {
+        id: 1,
+        name: 'Angled view',
+        src: trustCircle,
+        alt: 'Angled front view with bag zipped and handles upright.',
+      },
+      {
+        id: 1,
+        name: 'Angled view',
+        src: rpStaff,
+        alt: 'Angled front view with bag zipped and handles upright.',
+      },
+      {
+        id: 1,
+        name: 'Angled view',
+        src: prayerCircle,
+        alt: 'Angled front view with bag zipped and handles upright.',
+      },
+      {
+        id: 1,
+        name: 'Angled view',
+        src: graduation,
+        alt: 'Angled front view with bag zipped and handles upright.',
+      },
+      {
+        id: 1,
+        name: 'Angled view',
+        src: annasHomeOpening,
+        alt: 'Angled front view with bag zipped and handles upright.',
+      },
+      {
+        id: 1,
+        name: 'Angled view',
+        src: annasHomeOpening,
+        alt: 'Angled front view with bag zipped and handles upright.',
+      },
+      // More images...
+    ],
+    colors: [
+      {
+        name: 'Washed Black',
+        bgColor: 'bg-gray-700',
+        selectedColor: 'ring-gray-700',
+      },
+      { name: 'White', bgColor: 'bg-white', selectedColor: 'ring-gray-400' },
+      {
+        name: 'Washed Gray',
+        bgColor: 'bg-gray-500',
+        selectedColor: 'ring-gray-500',
+      },
+    ],
+    description: `
+      <p>The Zip Tote Basket is the perfect midpoint between shopping tote and comfy backpack. With convertible straps, you can hand carry, should sling, or backpack this convenient and spacious bag. The zip top and durable canvas construction keeps your goods protected for all-day use.</p>
+    `,
+    details: [
+      {
+        name: 'Features',
+        items: [
+          'Multiple strap configurations',
+          'Spacious interior with top zip',
+          'Leather handle and tabs',
+          'Interior dividers',
+          'Stainless strap loops',
+          'Double stitched construction',
+          'Water-resistant',
+        ],
+      },
+      // More sections...
+    ],
+  }
 
   return (
     <section
@@ -86,6 +167,53 @@ export function RestorativePartnersCallToAction() {
                   </div>
                 </div>
               </a>
+              <Tab.Group as="div" className="py-8 flex flex-col-reverse">
+                {/* Image selector */}
+                <div className="mx-auto mt-6 hidden w-full max-w-2xl sm:block lg:max-w-none">
+                  <Tab.List className="grid grid-cols-4 gap-6">
+                    {product.images.map((image) => (
+                      <Tab
+                        key={image.id}
+                        className="relative flex h-24 cursor-pointer items-center justify-center rounded-md bg-white text-sm font-medium uppercase text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring focus:ring-opacity-50 focus:ring-offset-4"
+                      >
+                        {({ selected }) => (
+                          <>
+                            <span className="sr-only"> {image.name} </span>
+                            <span className="absolute inset-0 overflow-hidden rounded-md">
+                              <Image
+                                src={image.src}
+                                alt=""
+                                className="h-full w-full object-cover object-center"
+                              />
+                            </span>
+                            <span
+                              className={classNames(
+                                selected
+                                  ? 'ring-bridge'
+                                  : 'ring-transparent',
+                                'pointer-events-none absolute inset-0 rounded-md ring-2 ring-offset-2'
+                              )}
+                              aria-hidden="true"
+                            />
+                          </>
+                        )}
+                      </Tab>
+                    ))}
+                  </Tab.List>
+                </div>
+
+                <Tab.Panels className="aspect-w-1 aspect-h-1 w-full">
+                  {product.images.map((image) => (
+                    <Tab.Panel key={image.id}>
+                      <Image
+                        src={image.src}
+                        alt={image.alt}
+                        className="h-full w-full object-cover object-center sm:rounded-lg"
+                      />
+                    </Tab.Panel>
+                  ))}
+                </Tab.Panels>
+              </Tab.Group>
             </div>
           </div>
 
@@ -115,7 +243,8 @@ export function RestorativePartnersCallToAction() {
                 <p className="text-2xl">
                   We envision a safer community where everyone belongs. We
                   strive to accomplish this through transforming lives impacted
-                  by crime through healing services and relationships. Tax ID 47-4825349
+                  by crime through healing services and relationships. Tax ID
+                  47-4825349
                 </p>
               </div>
             </div>
