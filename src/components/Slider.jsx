@@ -13,7 +13,8 @@ import grandopening7 from '../../public/images/grand-opening/ceremony/bridge-caf
 import grandopening8 from '../../public/images/grand-opening/ceremony/bridge-cafe-grand-opening-066.jpg'
 import grandopening9 from '../../public/images/grand-opening/ceremony/bridge-cafe-grand-opening-067.jpg'
 import grandopening10 from '../../public/images/grand-opening/ceremony/bridge-cafe-grand-opening-121.jpg'
-
+//C:\Users\accou\Desktop\ts-repos\the-bridge-cafe\public\images\grand-opening\ceremony\bridge-cafe-grand-opening-002.jpg
+//public\images\grand-opening\ceremony\bridge-cafe-grand-opening-064.jpg
 
 import 'tw-elements'
 
