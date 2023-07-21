@@ -43,9 +43,9 @@ export function Slider() {
         <div class="carousel-item relative float-left w-full">
           <Image src={grandopening4} class="block w-full" alt="Wild Landscape" />
         </div>
-        <div class="carousel-item relative float-left w-full">
+        {/* <div class="carousel-item relative float-left w-full">
           <Image src={grandopening5} class="block w-full" alt="Wild Landscape" />
-        </div>
+        </div> */}
         <div class="carousel-item relative float-left w-full">
           <Image src={grandopening6} class="block w-full" alt="Wild Landscape" />
         </div>

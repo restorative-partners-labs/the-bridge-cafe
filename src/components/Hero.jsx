@@ -488,7 +488,7 @@ export function Hero() {
         </Transition.Root>
         <div className="pb-40 lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
           <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
-            <h1 className="text-6xl font-medium pb-8 tracking-tight text-gray-900">
+            <h1 className="pb-8 text-6xl font-medium tracking-tight text-gray-900">
               Now Open!
             </h1>
             <h1 className="text-4xl font-medium tracking-tight text-gray-900">
@@ -499,18 +499,19 @@ export function Hero() {
               restaurant brought to you by Restorative Partners. We envision a
               safer community where everyone belongs, and we strive to
               accomplish this by transforming lives impacted by crime through
-              healing services and relationships. Join our mailing list below to
-              stay up to date!
+              healing services and relationships.
+            </p>
+            <p className="mt-6 text-2xl text-gray-600">
+              We could use your help via a donation to our General Fund or
+              through purchasing needed supplies for our new catering services
+              through our Amazon Registry.
             </p>
             <div className="mt-8 flex flex-col flex-wrap items-center gap-x-4 gap-y-4 sm:flex-row">
               <Button
-                //href="https://restorativepartners.org/donate/"
+                href="https://restorativepartners.org/donate/"
                 variant="outline"
                 color="theme"
-                className="w-56"
-                onClick={() => {
-                  setOpen(true)
-                }}
+                className="w-56 bg-white"
               >
                 <MoneyIcon className="h-6 w-6 flex-none" />
                 <span className="ml-2.5">
@@ -518,14 +519,14 @@ export function Hero() {
                 </span>
               </Button>
               <Button
-                href="https://restorativepartnersinc.salsalabs.org/TheBridgeCafeNewsletter/index.html"
+                href="https://www.amazon.com/registries/custom/3R36VQR64GJ03/guest-view?pldnSite=1"
                 variant="outline"
                 color="theme"
-                className="w-56"
+                className="w-56 bg-white"
               >
-                <PlayIcon className="h-6 w-6 flex-none" />
+                <MoneyIcon className="h-6 w-6 flex-none" />
                 <span className="ml-2.5">
-                  <p className="text-xl">Join Mailing List</p>
+                  <p className="text-xl">Amazon Registry</p>
                 </span>
               </Button>
 
