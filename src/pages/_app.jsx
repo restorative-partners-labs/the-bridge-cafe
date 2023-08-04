@@ -1,4 +1,5 @@
-import '@/styles/tailwind.css'
+import '../styles/tailwind.css'
+import '../styles/overrides.modules.css'
 import 'focus-visible'
 import Link from 'next/link'
 import { PrismicProvider } from '@prismicio/react'

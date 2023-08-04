@@ -9,7 +9,7 @@ import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
 import { PrimaryFeatures } from '@/components/PrimaryFeatures'
 import { Banner } from '@/components/Banner'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import PDFViewer from '../components/PDFViewer'
 
 const products = [
@@ -51,6 +51,17 @@ const products = [
 
 export default function Home() {
   const [open, setOpen] = useState(true)
+  useEffect(() => {
+    const script = document.createElement('script')
+    script.src = 'https://w.behold.so/widget.js'
+    script.async = true
+    script.type = 'MODULE'
+    document.body.appendChild(script)
+
+    return () => {
+      document.body.removeChild(script)
+    }
+  }, [])
   return (
     <>
       <Head>
@@ -73,7 +84,11 @@ export default function Home() {
         {/* <Reviews />
         <Pricing />
         <Faqs /> */}
+
+        <figure data-behold-id="ufAMDKItfpizCThMoE9k"></figure>
+
       </main>
+
       <Footer />
     </>
   )

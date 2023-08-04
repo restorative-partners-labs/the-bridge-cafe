@@ -30,3 +30,11 @@
 #__next {
   min-height: 100%;
 }
+
+.HoverCard {
+  display: none !important;
+}
+
+.Header {
+  display: none !important;
+}

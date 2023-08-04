@@ -478,7 +478,7 @@ export function Hero() {
         </Transition.Root>
         <div className="pb-40 lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
           <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
-            <h1 className="pb-8 text-6xl font-medium tracking-tight text-gray-900">
+            <h1 className="text-6xl font-medium pb-8 tracking-tight text-gray-900">
               Now Open!
             </h1>
             <h1 className="text-4xl font-medium tracking-tight text-gray-900">
@@ -491,17 +491,6 @@ export function Hero() {
               accomplish this by transforming lives impacted by crime through
               healing services and relationships. Join our mailing list below to
               stay up to date!
-            </p>
-            <p className="mt-6 text-2xl text-gray-600">
-              Transform the lives of those impacted by crime today! Your
-              donation will help us provide jobs for those who need and want to
-              change their behavior, heal from their trauma and acquire new
-              skills, accountability and compassion.
-            </p>
-            <p className="mt-6 text-2xl text-gray-600">
-              We could use your help via a donation to our General Fund or
-              through purchasing needed supplies through our Amazon Registry
-              below.
             </p>
             <div className="mt-8 flex flex-col flex-wrap items-center gap-x-4 gap-y-4 sm:flex-row">
               <Button
@@ -519,7 +508,7 @@ export function Hero() {
                 href="https://www.amazon.com/registries/gl/guest-view/3R36VQR64GJ03"
                 variant="outline"
                 color="theme"
-                className="w-56"
+                className="w-56 bg-white"
               >
                 <div className="h-6 w-6 flex-none">
                   <PlayIcon />
