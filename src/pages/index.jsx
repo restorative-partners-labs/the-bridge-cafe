@@ -50,18 +50,6 @@ const products = [
 // }
 
 export default function Home() {
-  const [open, setOpen] = useState(true)
-  useEffect(() => {
-    const script = document.createElement('script')
-    script.src = 'https://w.behold.so/widget.js'
-    script.async = true
-    script.type = 'MODULE'
-    document.body.appendChild(script)
-
-    return () => {
-      document.body.removeChild(script)
-    }
-  }, [])
   return (
     <>
       <Head>
