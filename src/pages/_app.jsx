@@ -6,6 +6,7 @@ import { PrismicProvider } from '@prismicio/react'
 import { PrismicPreview } from '@prismicio/next'
 import { repositoryName } from '../../prismicio'
 import { GoogleAnalytics, event } from 'nextjs-google-analytics'
+import { useEffect } from 'react'
 
 export function reportWebVitals({ id, name, label, value }) {
   event(name, {
@@ -17,6 +18,12 @@ export function reportWebVitals({ id, name, label, value }) {
 }
 
 export default function App({ Component, pageProps }) {
+  useEffect(() => {
+    const use = async () => {
+      ;(await import('tw-elements')).default
+    }
+    use()
+  }, [])
   return (
     <PrismicProvider internalLinkComponent={Link}>
       <PrismicPreview repositoryName={repositoryName}>
