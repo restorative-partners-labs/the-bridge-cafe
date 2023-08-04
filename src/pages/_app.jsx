@@ -7,6 +7,8 @@ import { PrismicPreview } from '@prismicio/next'
 import { repositoryName } from '../../prismicio'
 import { GoogleAnalytics, event } from 'nextjs-google-analytics'
 import { useEffect } from 'react'
+import dynamic from 'next/dynamic'
+const {} = dynamic(import('tw-elements'), { ssr: false })
 
 export function reportWebVitals({ id, name, label, value }) {
   event(name, {
