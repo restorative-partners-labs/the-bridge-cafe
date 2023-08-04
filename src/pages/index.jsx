@@ -1,14 +1,13 @@
 import Head from 'next/head'
 import { RestorativePartnersCallToAction } from '@/components/RestorativePartnersCallToAction'
 import { FoodDisplay } from '@/components/FoodDisplay'
-import { Slider } from '@/components/Slider'
+//import { Slider } from '@/components/Slider'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
 import { PrimaryFeatures } from '@/components/PrimaryFeatures'
 import { Banner } from '@/components/Banner'
-import { useState, useEffect } from 'react'
-import PDFViewer from '../components/PDFViewer'
+
 
 const products = [
   {
@@ -61,7 +60,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <Slider />
+        {/* <Slider /> */}
 
         <PrimaryFeatures />
         {/* <SecondaryFeatures /> */}
