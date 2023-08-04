@@ -1,11 +1,17 @@
 import Link from 'next/link'
-import { Popover } from '@headlessui/react'
+import { Popover, Transition } from '@headlessui/react'
 import { AnimatePresence, motion } from 'framer-motion'
+import { Fragment } from 'react'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLinks } from '@/components/NavLinks'
+import {
+  UserGroupIcon,
+  BuildingStorefrontIcon,
+  BellAlertIcon,
+} from '@heroicons/react/24/outline'
 
 function MenuIcon(props) {
   return (
@@ -44,6 +50,27 @@ function MobileNavLink({ children, ...props }) {
     </Popover.Button>
   )
 }
+
+const solutions = [
+  {
+    name: 'Cafe Menu',
+    description: 'Take a look at our menu items',
+    href: '/menu.png',
+    icon: BuildingStorefrontIcon,
+  },
+  {
+    name: 'Catering Menu',
+    description: 'Learn more about our catering services',
+    href: '/catering-menu.pdf',
+    icon: UserGroupIcon,
+  },
+  {
+    name: 'Specials Menu',
+    description: 'Checkout our daily specials menu',
+    href: '#',
+    icon: BellAlertIcon,
+  },
+]
 
 export function Header() {
   return (
@@ -109,11 +136,8 @@ export function Header() {
                           </div>
 
                           <div className="mt-8 flex flex-col gap-4">
-                            <Button
-                              href="https://restorativepartnersinc.salsalabs.org/TheBridgeCafeNewsletter/index.html"
-                              variant="outline"
-                            >
-                              <span className="text-2xl">Subscribe</span>
+                            <Button href="/catering-menu" variant="outline">
+                              <span className="text-2xl">Catering</span>
                             </Button>
                             <Button
                               href="https://restorativepartners.org/donate/"
@@ -159,14 +183,59 @@ export function Header() {
             >
               Restorative Partners
             </Button>
-            <Button
-              href="/menu.png"
-              variant="outline"
-              color="theme"
-              className="hidden w-32 text-center text-xl lg:block"
-            >
-              View Menu
-            </Button>
+
+            <Popover className="relative">
+              <Popover.Button className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
+                <Button
+                  variant="outline"
+                  color="theme"
+                  className="hidden w-32 text-center text-xl lg:block"
+                >
+                  View Menu
+                </Button>
+              </Popover.Button>
+
+              <Transition
+                as={Fragment}
+                enter="transition ease-out duration-200"
+                enterFrom="opacity-0 translate-y-1"
+                enterTo="opacity-100 translate-y-0"
+                leave="transition ease-in duration-150"
+                leaveFrom="opacity-100 translate-y-0"
+                leaveTo="opacity-0 translate-y-1"
+              >
+                <Popover.Panel className="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
+                  <div className="w-screen max-w-sm flex-auto rounded-3xl bg-white p-4 text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
+                    {solutions.map((item) => (
+                      <div
+                        key={item.name}
+                        className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50"
+                      >
+                        <div className="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                          <item.icon
+                            className="h-6 w-6 text-gray-600 group-hover:bridge"
+                            aria-hidden="true"
+                            color="theme"
+                          />
+                        </div>
+                        <div>
+                          <a
+                            href={item.href}
+                            className="font-semibold text-gray-900"
+                          >
+                            {item.name}
+                            <span className="absolute inset-0" />
+                          </a>
+                          <p className="mt-1 text-gray-600">
+                            {item.description}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </Popover.Panel>
+              </Transition>
+            </Popover>
             <Button
               href="https://order.spoton.com/so-the-bridge-cafe-10987/san-luis-obispo-ca/63338b3bf3ebec0040438b39"
               className="hidden w-40 text-center text-xl lg:block"

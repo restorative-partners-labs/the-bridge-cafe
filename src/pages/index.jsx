@@ -10,6 +10,7 @@ import { Hero } from '@/components/Hero'
 import { PrimaryFeatures } from '@/components/PrimaryFeatures'
 import { Banner } from '@/components/Banner'
 import { useState } from 'react'
+import PDFViewer from '../components/PDFViewer'
 
 const products = [
   {
@@ -64,6 +65,7 @@ export default function Home() {
       <main>
         <Hero />
         <Slider />
+
         <PrimaryFeatures />
         {/* <SecondaryFeatures /> */}
         <FoodDisplay />

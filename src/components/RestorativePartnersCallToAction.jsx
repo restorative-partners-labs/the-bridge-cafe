@@ -35,12 +35,6 @@ export function RestorativePartnersCallToAction() {
       {
         id: 1,
         name: 'Angled view',
-        src: rpStaff,
-        alt: 'Angled front view with bag zipped and handles upright.',
-      },
-      {
-        id: 1,
-        name: 'Angled view',
         src: prayerCircle,
         alt: 'Angled front view with bag zipped and handles upright.',
       },
@@ -55,13 +49,7 @@ export function RestorativePartnersCallToAction() {
         name: 'Angled view',
         src: annasHomeOpening,
         alt: 'Angled front view with bag zipped and handles upright.',
-      },
-      {
-        id: 1,
-        name: 'Angled view',
-        src: annasHomeOpening,
-        alt: 'Angled front view with bag zipped and handles upright.',
-      },
+      }
       // More images...
     ],
     colors: [
