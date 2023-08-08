@@ -272,7 +272,7 @@ export default function Contact() {
                         as="h3"
                         className="text-base font-semibold leading-6 text-gray-900"
                       >
-                        You're In!
+                        You&apos;re In!
                       </Dialog.Title>
                       <div className="mt-2">
                         <p className="text-sm text-gray-500">
