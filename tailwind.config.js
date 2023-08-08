@@ -40,6 +40,7 @@ module.exports = {
       colors: ({ colors }) => ({
         gray: colors.neutral,
         bridge: '#04706D',
+        bridgelight:'#C3DACE'
       }),
       fontFamily: {
         sans: ['Gill-Sans', 'Inter', ...defaultTheme.fontFamily.sans],

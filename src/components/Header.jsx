@@ -151,6 +151,12 @@ export function Header() {
                             >
                               <span className="text-2xl">Order</span>
                             </Button>
+                            <Button
+                              style={{ background: '#05716c' }}
+                              href="https://thebridgecafe.org/cafeclub"
+                            >
+                              <span className="text-2xl">Join Cafe Club</span>
+                            </Button>
                           </div>
                         </Popover.Panel>
                       </>

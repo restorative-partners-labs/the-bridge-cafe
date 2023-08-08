@@ -505,17 +505,14 @@ export function Hero() {
                 </span>
               </Button>
               <Button
-                href="https://www.amazon.com/registries/gl/guest-view/3R36VQR64GJ03"
+                href="/cafeclub"
                 variant="outline"
                 color="theme"
                 className="w-56 bg-white"
               >
-                <div className="h-6 w-6 flex-none">
-                  <PlayIcon />
-                </div>
 
                 <span className="ml-2.5">
-                  <p className="text-xl">Amazon Registry</p>
+                  <p className="text-xl">Join Cafe Club VIP</p>
                 </span>
               </Button>
 

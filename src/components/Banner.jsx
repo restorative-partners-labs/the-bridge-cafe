@@ -13,7 +13,10 @@ export function Banner() {
           <div className="flex w-0 flex-1 items-center">
             <span className="flex rounded-lg bg-white p-2">
               <a href="tel:805-439-1689">
-                <PhoneIcon className="sm:h-3 sm:w-3 md:h-6 md:w-6 text-bridge" aria-hidden="true" />
+                <PhoneIcon
+                  className="text-bridge sm:h-3 sm:w-3 md:h-6 md:w-6"
+                  aria-hidden="true"
+                />
               </a>
             </span>
             <p className="ml-3 truncate text-xl text-white">
@@ -21,8 +24,8 @@ export function Banner() {
                 Now Open! 7AM - 3PM Mon-Fri
               </span>
               <span className="hidden md:inline">
-                Big news! We&apos;re open! Come visit us 7 AM to 3 PM Monday thru
-                Friday
+                Big news! We&apos;re open! Come visit us 7 AM to 3 PM Monday
+                thru Friday
               </span>
             </p>
           </div>
@@ -33,6 +36,14 @@ export function Banner() {
             className="w-50 text-center text-xs text-white lg:block lg:text-xl"
           >
             1074 Higuera St, SLO
+          </Button>
+          <Button
+            href="/cafeclub"
+            variant="outline"
+            color="white"
+            className="hidden sm:inline-block ml-4 w-50 text-center text-xs text-white lg:block lg:text-xl"
+          >
+            Join Cafe Club VIP
           </Button>
         </div>
       </div>

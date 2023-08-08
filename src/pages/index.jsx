@@ -1,13 +1,12 @@
 import Head from 'next/head'
 import { RestorativePartnersCallToAction } from '@/components/RestorativePartnersCallToAction'
 import { FoodDisplay } from '@/components/FoodDisplay'
-//import { Slider } from '@/components/Slider'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
 import { PrimaryFeatures } from '@/components/PrimaryFeatures'
 import { Banner } from '@/components/Banner'
-
+import RewardSignup from '../components/RewardSignup'
 
 const products = [
   {
@@ -60,8 +59,6 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        {/* <Slider /> */}
-
         <PrimaryFeatures />
         {/* <SecondaryFeatures /> */}
         <FoodDisplay />
@@ -69,9 +66,9 @@ export default function Home() {
         {/* <Reviews />
         <Pricing />
         <Faqs /> */}
+        <RewardSignup />
 
         <figure data-behold-id="ufAMDKItfpizCThMoE9k"></figure>
-
       </main>
 
       <Footer />
