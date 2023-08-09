@@ -67,7 +67,7 @@ const solutions = [
   {
     name: 'Specials Menu',
     description: 'Checkout our daily specials menu',
-    href: '#',
+    href: '/#daily-specials',
     icon: BellAlertIcon,
   },
 ]

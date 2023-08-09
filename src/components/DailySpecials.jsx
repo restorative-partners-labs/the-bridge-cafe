@@ -15,6 +15,7 @@ export function DailySpecials() {
 
       <SectionIntro
         eyebrow=""
+        id="daily-specials"
         title=" Unwrap Deliciousness with Our Daily Specials!"
       >
         <p className="text-2xl">
