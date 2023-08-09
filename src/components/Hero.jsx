@@ -371,7 +371,7 @@ export function Hero() {
   const cancelButtonRef = useRef(null)
 
   return (
-    <div className="overflow-hidden py-40 sm:py-32 lg:pb-32 xl:pb-36">
+    <div className="overflow-hidden pt-20 sm:py-32 lg:pb-16 xl:pb-18">
       <Container>
         <Transition.Root show={open} as={Fragment}>
           <Dialog

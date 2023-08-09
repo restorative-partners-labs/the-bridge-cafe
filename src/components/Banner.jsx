@@ -11,10 +11,10 @@ export function Banner() {
       <div className="mx-auto max-w-7xl py-3 px-3 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-center justify-between">
           <div className="flex w-0 flex-1 items-center">
-            <span className="flex rounded-lg bg-white p-2">
+            <span className="rounded-lg bg-white p-2">
               <a href="tel:805-439-1689">
                 <PhoneIcon
-                  className="text-bridge sm:h-3 sm:w-3 md:h-6 md:w-6"
+                  className="text-bridge h-4 w-4sm:h-4 xs:w-4 sm:h-8 md:w-8 md:text-bridge"
                   aria-hidden="true"
                 />
               </a>
@@ -41,7 +41,7 @@ export function Banner() {
             href="/cafeclub"
             variant="outline"
             color="white"
-            className="hidden sm:inline-block ml-4 w-50 text-center text-xs text-white lg:block lg:text-xl"
+            className="w-50 ml-4 hidden text-center text-xs text-white sm:inline-block lg:block lg:text-xl"
           >
             Join Cafe Club VIP
           </Button>
