@@ -280,8 +280,7 @@ export default function Contact() {
                           Your membership automatically adds you to our customer
                           email subscription list to receive menu specials, VIP
                           Member discounts & cafe updates. You are welcome to
-                          unsubscribe anytime. Minimum purchase of $4.99 for
-                          each visit.
+                          unsubscribe anytime.
                         </p>
                       </div>
                     </div>
