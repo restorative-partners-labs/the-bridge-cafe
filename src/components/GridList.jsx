@@ -21,7 +21,6 @@ export function GridList({ className, children }) {
 
 export function GridListItem({
   title,
-  dish,
   price,
   children,
   className,
@@ -33,7 +32,7 @@ export function GridListItem({
         'text-xl',
         invert
           ? 'text-neutral-300 before:bg-white after:bg-white/10'
-          : 'before:bg-neutral-950 text-neutral-600 after:bg-neutral-100',
+          : 'text-neutral-600 before:bg-neutral-950 after:bg-neutral-100',
         className
       )}
     >
@@ -56,13 +55,12 @@ export function GridListItem({
               'text-bridge',
               'text-xl',
               'font-superbold',
+              'uppercase',
               invert ? 'text-white' : 'text-neutral-950'
             )}
           >
-            {dish}
-          </strong>{' '}
-          <br />
-          {children}
+            {children}
+          </strong>
           <br />
           <strong
             className={clsx(
