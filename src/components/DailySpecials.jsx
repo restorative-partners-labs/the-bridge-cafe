@@ -45,7 +45,7 @@ export function DailySpecials() {
             house made lemon vinaigrette.
           </GridListItem>
           <GridListItem title="BISCUITS & GRAVY" price="$12">
-            FRIDAY ONLY! HOMEMADE BISCUITS, WITH GRANDMA'S COUNTRY STYLE SAUSAGE
+            FRIDAY ONLY! HOMEMADE BISCUITS, WITH GRANDMA&aposS COUNTRY STYLE SAUSAGE
             GRAVY
           </GridListItem>
         </GridList>
