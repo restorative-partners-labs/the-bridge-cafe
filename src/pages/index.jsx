@@ -8,6 +8,7 @@ import { PrimaryFeatures } from '@/components/PrimaryFeatures'
 import { Banner } from '@/components/Banner'
 import RewardSignup from '../components/RewardSignup'
 import { DailySpecials } from '@/components/DailySpecials'
+import Team from '@/components/Team'
 
 const products = [
   {
@@ -64,6 +65,7 @@ export default function Home() {
         <PrimaryFeatures />
         {/* <SecondaryFeatures /> */}
         <FoodDisplay />
+        {/* <Team/> */}
         <RestorativePartnersCallToAction />
         {/* <Reviews />
         <Pricing />

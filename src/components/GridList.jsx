@@ -37,7 +37,7 @@ export function GridListItem({
       )}
     >
       <FadeIn>
-        <Border position="left" className="pl-8" invert={invert}>
+        <Border position="left" className="pl-8 hover:bg-none" invert={invert}>
           <strong
             className={clsx(
               'text-bridge',

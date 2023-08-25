@@ -27,6 +27,7 @@ import signage from '../../public/images/grand-opening/county/01 County Preview 
 import celebration from '../../public/images/grand-opening/county/01 County Preview - Scrub.00_06_12_02.Still012.jpg'
 import crossiant from '../../public/images/food/bridge-cafe-croissant-001.jpg'
 import burger from '../../public/images/food/bridge-cafe-burger-001.jpg'
+import { FadeIn, FadeInStagger } from './FadeIn'
 
 function BackgroundIllustration(props) {
   let id = useId()
@@ -341,7 +342,7 @@ function AppDemo() {
                 onChangeActivePointIndex={setActivePointIndex}
               />
             </div>
-            <div className="mt-4 rounded-lg bg-cyan-500 py-2 px-4 text-center text-sm font-semibold text-white">
+            <div className="mt-4 rounded-lg bg-cyan-500 px-4 py-2 text-center text-sm font-semibold text-white">
               Trade
             </div>
             <div className="mt-3 divide-y divide-gray-100 text-sm">
@@ -371,7 +372,7 @@ export function Hero() {
   const cancelButtonRef = useRef(null)
 
   return (
-    <div className="overflow-hidden pt-20 sm:py-32 lg:pb-16 xl:pb-18">
+    <div className="xl:pb-18 overflow-hidden pt-20 sm:py-32 lg:pb-16">
       <Container>
         <Transition.Root show={open} as={Fragment}>
           <Dialog
@@ -404,8 +405,8 @@ export function Hero() {
                   leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                   leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                 >
-                  <Dialog.Panel className="relative z-40 transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
-                    <div className="absolute top-0 right-0 pt-4 pr-4 sm:block">
+                  <Dialog.Panel className="relative z-40 transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
+                    <div className="absolute right-0 top-0 pr-4 pt-4 sm:block">
                       <button
                         type="button"
                         className="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-bridge focus:ring-offset-2"
@@ -478,7 +479,7 @@ export function Hero() {
         </Transition.Root>
         <div className="pb-40 lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
           <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
-            <h1 className="text-6xl font-medium pb-8 tracking-tight text-gray-900">
+            <h1 className="pb-8 text-6xl font-medium tracking-tight text-gray-900">
               Now Open!
             </h1>
             <h1 className="text-4xl font-medium tracking-tight text-gray-900">
@@ -510,7 +511,6 @@ export function Hero() {
                 color="theme"
                 className="w-56 bg-white"
               >
-
                 <span className="ml-2.5">
                   <p className="text-xl">Join Cafe Club VIP</p>
                 </span>
@@ -585,61 +585,82 @@ export function Hero() {
           </div>
           <div className="relative mt-10 sm:mt-20 lg:col-span-5 lg:row-span-2 lg:mt-0 xl:col-span-6">
             <BackgroundIllustration className="absolute left-1/2 top-4 h-[1026px] w-[1026px] -translate-x-1/3 stroke-gray-300/70 [mask-image:linear-gradient(to_bottom,white_20%,transparent_75%)] sm:top-16 sm:-translate-x-1/2 lg:-top-16 lg:ml-12 xl:-top-14 xl:ml-0" />
-            <div className="absolute -top-32 hidden -translate-x-1/2 transform sm:top-6 sm:translate-x-0 lg:block">
-              <div className="ml-24 flex min-w-max space-x-6 sm:ml-3 lg:space-x-8">
-                <div className="flex space-x-6 sm:flex-col sm:space-x-0 sm:space-y-6 lg:space-y-8">
-                  <div className="flex-shrink-0">
-                    <Image
-                      className="h-64 w-64 rounded-lg object-cover md:h-72 md:w-72"
-                      src={grandOpening}
-                      alt=""
-                    />
+            <FadeInStagger>
+              {' '}
+              <div className="absolute -top-32 hidden -translate-x-1/2 transform sm:top-6 sm:translate-x-0 lg:block">
+                <div className="ml-24 flex min-w-max space-x-6 sm:ml-3 lg:space-x-8">
+                  <div className="flex space-x-6 sm:flex-col sm:space-x-0 sm:space-y-6 lg:space-y-8">
+                    <FadeIn>
+                      {' '}
+                      <div className="flex-shrink-0">
+                        <Image
+                          className="h-64 w-64 rounded-lg object-cover md:h-72 md:w-72"
+                          src={grandOpening}
+                          alt=""
+                        />
+                      </div>
+                    </FadeIn>
+                    <FadeIn>
+                      {' '}
+                      <div className="mt-6 flex-shrink-0 sm:mt-0">
+                        <Image
+                          className="h-64 w-64 rounded-lg object-cover md:h-72 md:w-72"
+                          src={foodPrepColumn}
+                          alt=""
+                        />
+                      </div>
+                    </FadeIn>
                   </div>
+                  <div className="flex space-x-6 sm:-mt-20 sm:flex-col sm:space-x-0 sm:space-y-6 lg:space-y-8">
+                    <FadeIn>
+                      {' '}
+                      <div className="flex-shrink-0">
+                        <Image
+                          className="h-64 w-64 rounded-lg object-cover md:h-72 md:w-72"
+                          src={foodPrepSalad}
+                          alt=""
+                        />
+                      </div>
+                    </FadeIn>
 
-                  <div className="mt-6 flex-shrink-0 sm:mt-0">
-                    <Image
-                      className="h-64 w-64 rounded-lg object-cover md:h-72 md:w-72"
-                      src={foodPrepColumn}
-                      alt=""
-                    />
+                    <FadeIn>
+                      {' '}
+                      <div className="mt-6 flex-shrink-0 sm:mt-0">
+                        <Image
+                          className="h-64 w-64 rounded-lg object-cover md:h-72 md:w-72"
+                          src={signage}
+                          alt=""
+                        />
+                      </div>
+                    </FadeIn>
                   </div>
-                </div>
-                <div className="flex space-x-6 sm:-mt-20 sm:flex-col sm:space-x-0 sm:space-y-6 lg:space-y-8">
-                  <div className="flex-shrink-0">
-                    <Image
-                      className="h-64 w-64 rounded-lg object-cover md:h-72 md:w-72"
-                      src={foodPrepSalad}
-                      alt=""
-                    />
-                  </div>
+                  <div className="flex space-x-6 sm:flex-col sm:space-x-0 sm:space-y-6 lg:space-y-8">
+                    <FadeIn>
+                      {' '}
+                      <div className="flex-shrink-0">
+                        <Image
+                          className="h-64 w-64 rounded-lg object-cover md:h-72 md:w-72"
+                          src={crossiant}
+                          alt=""
+                        />
+                      </div>
+                    </FadeIn>
 
-                  <div className="mt-6 flex-shrink-0 sm:mt-0">
-                    <Image
-                      className="h-64 w-64 rounded-lg object-cover md:h-72 md:w-72"
-                      src={signage}
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div className="flex space-x-6 sm:flex-col sm:space-x-0 sm:space-y-6 lg:space-y-8">
-                  <div className="flex-shrink-0">
-                    <Image
-                      className="h-64 w-64 rounded-lg object-cover md:h-72 md:w-72"
-                      src={crossiant}
-                      alt=""
-                    />
-                  </div>
-
-                  <div className="mt-6 flex-shrink-0 sm:mt-0">
-                    <Image
-                      className="h-64 w-64 rounded-lg object-cover md:h-72 md:w-72"
-                      src={burger}
-                      alt=""
-                    />
+                    <FadeIn>
+                      {' '}
+                      <div className="mt-6 flex-shrink-0 sm:mt-0">
+                        <Image
+                          className="h-64 w-64 rounded-lg object-cover md:h-72 md:w-72"
+                          src={burger}
+                          alt=""
+                        />
+                      </div>
+                    </FadeIn>
                   </div>
                 </div>
               </div>
-            </div>
+            </FadeInStagger>
+
             <img
               className="lg:hidden"
               loading="lazy"

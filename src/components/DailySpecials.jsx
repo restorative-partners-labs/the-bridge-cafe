@@ -30,23 +30,43 @@ export function DailySpecials() {
 
       <Container className="mt-24">
         <GridList>
-          <GridListItem title="Street Tacos" price="$6">
+          <GridListItem
+            className="rounded-lg hover:bg-bridgelight"
+            title="Street Tacos"
+            price="$6"
+          >
             2 grilled chicken or el pastor, diced onion, & cilantro, served on
             corn tortilla with a side of avocado and salsa.
           </GridListItem>
-          <GridListItem title="Fish & Chips" price="$12">
+          <GridListItem
+            className="rounded-lg hover:bg-bridgelight"
+            title="Fish & Chips"
+            price="$12"
+          >
             two cod filets with fries and housemade tartar sauce.
           </GridListItem>
-          <GridListItem title="Patty Melt" price="$11">
+          <GridListItem
+            className="rounded-lg hover:bg-bridgelight"
+            title="Patty Melt"
+            price="$11"
+          >
             swiss cheese, caramelized opinions on marbled rye.
           </GridListItem>
-          <GridListItem title="Mediterranean Salad" price="$12">
+          <GridListItem
+            className="rounded-lg hover:bg-bridgelight"
+            title="Mediterranean Salad"
+            price="$12"
+          >
             cucumber, tomatoes, red onion, kalamata olives, feta cheese and our
             house made lemon vinaigrette.
           </GridListItem>
-          <GridListItem title="BISCUITS & GRAVY" price="$12">
-            FRIDAY ONLY! HOMEMADE BISCUITS, WITH GRANDMA&aposS COUNTRY STYLE SAUSAGE
-            GRAVY
+          <GridListItem
+            className="rounded-lg hover:bg-bridgelight"
+            title="BISCUITS & GRAVY"
+            price="$12"
+          >
+            FRIDAY ONLY! HOMEMADE BISCUITS, WITH GRANDMA&aposS COUNTRY STYLE
+            SAUSAGE GRAVY
           </GridListItem>
         </GridList>
       </Container>
