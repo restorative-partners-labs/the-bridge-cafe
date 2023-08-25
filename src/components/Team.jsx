@@ -2,6 +2,7 @@ import { FadeIn, FadeInStagger } from './FadeIn'
 
 const people = [
   {
+    id: 1,
     name: 'Leonard Krasner',
     role: 'Senior Designer',
     imageUrl:
@@ -10,6 +11,7 @@ const people = [
     linkedinUrl: '#',
   },
   {
+    id: 2,
     name: 'Leonard Krasner',
     role: 'Senior Designer',
     imageUrl:
@@ -18,6 +20,7 @@ const people = [
     linkedinUrl: '#',
   },
   {
+    id: 3,
     name: 'Leonard Krasner',
     role: 'Senior Designer',
     imageUrl:
@@ -26,6 +29,7 @@ const people = [
     linkedinUrl: '#',
   },
   {
+    id: 4,
     name: 'Leonard Krasner',
     role: 'Senior Designer',
     imageUrl:
@@ -34,6 +38,7 @@ const people = [
     linkedinUrl: '#',
   },
   {
+    id: 5,
     name: 'Leonard Krasner',
     role: 'Senior Designer',
     imageUrl:
@@ -42,6 +47,7 @@ const people = [
     linkedinUrl: '#',
   },
   {
+    id: 6,
     name: 'Leonard Krasner',
     role: 'Senior Designer',
     imageUrl:
@@ -75,10 +81,10 @@ export default function Team() {
         >
           {' '}
           {people.map((person) => (
-            <FadeIn>
+            <FadeIn key={person.id}>
               {' '}
               <li
-                key={person.name}
+                key={person.id}
                 className="rounded-2xl bg-bridgelight px-8 py-10 ring-2 ring-bridge"
               >
                 <img
