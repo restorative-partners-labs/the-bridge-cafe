@@ -5,7 +5,7 @@ import { SectionIntro } from '@/components/SectionIntro'
 
 export default function AboutUs() {
   return (
-    <div className="relative mt-24 pt-24 sm:mt-32 sm:pt-32 lg:mt-40 lg:pt-40 lg:pb-40">
+    <div className="relative mt-24 pt-24 sm:mt-32 sm:pt-32 lg:mt-40 lg:pb-40 lg:pt-40">
       <div className="absolute inset-x-0 top-0 -z-10 h-[884px] overflow-hidden rounded-t-4xl bg-gradient-to-b from-bridgelight"></div>
 
       <SectionIntro
@@ -28,24 +28,24 @@ export default function AboutUs() {
           <GridListItem title="Social Enterprise">
             A business whose primary purpose is addressing a social challenge
             rather than creating profit for owners or shareholders. All proceeds
-            from the cafe are fed back into Restorative Partners&#39; programs and
-            services.
+            from the cafe are fed back into Restorative Partners&#39; programs
+            and services.
           </GridListItem>
           <GridListItem title="Quality Convenient Dining">
             Delicious food to gather around, whether grabbing to go or dining on
             our patio to admire the community artwork.
           </GridListItem>
           <GridListItem title="Employment & Job Development">
-            In partnership with Cuesta College&#39;s Culinary Arts Foundation, The
-            Bridge Cafe provides paid experience for justice-involved
+            In partnership with Cuesta College&#39;s Culinary Arts Foundation,
+            The Bridge Cafe provides paid experience for justice-involved
             individuals seeking a certificate of specialization in culinary
             arts. Upon completion of the program, Restorative Partners assists
             participants with finding culinary employment.
           </GridListItem>
           <GridListItem title="Fundraising">
             Your donation can support a justice-involved individual through
-            Cuesta College's program and help maintain and grow Restorative
-            Partners' other services and programs. Tax ID 47-4825349
+            Cuesta College&#39;s program and help maintain and grow Restorative
+            Partners&#39; other services and programs. Tax ID 47-4825349
           </GridListItem>
         </GridList>
       </Container>

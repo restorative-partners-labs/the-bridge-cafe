@@ -117,7 +117,7 @@ export function FoodDisplay() {
       >
         <p>
           Dive into a collection of mouthwatering entrées that span a diverse
-          range of cuisines and flavors. Whether you're reminiscing about
+          range of cuisines and flavors. Whether you&#39;re reminiscing about
           beloved comfort foods or seeking your next café indulgence, our entrée
           images bring the flavors of America to life.
         </p>
