@@ -82,7 +82,7 @@ export function Header() {
     const currentHour = new Date()
 
     // Convert PST (UTC-8) to the user's local time (if applicable)
-    var pstCurrentHour = currentHour.getUTCHours() - 7
+    var pstCurrentHour = currentHour.getUTCHours() - 1
 
     if (pstCurrentHour > 0) {
       pstCurrentHour = pstCurrentHour + 24

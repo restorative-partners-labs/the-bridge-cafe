@@ -3,13 +3,13 @@ import clsx from 'clsx'
 import { Border } from '@/components/Border'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 
-export function GridList({ className, children }) {
+export function GridList({ className, children, columnCount = 3 }) {
   return (
     <FadeInStagger>
       <ul
         role="list"
         className={clsx(
-          'grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3',
+          `grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-${columnCount}`,
           className
         )}
       >

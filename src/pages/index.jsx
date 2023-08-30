@@ -8,6 +8,7 @@ import { PrimaryFeatures } from '@/components/PrimaryFeatures'
 import { Banner } from '@/components/Banner'
 import RewardSignup from '../components/RewardSignup'
 import { DailySpecials } from '@/components/DailySpecials'
+import AboutUs from '@/components/AboutUs'
 import Team from '@/components/Team'
 
 const products = [
@@ -35,17 +36,7 @@ const products = [
     imageAlt:
       'Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.',
   },
-  // More products...
 ]
-
-// export async function getStaticProps({ previewData }) {
-//   const client = createClient({ previewData })
-
-//   const menuItems = await client.getAllByType('menu_item')
-//   return {
-//     props: { menuItems },
-//   }
-// }
 
 export default function Home() {
   return (
@@ -62,10 +53,12 @@ export default function Home() {
       <main>
         <Hero />
         <DailySpecials />
-        <PrimaryFeatures />
+        <AboutUs />
+        {/* <PrimaryFeatures /> */}
         {/* <SecondaryFeatures /> */}
+        <Team />
         <FoodDisplay />
-        {/* <Team/> */}
+
         <RestorativePartnersCallToAction />
         {/* <Reviews />
         <Pricing />

@@ -49,7 +49,7 @@ export function RestorativePartnersCallToAction() {
         name: 'Angled view',
         src: annasHomeOpening,
         alt: 'Angled front view with bag zipped and handles upright.',
-      }
+      },
       // More images...
     ],
     colors: [
@@ -89,7 +89,7 @@ export function RestorativePartnersCallToAction() {
     <section
       id="restorative-partners"
       aria-labelledby="pricing-title"
-      className="border-t border-gray-200 bg-white py-5 sm:py-32"
+      className="bg-white py-5 sm:py-32"
     >
       <div className="relative bg-white py-16 sm:py-24">
         <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-start lg:gap-24 lg:px-8">
@@ -100,7 +100,7 @@ export function RestorativePartnersCallToAction() {
             >
               <div className="absolute inset-y-0 right-1/2 w-full rounded-r-3xl bg-gray-50 lg:right-72" />
               <svg
-                className="absolute top-8 left-1/2 -ml-3 lg:-right-8 lg:left-auto lg:top-12"
+                className="absolute left-1/2 top-8 -ml-3 lg:-right-8 lg:left-auto lg:top-12"
                 width={404}
                 height={392}
                 fill="none"
@@ -136,13 +136,13 @@ export function RestorativePartnersCallToAction() {
               {/* Testimonial card*/}
               <a href="https://restorativepartners.org/">
                 {' '}
-                <div className="relative overflow-hidden rounded-2xl pt-80 pb-10 shadow-xl">
+                <div className="relative overflow-hidden rounded-2xl pb-10 pt-80 shadow-xl">
                   <img
                     className="absolute inset-0 h-full w-full object-cover"
                     src="/rp-heart-logo.png"
                     alt=""
                   />
-                  <div className="absolute inset-0 bg-transparent bg-bridge mix-blend-multiply" />
+                  <div className="absolute inset-0 bg-bridge bg-transparent mix-blend-multiply" />
                   <div className="absolute inset-0 bg-gradient-to-t from-bridge via-bridge opacity-70 hover:bg-transparent" />
                   <div className="relative px-8">
                     <blockquote className="mt-8">
@@ -155,7 +155,7 @@ export function RestorativePartnersCallToAction() {
                   </div>
                 </div>
               </a>
-              <Tab.Group as="div" className="py-8 flex flex-col-reverse">
+              <Tab.Group as="div" className="flex flex-col-reverse py-8">
                 {/* Image selector */}
                 <div className="mx-auto mt-6 hidden w-full max-w-2xl sm:block lg:max-w-none">
                   <Tab.List className="grid grid-cols-4 gap-6">
@@ -176,9 +176,7 @@ export function RestorativePartnersCallToAction() {
                             </span>
                             <span
                               className={classNames(
-                                selected
-                                  ? 'ring-bridge'
-                                  : 'ring-transparent',
+                                selected ? 'ring-bridge' : 'ring-transparent',
                                 'pointer-events-none absolute inset-0 rounded-md ring-2 ring-offset-2'
                               )}
                               aria-hidden="true"
