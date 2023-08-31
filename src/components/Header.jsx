@@ -179,7 +179,7 @@ export function Header() {
                                 <span className="text-2xl">Donate</span>
                               </Button>
                               <Button
-                                onClick={() => handleOrderOnlineNavigation}
+                                href="https://order.spoton.com/so-the-bridge-cafe-10987/san-luis-obispo-ca/63338b3bf3ebec0040438b39"
                                 style={{ background: '#05716c' }}
                               >
                                 <span className="text-2xl">Order</span>
