@@ -79,25 +79,25 @@ export function Header() {
   const cancelButtonRef = useRef(null)
 
   const handleOrderOnlineNavigation = () => {
-    const currentHour = new Date()
+    // const currentHour = new Date()
 
-    // Convert PST (UTC-8) to the user's local time (if applicable)
-    var pstCurrentHour = currentHour.getUTCHours() - 1
+    // // Convert PST (UTC-8) to the user's local time (if applicable)
+    // var pstCurrentHour = currentHour.getUTCHours() - 1
 
-    if (pstCurrentHour > 0) {
-      pstCurrentHour = pstCurrentHour + 24
-    }
-    if (pstCurrentHour > 24) {
-      pstCurrentHour = pstCurrentHour - 24
-    }
+    // if (pstCurrentHour > 0) {
+    //   pstCurrentHour = pstCurrentHour + 24
+    // }
+    // if (pstCurrentHour > 24) {
+    //   pstCurrentHour = pstCurrentHour - 24
+    // }
 
-    console.log(pstCurrentHour)
+    // console.log(pstCurrentHour)
 
-    // Check if the current hour is between 3 PM and 7 AM PST
-    if (pstCurrentHour >= 15) {
-      setShowOnlineOrderClose(true)
-      return
-    }
+    // // Check if the current hour is between 3 PM and 7 AM PST
+    // if (pstCurrentHour >= 15) {
+    //   setShowOnlineOrderClose(true)
+    //   return
+    // }
     router.push(
       'https://order.spoton.com/so-the-bridge-cafe-10987/san-luis-obispo-ca/63338b3bf3ebec0040438b39'
     )

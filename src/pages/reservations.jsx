@@ -60,7 +60,7 @@ function Form({ handleInput, handleForm, formData }) {
     <FadeIn className="pb-50 order-2 sm:order-first lg:order-last">
       <form onSubmit={handleForm}>
         <div className="flex items-center justify-center">
-          <div className="isolate mt-6 -space-y-px rounded-2xl bg-white/50 lg:w-1/2">
+          <div className="isolate mt-6 w-full -space-y-px rounded-2xl bg-white/50 lg:w-1/2">
             <TextInput
               label="First Name"
               name="firstName"
