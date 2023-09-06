@@ -1,8 +1,6 @@
-import Link from 'next/link'
 import Head from 'next/head'
 import Image from 'next/image'
 import imageCafeClub from '@/images/logos/cafe-club-logo.png'
-
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
@@ -19,6 +17,63 @@ import {
   BuildingStorefrontIcon,
   GiftIcon,
 } from '@heroicons/react/24/outline'
+
+async function fetchData() {
+  // Fetch data from your API
+  const response = await fetch(
+    'https://api.cal.com/v1/availability?apiKey=cal_live_2c319e79d32d3442d2801259cf6c1794&userId=115819&dateFrom=2023-09-15T00:00:00.000Z&dateTo=2023-09-21T00:00:00.000Z'
+  )
+  const data = await response.json()
+
+  const slots = await generateBookingSlots(data.dateRanges, 90)
+
+  return { slots }
+}
+
+function formatTime(date) {
+  const inputDate = new Date(date)
+
+  const hours = inputDate.getHours()
+  const minutes = inputDate.getMinutes()
+  const ampm = hours >= 12 ? 'PM' : 'AM'
+
+  // Convert hours to 12-hour format
+  const formattedHours = hours % 12 || 12 // Ensure 12:00 AM is displayed as 12:00 AM, not 0:00 AM
+
+  return `${formattedHours}:${minutes.toString().padStart(2, '0')} ${ampm}`
+}
+
+async function generateBookingSlots(dateRanges, slotDurationMinutes) {
+  const bookingSlots = []
+  for (const dateRange of dateRanges) {
+    const startTime = new Date(dateRange.start)
+    const endTime = new Date(dateRange.end)
+
+    while (startTime < endTime) {
+      const inputDate = new Date(startTime.toISOString())
+
+      const options = {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      }
+
+      const formattedDate = inputDate.toLocaleDateString('en-US', options)
+
+      const slotEndTime = new Date(
+        startTime.getTime() + slotDurationMinutes * 60000
+      )
+      bookingSlots.push({
+        start: startTime.toISOString(),
+        end: slotEndTime.toISOString(),
+        window: `${formattedDate} ${formatTime(
+          startTime.toISOString()
+        )} - ${formatTime(slotEndTime.toISOString())}`,
+      })
+    }
+  }
+  return bookingSlots
+}
 
 function TextInput({ label, ...props }) {
   let id = useId()
@@ -55,7 +110,7 @@ function RadioInput({ label, ...props }) {
   )
 }
 
-function Form({ handleInput, handleForm, formData }) {
+function Form({ handleInput, handleForm, formData, slots }) {
   return (
     <FadeIn className="pb-50 order-2 sm:order-first lg:order-last">
       <form onSubmit={handleForm}>
@@ -97,14 +152,6 @@ function Form({ handleInput, handleForm, formData }) {
             />
             <TextInput
               onChange={handleInput}
-              label="Date"
-              type="date"
-              name="dob"
-              value={formData.date}
-              required
-            />
-            <TextInput
-              onChange={handleInput}
               label="Number of Guests"
               type="number"
               name="guestCount"
@@ -113,17 +160,17 @@ function Form({ handleInput, handleForm, formData }) {
             />
             <div className="group relative z-0 transition-all focus-within:z-10">
               <label className="pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 text-neutral-500 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-neutral-950 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-neutral-950">
-                Time Slot{' '}
+                Time{' '}
               </label>
               <select
-                id="countries"
+                name="timeSlot"
+                id="timeSlot"
                 class="peer block w-full border border-neutral-300 bg-transparent px-6 pb-4 pt-12 text-base/6 text-neutral-950 ring-transparent transition focus:border-bridge focus:border-neutral-950 focus:outline-none focus:ring-0 focus:ring-neutral-950/5 group-first:rounded-t-2xl group-last:rounded-b-2xl"
               >
-                <option value="CA"></option>
-                <option value="CA">11:00 AM - 11:30 AM</option>
-                <option value="CA">11:30 PM - 12:00 PM</option>
-                <option value="US">12:00 PM - 12:30 PM</option>
-                <option value="US">12:30 PM - 1:00 PM</option>
+                <option value="empty"></option>
+                {slots.map((slot) => {
+                  return <option value={slot.start}>{slot.window}</option>
+                })}
               </select>
             </div>
           </div>
@@ -218,9 +265,12 @@ function LoyaltyBenefits({ benefits }) {
   )
 }
 
-export default function Contact() {
+export default function Contact(props) {
   const [formData, setFormData] = useState({})
   const [open, setOpen] = useState(false)
+  const [bookedSlot, setBookedSlot] = ''
+
+  console.log(props.data)
 
   const cancelButtonRef = useRef(null)
 
@@ -228,19 +278,57 @@ export default function Contact() {
     e.preventDefault()
 
     try {
-      const response = await axios.post('/api/cafeclub', formData)
+      var data = JSON.stringify({
+        eventTypeId: 399443,
+        start: formData.timeSlot,
+        responses: {
+          name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
+        },
+        metadata: {
+          campaign: 'Cal Poly Wow Week',
+          numberOfGuests: formData.guestCount,
+        },
+        timeZone: 'America/Los_Angeles',
+        language: 'english',
+        title: 'Wow Week Reservation w/',
+      })
+
+      const response = await axios.post('/api/reservation', data)
       console.log(response.data)
     } catch (error) {
       console.error(error)
     }
+    setOpen(true)
+    // Parse the input date string into a Date object
+    const inputDate = new Date(formData.timeSlot)
+
+    // Create a Date object representing the same moment in PST (UTC-8)
+    const pstDate = new Date(inputDate.getTime() - 8 * 60 * 60 * 1000)
+
+    // Format the date and time in PST with AM/PM notation
+    const options = {
+      timeZone: 'America/Los_Angeles', // PST timezone
+      hour12: true, // Use AM/PM notation
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric',
+      year: 'numeric',
+      month: 'numeric',
+      day: 'numeric',
+    }
+
+    const pstFormatter = new Intl.DateTimeFormat('en-US', options)
+    const pstFormatted = pstFormatter.format(pstDate)
+    setBookedSlot(pstFormatted)
     setFormData({
       firstName: '',
       lastName: '',
       phone: '',
-      dob: '',
       email: '',
+      timeSlot: '',
+      guestCount: '',
     })
-    setOpen(true)
   }
 
   const handleInputChange = (e) => {
@@ -301,29 +389,28 @@ export default function Contact() {
                         as="h3"
                         className="text-xl font-semibold leading-6 text-gray-900"
                       >
-                        You&apos;re In!
+                        You&apos;re Spot is Reserved!
                       </Dialog.Title>
                       <div className="mt-2">
                         <p className="text-xl text-gray-500">
-                          Thank you for joining the Cafe Club Loyalty Program!
-                          Your membership automatically adds you to our customer
-                          email subscription list to receive menu specials, VIP
-                          Member discounts & cafe updates. You are welcome to
-                          unsubscribe anytime.
+                          Thank you for making your reservation! We are excited
+                          to host your WOW group for your meal!Please let us
+                          know if you have any questions befoprehand. See you{' '}
+                          {bookedSlot}!.
                         </p>
                       </div>
                     </div>
                   </div>
                   <div className="mt-5 text-xl sm:mt-6 sm:grid sm:grid-flow-row-dense sm:grid-cols-2 sm:gap-3">
                     <Button
-                      href="https://order.spoton.com/so-the-bridge-cafe-10987/san-luis-obispo-ca/63338b3bf3ebec0040438b39"
+                      href="/menu.png"
                       variant="outline"
                       color="themecta"
                       type="button"
                       className="inline-flex w-full justify-center rounded-md px-3 py-2 text-xl font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:col-start-2"
                       onClick={() => setOpen(false)}
                     >
-                      Order Online
+                      View Menu
                     </Button>
                     <button
                       type="button"
@@ -347,6 +434,7 @@ export default function Contact() {
             handleInput={handleInputChange}
             handleForm={handleSubmit}
             formData={formData}
+            slots={props.data.slots}
           />
           {/* <ContactDetails /> */}
         </div>
@@ -355,4 +443,11 @@ export default function Contact() {
       </Container>
     </>
   )
+}
+
+export async function getServerSideProps() {
+  const data = await fetchData()
+  return {
+    props: { data },
+  }
 }
