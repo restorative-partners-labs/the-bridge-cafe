@@ -1,10 +1,13 @@
-// pages/api/submitForm.js
-
 import axios from 'axios'
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     var formData = req.body
+    console.log(formData)
+
+    formData = {
+      ...formData,
+    }
 
     const config = {
       headers: {
@@ -36,7 +39,7 @@ export default async function handler(req, res) {
         }
       })
 
-    res.status(200).json({ message: 'Form data received successfully' })
+    res.status(200).json(response)
   } else {
     res.status(405).json({ message: 'Method Not Allowed' })
   }

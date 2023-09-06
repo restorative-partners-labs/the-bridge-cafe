@@ -70,6 +70,7 @@ async function generateBookingSlots(dateRanges, slotDurationMinutes) {
           startTime.toISOString()
         )} - ${formatTime(slotEndTime.toISOString())}`,
       })
+      startTime.setTime(slotEndTime.getTime())
     }
   }
   return bookingSlots
@@ -110,7 +111,14 @@ function RadioInput({ label, ...props }) {
   )
 }
 
-function Form({ handleInput, handleForm, formData, slots }) {
+function Form({
+  selectedOption,
+  handleSelectChange,
+  handleInput,
+  handleForm,
+  formData,
+  slots,
+}) {
   return (
     <FadeIn className="pb-50 order-2 sm:order-first lg:order-last">
       <form onSubmit={handleForm}>
@@ -163,14 +171,15 @@ function Form({ handleInput, handleForm, formData, slots }) {
                 Time{' '}
               </label>
               <select
-                name="timeSlot"
+                value={selectedOption}
+                onChange={handleSelectChange}
                 id="timeSlot"
                 class="peer block w-full border border-neutral-300 bg-transparent px-6 pb-4 pt-12 text-base/6 text-neutral-950 ring-transparent transition focus:border-bridge focus:border-neutral-950 focus:outline-none focus:ring-0 focus:ring-neutral-950/5 group-first:rounded-t-2xl group-last:rounded-b-2xl"
               >
                 <option value="empty"></option>
                 {slots.map((slot) => {
                   return (
-                    <option key={slot.start} value={slot.start}>
+                    <option value={slot.start} key={slot.start}>
                       {slot.window}
                     </option>
                   )
@@ -272,7 +281,7 @@ function LoyaltyBenefits({ benefits }) {
 export default function Contact(props) {
   const [formData, setFormData] = useState({})
   const [open, setOpen] = useState(false)
-  const [bookedSlot, setBookedSlot] = ''
+  const [selectedOption, setSelectedOption] = useState('')
 
   console.log(props.data)
 
@@ -282,9 +291,9 @@ export default function Contact(props) {
     e.preventDefault()
 
     try {
-      var data = JSON.stringify({
+      var data = {
         eventTypeId: 399443,
-        start: formData.timeSlot,
+        start: selectedOption,
         responses: {
           name: `${formData.firstName} ${formData.lastName}`,
           email: formData.email,
@@ -296,16 +305,16 @@ export default function Contact(props) {
         timeZone: 'America/Los_Angeles',
         language: 'english',
         title: 'Wow Week Reservation w/',
-      })
+      }
 
-      const response = await axios.post('/api/reservation', data)
+      const response = await axios.post('/api/reservations', data)
       console.log(response.data)
     } catch (error) {
       console.error(error)
     }
     setOpen(true)
     // Parse the input date string into a Date object
-    const inputDate = new Date(formData.timeSlot)
+    const inputDate = new Date(selectedOption)
 
     // Create a Date object representing the same moment in PST (UTC-8)
     const pstDate = new Date(inputDate.getTime() - 8 * 60 * 60 * 1000)
@@ -324,7 +333,7 @@ export default function Contact(props) {
 
     const pstFormatter = new Intl.DateTimeFormat('en-US', options)
     const pstFormatted = pstFormatter.format(pstDate)
-    setBookedSlot(pstFormatted)
+    setSelectedOption(pstFormatted)
     setFormData({
       firstName: '',
       lastName: '',
@@ -333,6 +342,10 @@ export default function Contact(props) {
       timeSlot: '',
       guestCount: '',
     })
+  }
+  // Handle changes to the select input
+  const handleSelectChange = (event) => {
+    setSelectedOption(event.target.value)
   }
 
   const handleInputChange = (e) => {
@@ -400,14 +413,14 @@ export default function Contact(props) {
                           Thank you for making your reservation! We are excited
                           to host your WOW group for your meal!Please let us
                           know if you have any questions befoprehand. See you{' '}
-                          {bookedSlot}!.
+                          {selectedOption}!.
                         </p>
                       </div>
                     </div>
                   </div>
                   <div className="mt-5 text-xl sm:mt-6 sm:grid sm:grid-flow-row-dense sm:grid-cols-2 sm:gap-3">
                     <Button
-                      href="/menu.png"
+                      href="/menu/png"
                       variant="outline"
                       color="themecta"
                       type="button"
@@ -437,6 +450,8 @@ export default function Contact(props) {
           <Form
             handleInput={handleInputChange}
             handleForm={handleSubmit}
+            selectedOption={selectedOption}
+            handleSelectChange={handleSelectChange}
             formData={formData}
             slots={props.data.slots}
           />

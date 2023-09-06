@@ -14,6 +14,8 @@ export default async function handler(req, res) {
     }
     formData.phone = `+1${formData.phone}`
     formData.name = `${formData.firstName} ${formData.lastName}`
+
+    console.log(formData)
     const config = {
       headers: {
         'Content-Type': 'application/json',
