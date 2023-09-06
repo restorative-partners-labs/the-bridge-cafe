@@ -169,7 +169,11 @@ function Form({ handleInput, handleForm, formData, slots }) {
               >
                 <option value="empty"></option>
                 {slots.map((slot) => {
-                  return <option value={slot.start}>{slot.window}</option>
+                  return (
+                    <option key={slot.start} value={slot.start}>
+                      {slot.window}
+                    </option>
+                  )
                 })}
               </select>
             </div>
