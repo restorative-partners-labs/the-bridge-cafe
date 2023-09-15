@@ -32,25 +32,34 @@ export function DailySpecials() {
         <GridList>
           <GridListItem
             className="rounded-lg hover:bg-bridgelight"
-            title="Street Tacos"
-            price="$6"
+            title="Avocado TOAST"
+            price="$12"
           >
-            2 grilled chicken or el pastor, diced onion, & cilantro, served on
-            corn tortilla with a side of avocado and salsa.
+            toasted sourdough with 2 tomatoes whole Avocado fanned out with 2
+            eggs
           </GridListItem>
           <GridListItem
             className="rounded-lg hover:bg-bridgelight"
-            title="Fish & Chips"
+            title="FRENCH TOAST BREAKFAST"
             price="$12"
           >
-            two cod filets with fries and housemade tartar sauce.
+            2 pieces cinnamon swirl bread scrambled eggs choice sausage or bacon
           </GridListItem>
+          <GridListItem
+            className="rounded-lg hover:bg-bridgelight"
+            title="Street Tacos"
+            price="$6"
+          >
+            2 grilled chicken or al pastor, diced onion, & cilantro, served on
+            corn tortilla with a side of avocado and salsa.
+          </GridListItem>
+
           <GridListItem
             className="rounded-lg hover:bg-bridgelight"
             title="Patty Melt"
             price="$11"
           >
-            swiss cheese, caramelized opinions on marbled rye.
+            swiss cheese, caramelized onions on marbled rye.
           </GridListItem>
           <GridListItem
             className="rounded-lg hover:bg-bridgelight"
@@ -65,8 +74,15 @@ export function DailySpecials() {
             title="BISCUITS & GRAVY"
             price="$12"
           >
-            FRIDAY ONLY! HOMEMADE BISCUITS, WITH GRANDMA&aposS COUNTRY STYLE
+            FRIDAY ONLY! HOMEMADE BISCUITS, WITH GRANDMA&#39;S COUNTRY STYLE
             SAUSAGE GRAVY
+          </GridListItem>
+          <GridListItem
+            className="rounded-lg hover:bg-bridgelight"
+            title="Fish & Chips"
+            price="$12"
+          >
+            FRIDAY ONLY! two cod filets with fries and housemade tartar sauce.
           </GridListItem>
         </GridList>
       </Container>
