@@ -8,10 +8,10 @@ export default async (req, res) => {
       )
 
       if (response.data.schedule) {
-        if (response.data.schedule.closed) {
-          res.status(200).json({ onlineOrderingAvailable: false })
-        } else {
+        if (response.data.orderTypes.pickup.scheduleDates.length > 0) {
           res.status(200).json({ onlineOrderingAvailable: true })
+        } else {
+          res.status(200).json({ onlineOrderingAvailable: false })
         }
       } else {
         res.status(400).json({ onlineOrderingAvailable: true })

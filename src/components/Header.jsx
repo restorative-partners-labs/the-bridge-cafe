@@ -12,6 +12,7 @@ import {
   BuildingStorefrontIcon,
   BellAlertIcon,
   XCircleIcon,
+  XMarkIcon,
 } from '@heroicons/react/24/outline'
 
 function MenuIcon(props) {
@@ -83,12 +84,10 @@ export function Header() {
       const response = await fetch('/api/status')
       const data = await response.json()
       if (data.onlineOrderingAvailable === true) {
-        // Online ordering is available, so continue to router push.
         router.push(
           'https://order.spoton.com/so-the-bridge-cafe-10987/san-luis-obispo-ca/63338b3bf3ebec0040438b39'
         )
       } else {
-        // Online ordering is not available, set showOnlineOrderClose to true.
         setShowOnlineOrderClose(true)
       }
     } catch (error) {
@@ -316,6 +315,16 @@ export function Header() {
                 leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
               >
                 <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
+                  <div className="absolute right-0 top-0 hidden pr-4 pt-4 sm:block">
+                    <button
+                      type="button"
+                      className="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-bridge focus:ring-offset-2"
+                      onClick={() => setShowOnlineOrderClose(false)}
+                    >
+                      <span className="sr-only">Close</span>
+                      <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                    </button>
+                  </div>
                   <div>
                     <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100">
                       <XCircleIcon
@@ -355,11 +364,14 @@ export function Header() {
                     </Button>
                     <button
                       type="button"
-                      href="https://thebridgecafe.org"
+                      href="https://thebridgecafe.org#daily-specials"
                       className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm text-xl font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:col-start-1 sm:mt-0"
-                      onClick={() => setShowOnlineOrderClose(false)}
+                      onClick={() => {
+                        setShowOnlineOrderClose(false)
+                        router.push('#daily-specials')
+                      }}
                     >
-                      Close
+                      View Specials
                     </button>
                   </div>
                 </Dialog.Panel>
