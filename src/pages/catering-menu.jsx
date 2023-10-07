@@ -1,12 +1,19 @@
 import React from 'react'
 import PDFViewer from '../components/PDFViewer'
 
-const PdfPage = () => {
+const CateringMenu = () => {
   return (
-    <div>
-      <PDFViewer pdfUrl="/catering-menu.pdf" />
-    </div>
+    <iframe
+      src="https://publuu.com/flip-book/259744/613377/page/1?embed"
+      width="100%"
+      height="100%"
+      scrolling="no"
+      frameborder="0"
+      allowfullscreen=""
+      allow="clipboard-write"
+      class="publuuflip"
+    ></iframe>
   )
 }
 
-export default PdfPage
+export default CateringMenu

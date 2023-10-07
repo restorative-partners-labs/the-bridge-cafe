@@ -63,7 +63,7 @@ const solutions = [
   {
     name: 'Catering Menu',
     description: 'Learn more about our catering services',
-    href: '/catering-menu.pdf',
+    href: '/catering-menu',
     icon: UserGroupIcon,
   },
   {
