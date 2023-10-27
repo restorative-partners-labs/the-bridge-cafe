@@ -18,14 +18,6 @@ const people = [
     linkedinUrl: '#',
   },
   {
-    id: 3,
-    name: 'Abele Martinez',
-    role: 'Line Cook',
-    imageUrl: 'https://techsavagery.b-cdn.net/the-bridge-cafe/Abele.jpg',
-    twitterUrl: '#',
-    linkedinUrl: '#',
-  },
-  {
     id: 4,
     name: 'Jared Lee',
     role: 'Line Cook',
