@@ -10,6 +10,7 @@ import RewardSignup from '../components/RewardSignup'
 import { DailySpecials } from '@/components/DailySpecials'
 import AboutUs from '@/components/AboutUs'
 import Team from '@/components/Team'
+import HolidayMenuBanner from '@/components/HolidayMenuBanner'
 
 const products = [
   {
@@ -52,6 +53,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <HolidayMenuBanner />
         <DailySpecials />
         <AboutUs />
         {/* <PrimaryFeatures /> */}
