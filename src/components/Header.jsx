@@ -13,6 +13,7 @@ import {
   BellAlertIcon,
   XCircleIcon,
   XMarkIcon,
+  BookOpenIcon
 } from '@heroicons/react/24/outline'
 
 function MenuIcon(props) {
@@ -71,6 +72,13 @@ const solutions = [
     description: 'Checkout our daily specials menu',
     href: '/specials',
     icon: BellAlertIcon,
+  },
+
+  {
+    name: 'Thanksgiving Menu',
+    description: 'Checkout our Thanksgiving menu specials',
+    href: '/thanksgiving-menu.pdf',
+    icon: BookOpenIcon,
   },
 ]
 
