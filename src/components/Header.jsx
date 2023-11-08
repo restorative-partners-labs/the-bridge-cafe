@@ -75,9 +75,9 @@ const solutions = [
   },
 
   {
-    name: 'Thanksgiving Menu',
+    name: 'Holiday Menu',
     description: 'Checkout our Thanksgiving menu specials',
-    href: '/thanksgiving-menu.pdf',
+    href: '/holiday-menu.png',
     icon: BookOpenIcon,
   },
 ]
