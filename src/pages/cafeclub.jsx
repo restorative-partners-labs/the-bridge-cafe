@@ -30,11 +30,11 @@ function TextInput({ label, ...props }) {
         id={id}
         {...props}
         placeholder=" "
-        className="text-base/6 text-neutral-950 focus:border-neutral-950 focus:ring-neutral-950/5 peer block w-full border border-neutral-300 bg-transparent px-6 pb-4 pt-12 ring-transparent transition focus:border-bridge focus:outline-none focus:ring-0 group-first:rounded-t-2xl group-last:rounded-b-2xl"
+        className="peer block w-full border border-neutral-300 bg-transparent px-6 pb-4 pt-12 text-base/6 text-neutral-950 ring-transparent transition focus:border-bridge focus:border-neutral-950 focus:outline-none focus:ring-0 focus:ring-neutral-950/5 group-first:rounded-t-2xl group-last:rounded-b-2xl"
       />
       <label
         htmlFor={id}
-        className="text-base/6 peer-focus:text-neutral-950 peer-[:not(:placeholder-shown)]:text-neutral-950 pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-neutral-500 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold"
+        className="pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 text-neutral-500 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-neutral-950 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-neutral-950"
       >
         {label}
       </label>
@@ -48,7 +48,7 @@ function RadioInput({ label, ...props }) {
       <input
         type="radio"
         {...props}
-        className="border-neutral-950/20 checked:border-neutral-950 focus-visible:ring-neutral-950 h-6 w-6 flex-none appearance-none rounded-full border outline-none checked:border-[0.5rem] focus-visible:ring-1 focus-visible:ring-offset-2"
+        className="h-6 w-6 flex-none appearance-none rounded-full border border-neutral-950/20 outline-none checked:border-[0.5rem] checked:border-neutral-950 focus-visible:ring-1 focus-visible:ring-neutral-950 focus-visible:ring-offset-2"
       />
       <span className="text-base/6 text-neutral-950">{label}</span>
     </label>
@@ -119,12 +119,38 @@ function ContactForm({ handleInput, handleForm, formData }) {
 
 function ContactDetails() {
   return (
-    <FadeIn className="order-1">
-      <Image
-        src={imageCafeClub}
-        sizes="(min-width: 512px) 41rem, 31rem"
-        className="justify-center lg:justify-end"
-      />
+    <FadeIn className="">
+      <div className="flex items-center justify-center">
+        <Image
+          src={imageCafeClub}
+          className="flex lg:h-auto lg:max-w-xl max-w-sm items-center justify-center justify-center"
+        />
+      </div>
+
+      <div className="mt-10 flex items-center justify-center">
+        <Button
+          href="https://www.toasttab.com/the-bridge-cafe/rewardsSignup"
+          variant="outline"
+          color="theme"
+          className="w-56 bg-white"
+        >
+          <span className="ml-2.5">
+            <p className="text-xl">Join Now</p>
+          </span>
+        </Button>
+      </div>
+      <div className="mt-10 flex items-center justify-center">
+        <Button
+          href="https://www.toasttab.com/the-bridge-cafe/rewards"
+          variant="outline"
+          color="theme"
+          className="w-56 bg-white"
+        >
+          <span className="ml-2.5">
+            <p className="text-xl">Check Balance</p>
+          </span>
+        </Button>
+      </div>
     </FadeIn>
   )
 }
@@ -174,7 +200,7 @@ function LoyaltyBenefits({ benefits }) {
                   {benefit.logo}
                 </h3>
 
-                <p className="font-display text-neutral-950 mt-6 text-2xl font-semibold">
+                <p className="font-display mt-6 text-2xl font-semibold text-neutral-950">
                   {benefit.title}
                 </p>
                 <p className="mt-4 text-base text-neutral-600">
@@ -285,7 +311,7 @@ export default function Contact() {
                       </div>
                     </div>
                   </div>
-                  <div className="text-xl mt-5 sm:mt-6 sm:grid sm:grid-flow-row-dense sm:grid-cols-2 sm:gap-3">
+                  <div className="mt-5 text-xl sm:mt-6 sm:grid sm:grid-flow-row-dense sm:grid-cols-2 sm:gap-3">
                     <Button
                       href="https://order.toasttab.com/online/the-bridge-cafe"
                       variant="outline"
@@ -299,7 +325,7 @@ export default function Contact() {
                     <button
                       type="button"
                       href="https://thebridgecafe.org"
-                      className="text-xl mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:col-start-1 sm:mt-0"
+                      className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm text-xl font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:col-start-1 sm:mt-0"
                       onClick={() => setOpen(false)}
                     >
                       Close
@@ -313,12 +339,7 @@ export default function Contact() {
       </Transition.Root>
 
       <Container className="mt-24 sm:mt-32 lg:mt-40">
-        <div className="grid grid-cols-1 items-center justify-center gap-x-8 gap-y-24 lg:grid-cols-2">
-          <ContactForm
-            handleInput={handleInputChange}
-            handleForm={handleSubmit}
-            formData={formData}
-          />
+        <div className="grid grid-cols-1 items-center justify-center gap-x-8 gap-y-24 lg:grid-cols-1">
           <ContactDetails />
         </div>
         <LoyaltyBenefits benefits={benefits} />
