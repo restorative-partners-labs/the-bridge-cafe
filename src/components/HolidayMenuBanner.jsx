@@ -8,7 +8,7 @@ export default function HolidayMenuBanner() {
         aria-hidden="true"
       />
       <div className="mx-auto max-w-7xl px-6 py-10 sm:py-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
+        <div className="mx-auto max-w-l lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
           <img
             src="/holiday-menu.png"
             alt=""
