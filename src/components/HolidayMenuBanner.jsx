@@ -16,7 +16,7 @@ export default function HolidayMenuBanner() {
           />
           <div className="mt-10 flex items-center justify-center">
             <Button
-              href="https://order.spoton.com/so-the-bridge-cafe-10987/san-luis-obispo-ca/63338b3bf3ebec0040438b39"
+              href="https://order.toasttab.com/online/the-bridge-cafe"
               variant="outline"
               color="theme"
               className="w-56 bg-white"

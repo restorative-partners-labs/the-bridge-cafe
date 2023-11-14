@@ -287,7 +287,7 @@ export default function Contact() {
                   </div>
                   <div className="text-xl mt-5 sm:mt-6 sm:grid sm:grid-flow-row-dense sm:grid-cols-2 sm:gap-3">
                     <Button
-                      href="https://order.spoton.com/so-the-bridge-cafe-10987/san-luis-obispo-ca/63338b3bf3ebec0040438b39"
+                      href="https://order.toasttab.com/online/the-bridge-cafe"
                       variant="outline"
                       color="themecta"
                       type="button"

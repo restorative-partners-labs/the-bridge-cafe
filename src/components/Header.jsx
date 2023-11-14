@@ -13,7 +13,7 @@ import {
   BellAlertIcon,
   XCircleIcon,
   XMarkIcon,
-  BookOpenIcon
+  BookOpenIcon,
 } from '@heroicons/react/24/outline'
 
 function MenuIcon(props) {
@@ -88,22 +88,7 @@ export function Header() {
   const cancelButtonRef = useRef(null)
 
   const handleOrderOnlineNavigation = async () => {
-    try {
-      const response = await fetch('/api/status')
-      const data = await response.json()
-      if (data.onlineOrderingAvailable === true) {
-        router.push(
-          'https://order.spoton.com/so-the-bridge-cafe-10987/san-luis-obispo-ca/63338b3bf3ebec0040438b39'
-        )
-      } else {
-        setShowOnlineOrderClose(true)
-      }
-    } catch (error) {
-      console.error('Error fetching data:', error)
-      router.push(
-        'https://order.spoton.com/so-the-bridge-cafe-10987/san-luis-obispo-ca/63338b3bf3ebec0040438b39'
-      )
-    }
+    router.push('https://order.toasttab.com/online/the-bridge-cafe')
   }
   return (
     <>
