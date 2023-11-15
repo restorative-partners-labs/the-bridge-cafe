@@ -1,6 +1,6 @@
-export const author = {
-  name: 'author',
-  title: 'Author',
+export const teamMember = {
+  name: 'teamMember',
+  title: 'Team Member',
   type: 'document',
   fields: [
     {
