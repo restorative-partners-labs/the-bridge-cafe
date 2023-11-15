@@ -2,9 +2,6 @@ import '../styles/tailwind.css'
 import '../styles/overrides.modules.css'
 import 'focus-visible'
 import Link from 'next/link'
-import { PrismicProvider } from '@prismicio/react'
-import { PrismicPreview } from '@prismicio/next'
-import { repositoryName } from '../../prismicio'
 import { GoogleAnalytics, event } from 'nextjs-google-analytics'
 import { Analytics } from '@vercel/analytics/react'
 
@@ -19,12 +16,10 @@ export function reportWebVitals({ id, name, label, value }) {
 
 export default function App({ Component, pageProps }) {
   return (
-    <PrismicProvider internalLinkComponent={Link}>
-      <PrismicPreview repositoryName={repositoryName}>
-        <GoogleAnalytics trackPageViews />
-        <Component {...pageProps} />
-        <Analytics />
-      </PrismicPreview>
-    </PrismicProvider>
+    <>
+      <GoogleAnalytics trackPageViews />
+      <Component {...pageProps} />
+      <Analytics />
+    </>
   )
 }
