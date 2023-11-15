@@ -1,34 +1,10 @@
-import { FadeIn, FadeInStagger } from './FadeIn'
-import { SanityDocument } from '@sanity/client'
+import { FadeIn } from './FadeIn'
+import { client } from '../../sanity/lib/client'
+import imageUrlBuilder from '@sanity/image-url'
 
-const people = [
-  {
-    id: 1,
-    name: 'Jason Hunter',
-    role: 'General Manager/Chef',
-    imageUrl: 'https://techsavagery.b-cdn.net/the-bridge-cafe/Jason.jpg',
-    twitterUrl: '#',
-    linkedinUrl: '#',
-  },
-  {
-    id: 2,
-    name: 'Jaycee Holland',
-    role: 'Assistant Manager',
-    imageUrl: 'https://techsavagery.b-cdn.net/the-bridge-cafe/Jaycee.jpg',
-    twitterUrl: '#',
-    linkedinUrl: '#',
-  },
-  {
-    id: 4,
-    name: 'Jared Lee',
-    role: 'Line Cook',
-    imageUrl: 'https://techsavagery.b-cdn.net/the-bridge-cafe/Jared.jpg',
-    twitterUrl: '#',
-    linkedinUrl: '#',
-  },
-]
+const builder = imageUrlBuilder(client)
 
-export default function Team(teamMembers = []) {
+export default function Team({ teamMembers = [] }) {
   return (
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
@@ -51,7 +27,7 @@ export default function Team(teamMembers = []) {
         >
           {' '}
           {teamMembers.map((teamMember) => (
-            <FadeIn key={teamMember.id}>
+            <FadeIn key={teamMember._id}>
               {' '}
               <li
                 key={teamMember.id}
@@ -59,7 +35,7 @@ export default function Team(teamMembers = []) {
               >
                 <img
                   className="mx-auto h-48 w-48 rounded-full ring-2 ring-bridge md:h-56 md:w-56"
-                  src={teamMember.image}
+                  src={builder.image(teamMember.image).url()}
                   alt=""
                 />
                 <h3 className="mt-6 text-3xl font-bold leading-7 tracking-tight text-bridge">

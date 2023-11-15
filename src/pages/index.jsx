@@ -15,7 +15,7 @@ import { client } from '../../sanity/lib/client'
 import { groq } from 'next-sanity'
 
 export const teamQuery = groq`*[_type == "teamMember" && defined(name)]{
-  _id, name, image. role
+  _id, name, image, role
 }`
 export const getStaticProps = async () => {
   const data = await client.fetch(teamQuery)
