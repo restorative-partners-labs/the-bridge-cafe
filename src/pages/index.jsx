@@ -11,35 +11,19 @@ import { DailySpecials } from '@/components/DailySpecials'
 import AboutUs from '@/components/AboutUs'
 import Team from '@/components/Team'
 import HolidayMenuBanner from '@/components/HolidayMenuBanner'
+import { client } from '../../sanity/lib/client'
+import { groq } from 'next-sanity'
 
-const products = [
-  {
-    id: 1,
-    name: 'Throwback Hip Bag',
-    href: '#',
-    color: 'Salmon',
-    price: '$90.00',
-    quantity: 1,
-    imageSrc:
-      'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg',
-    imageAlt:
-      'Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.',
-  },
-  {
-    id: 2,
-    name: 'Medium Stuff Satchel',
-    href: '#',
-    color: 'Blue',
-    price: '$32.00',
-    quantity: 1,
-    imageSrc:
-      'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg',
-    imageAlt:
-      'Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.',
-  },
-]
+export const teamQuery = groq`*[_type == "teamMember" && defined(name)]{
+  _id, name, image. role
+}`
+export const getStaticProps = async () => {
+  const data = await client.fetch(teamQuery)
 
-export default function Home() {
+  return { props: { data } }
+}
+
+export default function Home({ data }) {
   return (
     <>
       <Head>
@@ -58,7 +42,7 @@ export default function Home() {
         <AboutUs />
         {/* <PrimaryFeatures /> */}
         {/* <SecondaryFeatures /> */}
-        <Team />
+        <Team teamMembers={data} />
         <FoodDisplay />
 
         <RestorativePartnersCallToAction />
