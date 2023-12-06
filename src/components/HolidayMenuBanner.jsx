@@ -10,7 +10,7 @@ export default function HolidayMenuBanner() {
       <div className="mx-auto max-w-7xl px-6 py-10 sm:py-40 lg:px-8">
         <div className="mx-auto max-w-l lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
           <img
-            src="/holiday-menu.png"
+            src="/christmas-menu.png"
             alt=""
             className="mt-10 w-full max-w-lg rounded-2xl object-cover sm:mt-10 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-10"
           />
@@ -30,8 +30,8 @@ export default function HolidayMenuBanner() {
             id="sale-heading"
             className="text-xl font-bold tracking-tight text-bridge md:text-2xl text-center"
           >
-            Check Out Our Thanksgiving Menu and Order Now! Order Online Before
-            11/20 @3PM
+            Check Out Our Christmas Menu and Order Now! Order Online Before
+            12/15 @3PM
           </h2>
         </div>
       </div>
