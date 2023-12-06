@@ -8,7 +8,7 @@ export default function HolidayMenuBanner() {
         aria-hidden="true"
       />
       <div className="mx-auto max-w-7xl px-6 py-10 sm:py-40 lg:px-8">
-        <div className="mx-auto max-w-l lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
+        <div className="max-w-l mx-auto lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
           <img
             src="/christmas-menu.png"
             alt=""
@@ -16,7 +16,7 @@ export default function HolidayMenuBanner() {
           />
           <div className="mt-10 flex items-center justify-center">
             <Button
-              href="https://order.toasttab.com/online/the-bridge-cafe"
+              href="https://order.toasttab.com/online/the-bridge-cafe/item-glazed-ham-or-roasted-turkey-breast-house-made-stuffing-mac-and-cheese-cranberry-relish-and-roasted-gravy_96042282-5c96-4c20-9cef-a1209ff4740f"
               variant="outline"
               color="theme"
               className="w-56 bg-white"
@@ -28,7 +28,7 @@ export default function HolidayMenuBanner() {
           </div>
           <h2
             id="sale-heading"
-            className="text-xl font-bold tracking-tight text-bridge md:text-2xl text-center"
+            className="text-center text-xl font-bold tracking-tight text-bridge md:text-2xl"
           >
             Check Out Our Christmas Menu and Order Now! Order Online Before
             12/15 @3PM
