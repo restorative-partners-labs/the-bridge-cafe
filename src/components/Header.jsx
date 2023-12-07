@@ -76,8 +76,8 @@ const solutions = [
 
   {
     name: 'Holiday Menu',
-    description: 'Checkout our Thanksgiving menu specials',
-    href: '/holiday-menu.png',
+    description: 'Checkout our Christmas menu specials',
+    href: '/christmas-menu',
     icon: BookOpenIcon,
   },
 ]
