@@ -4,13 +4,12 @@ import { FoodDisplay } from '@/components/FoodDisplay'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
-import { PrimaryFeatures } from '@/components/PrimaryFeatures'
 import { Banner } from '@/components/Banner'
 import RewardSignup from '../components/RewardSignup'
 import { DailySpecials } from '@/components/DailySpecials'
 import AboutUs from '@/components/AboutUs'
 import Team from '@/components/Team'
-import HolidayMenuBanner from '@/components/HolidayMenuBanner'
+import SpecialMenuBanner from '@/components/SpecialMenuBanner'
 import { client } from '../../sanity/lib/client'
 import { groq } from 'next-sanity'
 
@@ -37,7 +36,7 @@ export default function Home({ data }) {
       <Header />
       <main>
         <Hero />
-        <HolidayMenuBanner />
+        {/* <SpecialMenuBanner /> */}
         <DailySpecials />
         <AboutUs />
         {/* <PrimaryFeatures /> */}

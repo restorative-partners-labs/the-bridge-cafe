@@ -74,12 +74,12 @@ const solutions = [
     icon: BellAlertIcon,
   },
 
-  {
-    name: 'Holiday Menu',
-    description: 'Checkout our Christmas menu specials',
-    href: '/christmas-menu',
-    icon: BookOpenIcon,
-  },
+  // {
+  //   name: 'Holiday Menu',
+  //   description: 'Checkout our Christmas menu specials',
+  //   href: '/christmas-menu',
+  //   icon: BookOpenIcon,
+  // },
 ]
 
 export function Header() {

@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Banner } from '@/components/Banner'
-import HolidayMenuBanner from '@/components/HolidayMenuBanner'
+import HolidayMenuBanner from '@/components/SpecialMenuBanner'
 import { client } from '../../sanity/lib/client'
 import { groq } from 'next-sanity'
 

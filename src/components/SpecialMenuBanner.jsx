@@ -1,6 +1,6 @@
 import { Button } from '@/components/Button'
 
-export default function HolidayMenuBanner() {
+export default function SpecialMenuBanner() {
   return (
     <div className="relative isolate overflow-hidden bg-gradient-to-b from-bridge pt-14">
       <div
