@@ -3,7 +3,7 @@ import { GridList, GridListItem } from '@/components/GridList'
 import { GridPattern } from '@/components/GridPattern'
 import { SectionIntro } from '@/components/SectionIntro'
 
-export function DailySpecials() {
+export function DailySpecials({ specials = [] }) {
   return (
     <div
       id="daily-specials"
@@ -30,6 +30,15 @@ export function DailySpecials() {
 
       <Container className="mt-24">
         <GridList>
+          {specials.map((special) => {
+            <GridListItem
+              className="rounded-lg hover:bg-bridgelight"
+              title={special.name}
+              price={special.price}
+            >
+              {special.description}
+            </GridListItem>
+          })}
           <GridListItem
             className="rounded-lg hover:bg-bridgelight"
             title="Avocado TOAST"

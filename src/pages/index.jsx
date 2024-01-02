@@ -16,13 +16,19 @@ import { groq } from 'next-sanity'
 export const teamQuery = groq`*[_type == "teamMember" && defined(name)]{
   _id, name, image, role
 }`
-export const getStaticProps = async () => {
-  const data = await client.fetch(teamQuery)
 
-  return { props: { data } }
+export const specialsQuery = groq`*[_type == "special-item" && defined(name)]{
+  _id, name, price, link, description
+}`
+
+export const getStaticProps = async () => {
+  const teamData = await client.fetch(teamQuery)
+  const specialsData = await client.fetch(specialsQuery)
+
+  return { props: { teamData } }
 }
 
-export default function Home({ data }) {
+export default function Home({ teamData }) {
   return (
     <>
       <Head>
@@ -37,11 +43,11 @@ export default function Home({ data }) {
       <main>
         <Hero />
         {/* <SpecialMenuBanner /> */}
-        <DailySpecials />
+        <DailySpecials specials={specialsData}/>
         <AboutUs />
         {/* <PrimaryFeatures /> */}
         {/* <SecondaryFeatures /> */}
-        <Team teamMembers={data} />
+        <Team teamMembers={teamData} />
         <FoodDisplay />
 
         <RestorativePartnersCallToAction />

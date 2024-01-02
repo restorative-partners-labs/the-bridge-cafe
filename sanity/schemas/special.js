@@ -10,7 +10,7 @@ export const special = {
     },
     {
       name: 'price',
-      title: 'Prce',
+      title: 'Price',
       type: 'string',
     },
     {
@@ -36,6 +36,11 @@ export const special = {
     {
       name: 'description',
       title: 'Description',
+      type: 'string',
+    },
+    {
+      name: 'available',
+      title: 'Available',
       type: 'string',
     },
   ],
