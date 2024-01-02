@@ -2,6 +2,7 @@ import { Container } from '@/components/Container'
 import { GridList, GridListItem } from '@/components/GridList'
 import { GridPattern } from '@/components/GridPattern'
 import { SectionIntro } from '@/components/SectionIntro'
+import { FadeIn } from './FadeIn'
 
 export function DailySpecials({ specials = [] }) {
   return (
@@ -30,69 +31,21 @@ export function DailySpecials({ specials = [] }) {
 
       <Container className="mt-24">
         <GridList>
-          {specials.map((special) => {
-            <GridListItem
-              className="rounded-lg hover:bg-bridgelight"
-              title={special.name}
-              price={special.price}
-            >
-              {special.description}
-            </GridListItem>
-          })}
-          <GridListItem
-            className="rounded-lg hover:bg-bridgelight"
-            title="Avocado TOAST"
-            price="$12"
-          >
-            toasted sourdough with 2 tomatoes whole Avocado fanned out with 2
-            eggs
-          </GridListItem>
-          <GridListItem
-            className="rounded-lg hover:bg-bridgelight"
-            title="FRENCH TOAST BREAKFAST"
-            price="$12"
-          >
-            2 pieces cinnamon swirl bread scrambled eggs choice sausage or bacon
-          </GridListItem>
-          <GridListItem
-            className="rounded-lg hover:bg-bridgelight"
-            title="Street Tacos"
-            price="$6"
-          >
-            2 grilled chicken or al pastor, diced onion, & cilantro, served on
-            corn tortilla with a side of avocado and salsa.
-          </GridListItem>
-
-          <GridListItem
-            className="rounded-lg hover:bg-bridgelight"
-            title="Patty Melt"
-            price="$11"
-          >
-            swiss cheese, caramelized onions on marbled rye.
-          </GridListItem>
-          <GridListItem
-            className="rounded-lg hover:bg-bridgelight"
-            title="Mediterranean Salad"
-            price="$12"
-          >
-            cucumber, tomatoes, red onion, kalamata olives, feta cheese and our
-            house made lemon vinaigrette.
-          </GridListItem>
-          <GridListItem
-            className="rounded-lg hover:bg-bridgelight"
-            title="BISCUITS & GRAVY"
-            price="$12"
-          >
-            FRIDAY ONLY! HOMEMADE BISCUITS, WITH GRANDMA&#39;S COUNTRY STYLE
-            SAUSAGE GRAVY
-          </GridListItem>
-          <GridListItem
-            className="rounded-lg hover:bg-bridgelight"
-            title="Fish & Chips"
-            price="$12"
-          >
-            FRIDAY ONLY! two cod filets with fries and housemade tartar sauce.
-          </GridListItem>
+          {specials.map((special) => (
+            <FadeIn key={special._id}>
+              {' '}
+              <a href={special.link}>
+                {' '}
+                <GridListItem
+                  className="rounded-lg hover:bg-bridgelight"
+                  title={special.name}
+                  price={`$ ${special.price}`}
+                >
+                  {special.description}
+                </GridListItem>
+              </a>
+            </FadeIn>
+          ))}
         </GridList>
       </Container>
     </div>

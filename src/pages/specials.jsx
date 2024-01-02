@@ -3,35 +3,24 @@ import { Footer } from '@/components/Footer'
 import { Banner } from '@/components/Banner'
 import { DailySpecials } from '@/components/DailySpecials'
 import { Header } from '@/components/Header'
+import { groq } from 'next-sanity'
+import { client } from '../../sanity/lib/client'
 
-const products = [
-  {
-    id: 1,
-    name: 'Throwback Hip Bag',
-    href: '#',
-    color: 'Salmon',
-    price: '$90.00',
-    quantity: 1,
-    imageSrc:
-      'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg',
-    imageAlt:
-      'Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.',
-  },
-  {
-    id: 2,
-    name: 'Medium Stuff Satchel',
-    href: '#',
-    color: 'Blue',
-    price: '$32.00',
-    quantity: 1,
-    imageSrc:
-      'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg',
-    imageAlt:
-      'Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.',
-  },
-]
 
-export default function Specials() {
+
+
+export const specialsQuery = groq`*[_type == "special-item" && defined(name)]{
+  _id, name, price, link, description
+}`
+
+export const getStaticProps = async () => {
+  const specialsData = await client.fetch(specialsQuery)
+  console.log(specialsData)
+
+  return { props: { specialsData } }
+}
+
+export default function Specials({ specialsData }) {
   return (
     <>
       <Head>
@@ -45,7 +34,7 @@ export default function Specials() {
       <Header />
 
       <main>
-        <DailySpecials />
+        <DailySpecials specials={specialsData} />
       </main>
 
       <Footer />

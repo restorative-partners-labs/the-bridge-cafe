@@ -24,6 +24,7 @@ export const specialsQuery = groq`*[_type == "special-item" && defined(name)]{
 export const getStaticProps = async () => {
   const teamData = await client.fetch(teamQuery)
   const specialsData = await client.fetch(specialsQuery)
+  console.log(specialsData)
 
   return { props: { teamData, specialsData } }
 }
