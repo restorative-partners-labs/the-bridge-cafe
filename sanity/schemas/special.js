@@ -41,7 +41,7 @@ export const special = {
     {
       name: 'available',
       title: 'Available',
-      type: 'string',
+      type: 'boolean',
     },
   ],
   preview: {

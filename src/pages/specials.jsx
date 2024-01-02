@@ -6,21 +6,28 @@ import { Header } from '@/components/Header'
 import { groq } from 'next-sanity'
 import { client } from '../../sanity/lib/client'
 
-
-
-
 export const specialsQuery = groq`*[_type == "special-item" && defined(name)]{
   _id, name, price, link, description
 }`
 
-export const getStaticProps = async () => {
-  const specialsData = await client.fetch(specialsQuery)
-  console.log(specialsData)
+export default function Specials() {
+  const [specials, setSpecials] = useState([])
 
-  return { props: { specialsData } }
-}
+  useEffect(() => {
+    const specialsSubscription = client
+      .listen(specialsQuery)
+      .subscribe((update) => {
+        const updatedSpecials = update.result
+        setSpecials(updatedSpecials)
+      })
 
-export default function Specials({ specialsData }) {
+    client.fetch(specialsQuery).then(setSpecials)
+
+    return () => {
+      specialsSubscription.unsubscribe()
+    }
+  }, [])
+
   return (
     <>
       <Head>
@@ -34,7 +41,7 @@ export default function Specials({ specialsData }) {
       <Header />
 
       <main>
-        <DailySpecials specials={specialsData} />
+        <DailySpecials specials={specials} />
       </main>
 
       <Footer />

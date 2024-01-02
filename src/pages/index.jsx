@@ -12,6 +12,7 @@ import Team from '@/components/Team'
 import SpecialMenuBanner from '@/components/SpecialMenuBanner'
 import { client } from '../../sanity/lib/client'
 import { groq } from 'next-sanity'
+import React, { useEffect, useState } from 'react'
 
 export const teamQuery = groq`*[_type == "teamMember" && defined(name)]{
   _id, name, image, role
@@ -21,15 +22,32 @@ export const specialsQuery = groq`*[_type == "special-item" && defined(name)]{
   _id, name, price, link, description
 }`
 
-export const getStaticProps = async () => {
-  const teamData = await client.fetch(teamQuery)
-  const specialsData = await client.fetch(specialsQuery)
-  console.log(specialsData)
+export default function Home() {
+  const [team, setTeam] = useState([])
+  const [specials, setSpecials] = useState([])
 
-  return { props: { teamData, specialsData } }
-}
+  useEffect(() => {
+    const teamSubscription = client.listen(teamQuery).subscribe((update) => {
+      const updatedTeam = update.result
+      setTeam(updatedTeam)
+    })
 
-export default function Home({ teamData, specialsData }) {
+    const specialsSubscription = client
+      .listen(specialsQuery)
+      .subscribe((update) => {
+        const updatedSpecials = update.result
+        setSpecials(updatedSpecials)
+      })
+
+    client.fetch(teamQuery).then(setTeam)
+    client.fetch(specialsQuery).then(setSpecials)
+
+    return () => {
+      specialsSubscription.unsubscribe()
+      teamSubscription.unsubscribe()
+    }
+  }, [])
+
   return (
     <>
       <Head>
@@ -44,11 +62,11 @@ export default function Home({ teamData, specialsData }) {
       <main>
         <Hero />
         {/* <SpecialMenuBanner /> */}
-        <DailySpecials specials={specialsData} />
+        <DailySpecials specials={specials} />
         <AboutUs />
         {/* <PrimaryFeatures /> */}
         {/* <SecondaryFeatures /> */}
-        <Team teamMembers={teamData} />
+        <Team teamMembers={team} />
         <FoodDisplay />
 
         <RestorativePartnersCallToAction />
