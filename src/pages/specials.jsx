@@ -5,6 +5,7 @@ import { DailySpecials } from '@/components/DailySpecials'
 import { Header } from '@/components/Header'
 import { groq } from 'next-sanity'
 import { client } from '../../sanity/lib/client'
+import React, { useEffect, useState } from 'react'
 
 export const specialsQuery = groq`*[_type == "special-item" && defined(name)]{
   _id, name, price, link, description
