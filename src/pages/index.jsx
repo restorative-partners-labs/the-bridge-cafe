@@ -25,10 +25,10 @@ export const getStaticProps = async () => {
   const teamData = await client.fetch(teamQuery)
   const specialsData = await client.fetch(specialsQuery)
 
-  return { props: { teamData } }
+  return { props: { teamData, specialsData } }
 }
 
-export default function Home({ teamData }) {
+export default function Home({ teamData, specialsData }) {
   return (
     <>
       <Head>
@@ -43,7 +43,7 @@ export default function Home({ teamData }) {
       <main>
         <Hero />
         {/* <SpecialMenuBanner /> */}
-        <DailySpecials specials={specialsData}/>
+        <DailySpecials specials={specialsData} />
         <AboutUs />
         {/* <PrimaryFeatures /> */}
         {/* <SecondaryFeatures /> */}
