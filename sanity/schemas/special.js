@@ -9,13 +9,14 @@ export const special = {
       type: 'string',
     },
     {
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      options: {
-        source: 'name',
-        maxLength: 96,
-      },
+      name: 'price',
+      title: 'Prce',
+      type: 'string',
+    },
+    {
+      name: 'link',
+      title: 'Link',
+      type: 'string',
     },
     {
       name: 'image',
@@ -29,21 +30,13 @@ export const special = {
           name: 'alt',
           type: 'string',
           title: 'Alternative Text',
-        }
-      ]
+        },
+      ],
     },
     {
       name: 'description',
       title: 'Description',
-      type: 'array',
-      of: [
-        {
-          title: 'Block',
-          type: 'block',
-          styles: [{title: 'Normal', value: 'normal'}],
-          lists: [],
-        },
-      ],
+      type: 'string',
     },
   ],
   preview: {
