@@ -7,7 +7,7 @@ import { groq } from 'next-sanity'
 import { client } from '../../sanity/lib/client'
 import React, { useEffect, useState } from 'react'
 
-export const specialsQuery = groq`*[_type == "special-item" && defined(name)]{
+export const specialsQuery = groq`*[_type == "special-item" && defined(name) && available == true]{
   _id, name, price, link, description
 }`
 
@@ -15,14 +15,20 @@ export default function Specials() {
   const [specials, setSpecials] = useState([])
 
   useEffect(() => {
+    client.fetch(specialsQuery).then(setSpecials)
+
     const specialsSubscription = client
       .listen(specialsQuery)
       .subscribe((update) => {
-        const updatedSpecials = update.result
-        setSpecials(updatedSpecials)
+        if (update.result) {
+          // If an item was updated, find it in the array and replace it
+          setSpecials((prevSpecials) =>
+            prevSpecials.map((special) =>
+              special._id === update.result._id ? update.result : special
+            )
+          )
+        }
       })
-
-    client.fetch(specialsQuery).then(setSpecials)
 
     return () => {
       specialsSubscription.unsubscribe()

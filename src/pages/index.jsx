@@ -18,7 +18,7 @@ export const teamQuery = groq`*[_type == "teamMember" && defined(name)]{
   _id, name, image, role
 }`
 
-export const specialsQuery = groq`*[_type == "special-item" && defined(name)]{
+export const specialsQuery = groq`*[_type == "special-item" && defined(name) && available == true]{
   _id, name, price, link, description
 }`
 
@@ -27,20 +27,31 @@ export default function Home() {
   const [specials, setSpecials] = useState([])
 
   useEffect(() => {
+
+    client.fetch(teamQuery).then(setTeam)
+    client.fetch(specialsQuery).then(setSpecials)
+
     const teamSubscription = client.listen(teamQuery).subscribe((update) => {
-      const updatedTeam = update.result
-      setTeam(updatedTeam)
+      if (update.result) {
+        // If an item was updated, find it in the array and replace it
+        setTeam(prevTeam =>
+          prevTeam.map(team => (team._id === update.result._id ? update.result : team))
+        )
+      }
     })
 
     const specialsSubscription = client
       .listen(specialsQuery)
       .subscribe((update) => {
-        const updatedSpecials = update.result
-        setSpecials(updatedSpecials)
+        if (update.result) {
+          // If an item was updated, find it in the array and replace it
+          setSpecials(prevSpecials =>
+            prevSpecials.map(special => (special._id === update.result._id ? update.result : special))
+          )
+        }
       })
 
-    client.fetch(teamQuery).then(setTeam)
-    client.fetch(specialsQuery).then(setSpecials)
+
 
     return () => {
       specialsSubscription.unsubscribe()
