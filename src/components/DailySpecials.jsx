@@ -33,9 +33,7 @@ export function DailySpecials({ specials = [] }) {
         <GridList>
           {specials.map((special) => (
             <FadeIn key={special._id}>
-              {' '}
               <a href={special.link}>
-                {' '}
                 <GridListItem
                   className="rounded-lg hover:bg-bridgelight"
                   title={special.name}
