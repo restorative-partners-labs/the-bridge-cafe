@@ -48,7 +48,7 @@ export default function Specials() {
       <Header />
 
       <main>
-        <DailySpecials specials={specials} />
+        <DailySpecials specials={specials} fadeIn={false} />
       </main>
 
       <Footer />

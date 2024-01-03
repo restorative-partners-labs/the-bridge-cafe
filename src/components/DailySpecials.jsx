@@ -4,7 +4,7 @@ import { GridPattern } from '@/components/GridPattern'
 import { SectionIntro } from '@/components/SectionIntro'
 import { FadeIn } from './FadeIn'
 
-export function DailySpecials({ specials = [] }) {
+export function DailySpecials({ specials = [], fadeIn = true }) {
   return (
     <div
       id="daily-specials"
@@ -31,8 +31,20 @@ export function DailySpecials({ specials = [] }) {
 
       <Container className="mt-24">
         <GridList>
-          {specials.map((special) => (
-            <FadeIn key={special._id}>
+          {specials.map((special) =>
+            fadeIn == true ? (
+              <FadeIn key={special._id}>
+                <a href={special.link}>
+                  <GridListItem
+                    className="rounded-lg hover:bg-bridgelight"
+                    title={special.name}
+                    price={`$ ${special.price}`}
+                  >
+                    {special.description}
+                  </GridListItem>
+                </a>
+              </FadeIn>
+            ) : (
               <a href={special.link}>
                 <GridListItem
                   className="rounded-lg hover:bg-bridgelight"
@@ -42,8 +54,8 @@ export function DailySpecials({ specials = [] }) {
                   {special.description}
                 </GridListItem>
               </a>
-            </FadeIn>
-          ))}
+            )
+          )}
         </GridList>
       </Container>
     </div>
