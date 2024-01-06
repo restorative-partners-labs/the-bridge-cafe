@@ -746,7 +746,7 @@ export function Hero() {
                     Meals with a Mission.
                   </h1>
                   <p className="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
-                    The Bridge Cafe is the Central Coast's first social
+                    The Bridge Cafe is the Central Coast&apos;s first social
                     enterprise restaurant brought to you by Restorative
                     Partners. We envision a safer community where everyone
                     belongs, and we strive to accomplish this by transforming
