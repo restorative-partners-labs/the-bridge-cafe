@@ -43,6 +43,7 @@ export function DailySpecials({ specials = [], fadeIn = true }) {
                 <div id="circletype_v12_brand_name" class="autoFontSize">
                   <a
                     target="_blank"
+                    rel="noreferrer"
                     href="https://www.restaurantji.com/ca/san-luis-obispo/the-bridge-caf-/"
                     class="ahref_emprty_area"
                     style={{ fontSize: `calc(13px * 1)` }}
@@ -53,6 +54,7 @@ export function DailySpecials({ specials = [], fadeIn = true }) {
                 <a
                   href="https://www.restaurantji.com"
                   target="_blank"
+                  rel="noreferrer"
                   id="rewards_link"
                 >
                   Restaurantji
