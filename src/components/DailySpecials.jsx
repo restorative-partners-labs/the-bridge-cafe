@@ -17,17 +17,51 @@ export function DailySpecials({ specials = [], fadeIn = true }) {
         />
       </div>
 
-      <SectionIntro
-        eyebrow=""
-        title=" Unwrap Deliciousness with Our Daily Specials!"
-      >
-        <p className="text-2xl">
-          Indulge in a culinary journey with our ever-changing specials at The
-          Bridge Cafe. From unique flavors to delightful surprises, our specials
-          showcase the best of the season. Join us to experience a fresh twist
-          on café dining!
-        </p>
-      </SectionIntro>
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2">
+          <SectionIntro
+            eyebrow=""
+            title=" Unwrap Deliciousness with Our Daily Specials!"
+          >
+            <p className="text-2xl">
+              Indulge in a culinary journey with our ever-changing specials at
+              The Bridge Cafe. From unique flavors to delightful surprises, our
+              specials showcase the best of the season. Join us to experience a
+              fresh twist on café dining!
+            </p>
+          </SectionIntro>
+          <div>
+            <link
+              rel="stylesheet"
+              href="https://cdn6.localdatacdn.com/badges/restaurantji/css/circle_v12.css?v=61517"
+            ></link>
+            <div
+              id="circle_v12_wrap"
+              style={{ width: `calc(250px * 1)`, height: `calc(220px * 1)` }}
+            >
+              <div id="circle_v12" tabindex="0">
+                <div id="circletype_v12_brand_name" class="autoFontSize">
+                  <a
+                    target="_blank"
+                    href="https://www.restaurantji.com/ca/san-luis-obispo/the-bridge-caf-/"
+                    class="ahref_emprty_area"
+                    style={{ fontSize: `calc(13px * 1)` }}
+                  >
+                    The Bridge Café
+                  </a>
+                </div>
+                <a
+                  href="https://www.restaurantji.com"
+                  target="_blank"
+                  id="rewards_link"
+                >
+                  Restaurantji
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <Container className="mt-24">
         <GridList>
