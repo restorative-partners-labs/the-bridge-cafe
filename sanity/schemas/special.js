@@ -53,7 +53,7 @@ export const special = {
     prepare(selection) {
       const { title, available } = selection
       return {
-        title: `${title} ${available ? 'Displayed' : ''}`,
+        title: `${title} ${available ? '[LIVE]' : ''}`,
       }
     },
   },
