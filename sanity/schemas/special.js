@@ -47,7 +47,14 @@ export const special = {
   preview: {
     select: {
       title: 'name',
+      available: 'available',
       media: 'image',
+    },
+    prepare(selection) {
+      const { title, available } = selection
+      return {
+        title: `${title} ${available ? 'Displayed' : ''}`,
+      }
     },
   },
 }

@@ -4,7 +4,7 @@ import PDFViewer from '../components/PDFViewer'
 const CateringMenu = () => {
   return (
     <iframe
-      src="https://publuu.com/flip-book/259744/613377/page/1?embed"
+      src="https://publuu.com/flip-book/259744/826863/page/1?embed"
       width="100%"
       height="100%"
       scrolling="no"
