@@ -21,21 +21,26 @@ export const teamQuery = groq`*[_type == "teamMember" && defined(name)]{
 export const specialsQuery = groq`*[_type == "special-item" && defined(name) && available == true]{
   _id, name, price, link, description
 }`
+export const specialMenuQuery = groq`*[_type == "specialMenu" && defined(name) && available == true]{
+  _id, name, link, details, image
+}`
 
 export default function Home() {
   const [team, setTeam] = useState([])
   const [specials, setSpecials] = useState([])
+  const [specialMenu, setSpecialMenu] = useState([])
 
   useEffect(() => {
-
     client.fetch(teamQuery).then(setTeam)
     client.fetch(specialsQuery).then(setSpecials)
 
     const teamSubscription = client.listen(teamQuery).subscribe((update) => {
       if (update.result) {
         // If an item was updated, find it in the array and replace it
-        setTeam(prevTeam =>
-          prevTeam.map(team => (team._id === update.result._id ? update.result : team))
+        setTeam((prevTeam) =>
+          prevTeam.map((team) =>
+            team._id === update.result._id ? update.result : team
+          )
         )
       }
     })
@@ -45,17 +50,31 @@ export default function Home() {
       .subscribe((update) => {
         if (update.result) {
           // If an item was updated, find it in the array and replace it
-          setSpecials(prevSpecials =>
-            prevSpecials.map(special => (special._id === update.result._id ? update.result : special))
+          setSpecials((prevSpecials) =>
+            prevSpecials.map((special) =>
+              special._id === update.result._id ? update.result : special
+            )
           )
         }
       })
 
-
+    const specialMenuSubscription = client
+      .listen(specialsQuery)
+      .subscribe((update) => {
+        if (update.result) {
+          // If an item was updated, find it in the array and replace it
+          setSpecials((prevSpecialMenu) =>
+            prevSpecialMenu.map((special) =>
+              special._id === update.result._id ? update.result : special
+            )
+          )
+        }
+      })
 
     return () => {
       specialsSubscription.unsubscribe()
       teamSubscription.unsubscribe()
+      specialMenuSubscription.unsubscribe()
     }
   }, [])
 
@@ -72,7 +91,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <SpecialMenuBanner />
+        <SpecialMenuBanner specialMenu={specialMenu} />
         <DailySpecials specials={specials} />
         <AboutUs />
         {/* <PrimaryFeatures /> */}
