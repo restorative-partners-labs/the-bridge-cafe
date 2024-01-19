@@ -1,4 +1,9 @@
 import { Button } from '@/components/Button'
+import { client } from '../../sanity/lib/client'
+import imageUrlBuilder from '@sanity/image-url'
+
+const builder = imageUrlBuilder(client)
+
 
 export default function SpecialMenuBanner({ specialMenu = [] }) {
   return specialMenu.length != 0 ? (
