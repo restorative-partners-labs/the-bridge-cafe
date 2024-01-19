@@ -72,7 +72,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        {/* <SpecialMenuBanner /> */}
+        <SpecialMenuBanner />
         <DailySpecials specials={specials} />
         <AboutUs />
         {/* <PrimaryFeatures /> */}

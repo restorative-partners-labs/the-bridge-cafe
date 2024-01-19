@@ -13,13 +13,13 @@ export default function SpecialMenuBanner() {
           className="max-w-l mx-auto lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8"
         >
           <img
-            src="/christmas-menu.png"
+            src="/valentines-menu.png"
             alt=""
             className="mt-10 w-full max-w-lg rounded-2xl object-cover sm:mt-10 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-10"
           />
           <div className="mt-10 flex items-center justify-center">
             <Button
-              href="https://order.toasttab.com/online/the-bridge-cafe/item-glazed-ham-or-roasted-turkey-breast-house-made-stuffing-mac-and-cheese-cranberry-relish-and-roasted-gravy_96042282-5c96-4c20-9cef-a1209ff4740f"
+              href="https://order.toasttab.com/online/the-bridge-cafe/item-heat-and-serve_495abc00-6c24-431b-a236-4ac085ae4510"
               variant="outline"
               color="theme"
               className="w-56 bg-white"
@@ -33,8 +33,8 @@ export default function SpecialMenuBanner() {
             id="sale-heading"
             className="text-center text-xl font-bold tracking-tight text-bridge md:text-2xl"
           >
-            Check Out Our Christmas Menu and Order Now! Order Online Before
-            12/15 @3PM
+            Check Out Our Valentine&#39;s Day Special and Order Now! Order
+            Online Before 2/9 @3PM
           </h2>
         </div>
       </div>
