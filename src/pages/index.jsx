@@ -33,6 +33,8 @@ export default function Home() {
   useEffect(() => {
     client.fetch(teamQuery).then(setTeam)
     client.fetch(specialsQuery).then(setSpecials)
+    client.fetch(specialMenuQuery).then(setSpecialMenu)
+
 
     const teamSubscription = client.listen(teamQuery).subscribe((update) => {
       if (update.result) {
