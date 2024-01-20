@@ -7,7 +7,7 @@ export default function RestorativePartnersBanner() {
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Want to join us?
           <br />
-          Learn about Restorative Partner's misson.
+          Learn about Restorative Partner&#39;s misson.
         </h2>
         <div className="mt-10 flex items-center gap-x-6 lg:mt-0 lg:flex-shrink-0">
           <Button
