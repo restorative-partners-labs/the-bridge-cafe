@@ -13,7 +13,7 @@ import {
   BellAlertIcon,
   XCircleIcon,
   XMarkIcon,
-  BookOpenIcon,
+  HeartIcon,
 } from '@heroicons/react/24/outline'
 
 function MenuIcon(props) {
@@ -72,6 +72,12 @@ const solutions = [
     description: 'Checkout our daily specials menu',
     href: '/specials',
     icon: BellAlertIcon,
+  },
+  {
+    name: `Valentine's Menu`,
+    description: `Checkout our special Valentine's Day menu`,
+    href: '/valentines-menu.png',
+    icon: HeartIcon,
   },
 
   // {
@@ -247,14 +253,14 @@ export function Header() {
               >
                 Contact
               </Button>
-              <Button
+              {/* <Button
                 href="/#restorative-partners"
                 variant="outline"
                 color="theme"
                 className="w-50 hidden text-center text-xl lg:block"
               >
                 Restorative Partners
-              </Button>
+              </Button> */}
 
               <Popover className="relative">
                 <Popover.Button className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
