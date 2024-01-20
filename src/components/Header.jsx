@@ -76,7 +76,7 @@ const solutions = [
   {
     name: `Valentine's Menu`,
     description: `Checkout our special Valentine's Day menu`,
-    href: '/valentines-menu.png',
+    href: '/valentines-menu',
     icon: HeartIcon,
   },
 
