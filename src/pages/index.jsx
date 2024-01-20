@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { RestorativePartnersCallToAction } from '@/components/RestorativePartnersCallToAction'
 import { FoodDisplay } from '@/components/FoodDisplay'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
@@ -13,6 +12,7 @@ import SpecialMenuBanner from '@/components/SpecialMenuBanner'
 import { client } from '../../sanity/lib/client'
 import { groq } from 'next-sanity'
 import React, { useEffect, useState } from 'react'
+import RestorativePartnersBanner from '@/components/RestorativePartnersBanner'
 
 export const teamQuery = groq`*[_type == "teamMember" && defined(name)]{
   _id, name, image, role
@@ -98,6 +98,7 @@ export default function Home() {
         <AboutUs />
         {/* <PrimaryFeatures /> */}
         {/* <SecondaryFeatures /> */}
+        <RestorativePartnersBanner/>
         <Team teamMembers={team} />
         <FoodDisplay />
 

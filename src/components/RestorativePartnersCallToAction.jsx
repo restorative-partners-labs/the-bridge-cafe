@@ -89,11 +89,11 @@ export function RestorativePartnersCallToAction() {
     <section
       id="restorative-partners"
       aria-labelledby="pricing-title"
-      className="bg-white py-5 sm:py-32"
+      className="bg-gray"
     >
-      <div className="relative bg-white py-16 sm:py-24">
+      <div className="relative bg-gray">
         <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-start lg:gap-24 lg:px-8">
-          <div className="relative sm:py-16 lg:py-0">
+          <div className="relative sm:py-16">
             <div
               aria-hidden="true"
               className="hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen"
@@ -132,7 +132,7 @@ export function RestorativePartnersCallToAction() {
                 />
               </svg>
             </div>
-            <div className="relative mx-auto max-w-md px-6 sm:max-w-3xl lg:max-w-none lg:px-0 lg:py-20">
+            <div className="relative mx-auto max-w-md px-6 sm:max-w-3xl lg:max-w-none lg:px-0 lg:py-8">
               {/* Testimonial card*/}
               <a href="https://restorativepartners.org/">
                 {' '}
