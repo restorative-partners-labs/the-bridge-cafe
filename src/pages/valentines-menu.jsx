@@ -37,7 +37,7 @@ export default function ValentinesMenu  () {
   return (
     <>
       <Head>
-        <title>The Bridge Cafe - Valentine's Day Menu</title>
+        <title>The Bridge Cafe - Valentine&apos;s Day Menu</title>
         <meta
           name="description"
           content="The Bridge Cafe is a social enterprise cafe run by Restorayive Partners. We envision a safer community where everyone belongs and strive to accomplish this through transforming lives impacted by crime through healing services and relationships."
