@@ -137,7 +137,6 @@ export function FoodDisplay({ menuPhotos = [] }) {
                 key={menuPhoto._id}
               >
                 <PortableText value={menuPhoto.description} />
-                <p>{menuPhoto.description}</p>
               </SectionIntro>
               {menuPhoto.images.map((image) => (
                 <a key={menuPhoto._id} href={image.toastLink}>
