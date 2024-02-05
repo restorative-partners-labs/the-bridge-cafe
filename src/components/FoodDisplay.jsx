@@ -12,6 +12,10 @@ import Link from 'next/link'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { SectionIntro } from '@/components/SectionIntro'
+import { client } from '../../sanity/lib/client'
+import imageUrlBuilder from '@sanity/image-url'
+
+const builder = imageUrlBuilder(client)
 
 const favorites = [
   {
@@ -108,7 +112,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export function FoodDisplay() {
+export function FoodDisplay({ menuPhotos = [] }) {
   return (
     <>
       <SectionIntro
@@ -124,41 +128,28 @@ export function FoodDisplay() {
       </SectionIntro>
       <Container className="mt-16">
         <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-          {favorites.map((favorite) => (
-            <FadeIn key={favorite.href} className="flex">
-              <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-bridgelight transition hover:bg-bridgelight sm:p-8">
-                <Image
-                  src={favorite.imageSrc}
-                  alt={favorite.imageAlt}
-                  className="h-full w-full rounded-md object-cover object-center"
-                />
-                {/* <h3>
-                  <Link href={favorite.href}>
-                    <span className="absolute inset-0 rounded-3xl" />
+          {menuPhotos.map((menuPhoto) => (
+            <FadeIn key={menuPhoto.href} className="flex">
+              <SectionIntro
+                title={menuPhoto.name}
+                className="mt-24 sm:mt-32 lg:mt-40"
+              >
+                <p>{menuPhoto.description}</p>
+              </SectionIntro>
+              {menuPhoto.images.map((image) => (
+                <a href={image.toastLink}>
+                  <article
+                    key={image._key}
+                    className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-bridgelight transition hover:bg-bridgelight sm:p-8"
+                  >
                     <Image
-                      src={caseStudy.logo}
-                      alt={caseStudy.client}
-                      className="h-16 w-16"
-                      unoptimized
+                      src={builder.image(image).url()}
+                      alt={image.alt}
+                      className="h-full w-full rounded-md object-cover object-center"
                     />
-                  </Link>
-                </h3> */}
-                {/* <p className="mt-6 flex gap-x-2 text-sm text-neutral-950">
-                  <time dateTime={caseStudy.year} className="font-semibold">
-                    {caseStudy.date.split('-')[0]}
-                  </time>
-                  <span className="text-neutral-300" aria-hidden="true">
-                    /
-                  </span>
-                  <span>Case study</span>
-                </p>
-                <p className="font-display mt-6 text-2xl font-semibold text-neutral-950">
-                  {caseStudy.title}
-                </p>
-                <p className="mt-4 text-base text-neutral-600">
-                  {caseStudy.description}
-                </p> */}
-              </article>
+                  </article>
+                </a>
+              ))}
             </FadeIn>
           ))}
         </FadeInStagger>
