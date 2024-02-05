@@ -33,6 +33,11 @@ export const menuPhotos = {
               type: 'string',
               title: 'Alternative Text',
             },
+            {
+              name: 'toastLink',
+              type: 'string',
+              title: 'Toast Link',
+            },
           ],
         },
       ],

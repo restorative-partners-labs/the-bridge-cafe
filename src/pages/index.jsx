@@ -21,20 +21,26 @@ export const teamQuery = groq`*[_type == "teamMember" && defined(name)]{
 export const specialsQuery = groq`*[_type == "special-item" && defined(name) && available == true]{
   _id, name, price, link, description
 }`
+
 export const specialMenuQuery = groq`*[_type == "specialMenu" && defined(name) && available == true]{
   _id, name, link, details, image
+}`
+
+export const menuPhotosQuery = groq`*[_type == "menuPhotos" && defined(name)]{
+  _id, name, images, description
 }`
 
 export default function Home() {
   const [team, setTeam] = useState([])
   const [specials, setSpecials] = useState([])
   const [specialMenu, setSpecialMenu] = useState([])
+  const [menuPhotos, setMenuPhotos] = useState([])
 
   useEffect(() => {
     client.fetch(teamQuery).then(setTeam)
     client.fetch(specialsQuery).then(setSpecials)
     client.fetch(specialMenuQuery).then(setSpecialMenu)
-
+    client.fetch(menuPhotosQuery).then(setMenuPhotos)
 
     const teamSubscription = client.listen(teamQuery).subscribe((update) => {
       if (update.result) {
@@ -73,10 +79,24 @@ export default function Home() {
         }
       })
 
+    const menuPhotosSubscription = client
+      .listen(menuPhotosQuery)
+      .subscribe((update) => {
+        if (update.result) {
+          // If an item was updated, find it in the array and replace it
+          setMenuPhotos((prevMenuPhotos) =>
+            prevMenuPhotos.map((menuPhotos) =>
+              menuPhotos._id === update.result._id ? update.result : menuPhotos
+            )
+          )
+        }
+      })
+
     return () => {
       specialsSubscription.unsubscribe()
       teamSubscription.unsubscribe()
       specialMenuSubscription.unsubscribe()
+      menuPhotosSubscription.unsubscribe()
     }
   }, [])
 
@@ -98,9 +118,9 @@ export default function Home() {
         <AboutUs />
         {/* <PrimaryFeatures /> */}
         {/* <SecondaryFeatures /> */}
-        <RestorativePartnersBanner/>
+        <RestorativePartnersBanner />
         <Team teamMembers={team} />
-        <FoodDisplay />
+        <FoodDisplay menuPhotos={menuPhotos} />
 
         {/* <RestorativePartnersCallToAction /> */}
         {/* <Reviews />
