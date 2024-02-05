@@ -129,10 +129,11 @@ export function FoodDisplay({ menuPhotos = [] }) {
       <Container className="mt-16">
         <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {menuPhotos.map((menuPhoto) => (
-            <FadeIn key={menuPhoto.href} className="flex">
+            <FadeIn key={menuPhoto._id} className="flex">
               <SectionIntro
                 title={menuPhoto.name}
                 className="mt-24 sm:mt-32 lg:mt-40"
+                key={menuPhoto._id}
               >
                 <p>{menuPhoto.description}</p>
               </SectionIntro>
@@ -143,6 +144,7 @@ export function FoodDisplay({ menuPhotos = [] }) {
                     className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-bridgelight transition hover:bg-bridgelight sm:p-8"
                   >
                     <Image
+                      key={image._key}
                       src={builder.image(image).url()}
                       alt={image.alt}
                       className="h-full w-full rounded-md object-cover object-center"
