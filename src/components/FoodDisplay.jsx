@@ -138,7 +138,7 @@ export function FoodDisplay({ menuPhotos = [] }) {
                 <p>{menuPhoto.description}</p>
               </SectionIntro>
               {menuPhoto.images.map((image) => (
-                <a href={image.toastLink}>
+                <a key={menuPhoto._id} href={image.toastLink}>
                   <article
                     key={image._key}
                     className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-bridgelight transition hover:bg-bridgelight sm:p-8"
