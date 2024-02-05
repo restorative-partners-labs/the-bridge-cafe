@@ -14,6 +14,7 @@ import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { SectionIntro } from '@/components/SectionIntro'
 import { client } from '../../sanity/lib/client'
 import imageUrlBuilder from '@sanity/image-url'
+import { PortableText } from '@portabletext/react'
 
 const builder = imageUrlBuilder(client)
 
@@ -135,6 +136,7 @@ export function FoodDisplay({ menuPhotos = [] }) {
                 className="mt-24 sm:mt-32 lg:mt-40"
                 key={menuPhoto._id}
               >
+                <PortableText value={menuPhoto.description} />
                 <p>{menuPhoto.description}</p>
               </SectionIntro>
               {menuPhoto.images.map((image) => (
