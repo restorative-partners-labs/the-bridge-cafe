@@ -20,7 +20,9 @@ export default defineConfig({
                   .schemaType('siteSettings')
                   .documentId('siteSettings')
               ),
-            ...S.documentTypeListItems(),
+            ...S.documentTypeListItems().filter(
+              (listItem) => !['siteSettings'].includes(listItem.getId())
+            ),
           ]),
     }),
   ],
