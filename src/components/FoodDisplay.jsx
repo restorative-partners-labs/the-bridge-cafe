@@ -12,10 +12,6 @@ import Link from 'next/link'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { SectionIntro } from '@/components/SectionIntro'
-import { client } from '../../sanity/lib/client'
-import imageUrlBuilder from '@sanity/image-url'
-
-const builder = imageUrlBuilder(client)
 
 const favorites = [
   {
@@ -112,7 +108,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export function FoodDisplay({ menuPhotos = [] }) {
+export function FoodDisplay() {
   return (
     <>
       <SectionIntro
@@ -128,17 +124,15 @@ export function FoodDisplay({ menuPhotos = [] }) {
       </SectionIntro>
       <Container className="mt-16">
         <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-          {menuPhotos.map((menu) => (
-            <FadeIn key={menu._id} className="flex">
-              {menu.images.map((image) => {
-                <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-bridgelight transition hover:bg-bridgelight sm:p-8">
-                  <Image
-                    src={builder.image(image).url()}
-                    alt={image.alt}
-                    className="h-full w-full rounded-md object-cover object-center"
-                  />
-                </article>
-              })}
+          {favorites.map((favorite) => (
+            <FadeIn key={favorite.href} className="flex">
+              <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-bridgelight transition hover:bg-bridgelight sm:p-8">
+                <Image
+                  src={favorite.imageSrc}
+                  alt={favorite.imageAlt}
+                  className="h-full w-full rounded-md object-cover object-center"
+                />
+              </article>
             </FadeIn>
           ))}
         </FadeInStagger>

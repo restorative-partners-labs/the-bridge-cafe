@@ -29,6 +29,11 @@ export const menuPhotos = {
           },
           fields: [
             {
+              name: 'name',
+              type: 'string',
+              title: 'Name',
+            },
+            {
               name: 'alt',
               type: 'string',
               title: 'Alternative Text',
