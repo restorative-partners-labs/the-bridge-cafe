@@ -4,8 +4,7 @@
 
 import { visionTool } from '@sanity/vision'
 import { defineConfig } from 'sanity'
-import { deskTool } from 'sanity/desk'
-import { structureTool } from '@sanity/structure'
+import { structureTool } from 'sanity/structure'
 
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
 import { apiVersion, dataset, projectId } from './sanity/env'
@@ -15,10 +14,8 @@ export default defineConfig({
   basePath: '/admin',
   projectId,
   dataset,
-  // Add and edit the content schema in the './sanity/schema' folder
   schema,
   plugins: [
-    deskTool(),
     structureTool({
       structure: (S) =>
         S.list()
