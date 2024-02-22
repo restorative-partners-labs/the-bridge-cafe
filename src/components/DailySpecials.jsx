@@ -81,11 +81,12 @@ export function DailySpecials({ specials = [], fadeIn = true }) {
                 </a>
               </FadeIn>
             ) : (
-              <a href={special.link}>
+              <a href={special.link} key={special._id}>
                 <GridListItem
                   className="rounded-lg hover:bg-bridgelight"
                   title={special.name}
                   price={`$ ${special.price}`}
+                  key={special._id}
                 >
                   {special.description}
                 </GridListItem>
