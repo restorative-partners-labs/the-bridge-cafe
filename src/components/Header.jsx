@@ -73,12 +73,6 @@ const solutions = [
     href: '/specials',
     icon: BellAlertIcon,
   },
-  {
-    name: `Valentine's Menu`,
-    description: `Checkout our special Valentine's Day menu`,
-    href: '/valentines-menu',
-    icon: HeartIcon,
-  },
 
   // {
   //   name: 'Holiday Menu',
