@@ -13,7 +13,7 @@ import {
   BellAlertIcon,
   XCircleIcon,
   XMarkIcon,
-  HeartIcon,
+  StarIcon,
 } from '@heroicons/react/24/outline'
 
 function MenuIcon(props) {
@@ -74,12 +74,12 @@ const solutions = [
     icon: BellAlertIcon,
   },
 
-  // {
-  //   name: 'Holiday Menu',
-  //   description: 'Checkout our Christmas menu specials',
-  //   href: '/christmas-menu',
-  //   icon: BookOpenIcon,
-  // },
+  {
+    name: 'St Patricks Day Menu',
+    description: 'Checkout our St Patricks Day menu specials',
+    href: 'https://order.toasttab.com/online/the-bridge-cafe/item-st-patricks-day-meal_495abc00-6c24-431b-a236-4ac085ae4510',
+    icon: StarIcon,
+  },
 ]
 
 export function Header() {
