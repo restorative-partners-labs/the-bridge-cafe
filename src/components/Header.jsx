@@ -14,6 +14,7 @@ import {
   XCircleIcon,
   XMarkIcon,
   StarIcon,
+  SunIcon
 } from '@heroicons/react/24/outline'
 
 function MenuIcon(props) {
@@ -75,10 +76,10 @@ const solutions = [
   },
 
   {
-    name: 'St Patricks Day Menu',
-    description: 'Checkout our St Patricks Day menu specials',
-    href: 'https://order.toasttab.com/online/the-bridge-cafe/item-st-patricks-day-meal_495abc00-6c24-431b-a236-4ac085ae4510',
-    icon: StarIcon,
+    name: 'Brunch Menu',
+    description: 'Checkout our new Sunday Brunch menu',
+    href: '/brunch-menu.png',
+    icon: SunIcon,
   },
 ]
 
