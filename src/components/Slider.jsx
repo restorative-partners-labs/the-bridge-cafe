@@ -4,8 +4,9 @@ import "keen-slider/keen-slider.min.css"
 import "./Slider.module.css"
 import { SundayBrunch } from '@/components/SundayBrunch'
 import { Hero } from '@/components/Hero'
+import { ImageSlide } from '@/components/ImageSlide'
 
-const slides = [{component: <Hero/>, key:1},{component: <SundayBrunch/>, key:2}
+const slides = [{component: <ImageSlide/>, key:1},{component: <SundayBrunch/>, key:2},{component: <Hero/>, key:3}
 ]
 
 function Arrow(props) {
