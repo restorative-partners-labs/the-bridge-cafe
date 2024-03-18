@@ -25,7 +25,7 @@ import { Button } from '@/components/Button'
                 href="/vip-sunday-brunch"
                 variant="outline"
                 color="theme"
-                className="w-56 bg-white"
+                className="w-64 bg-white"
               >
                 <span className="ml-2.5">
                   <p className="text-xl">Sign Up Now!</p>
