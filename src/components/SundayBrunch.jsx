@@ -486,7 +486,7 @@ export function SundayBrunch() {
               Join us for Sunday Brunch!
             </h1>
             <p className="mt-6 text-2xl text-gray-600">
-            Elevate your Sundays starting with a spectacular VIP event on the very first Sunday—Easter Sunday! We&#39;re ecstatic to present an exclusive Brunch from 8 AM to 2 PM. This isn&#39;t just any brunch; it&#39;s a curated experience blending classic favorites with innovative culinary twists, making every Sunday an occasion to cherish. Don't miss this premier Easter Sunday brunch, a celebration of taste and tradition in VIP style. Tap the link below to secure your spot and explore our special menu. Transform your Sundays into a routine culinary adventure with us, where exquisite cuisine and memorable moments await.           </p>
+            Elevate your Sundays starting with a spectacular VIP event on the very first Sunday—Easter Sunday! We&#39;re ecstatic to present an exclusive Brunch from 8 AM to 2 PM. This isn&#39;t just any brunch; it&#39;s a curated experience blending classic favorites with innovative culinary twists, making every Sunday an occasion to cherish. Don&#39;t miss this premier Easter Sunday brunch, a celebration of taste and tradition in VIP style. Tap the link below to secure your spot and explore our special menu. Transform your Sundays into a routine culinary adventure with us, where exquisite cuisine and memorable moments await.           </p>
             <div className="mt-8 flex flex-col flex-wrap items-center gap-x-4 gap-y-4 sm:flex-row">
               <Button
                 href="/brunch-menu.png"
@@ -740,7 +740,7 @@ export function SundayBrunch() {
             </h1>
             <p className="mt-6 text-2xl text-gray-600">
 
-            Start your Sundays with a VIP Easter Brunch from 8 AM to 2 PM! Enjoy a curated mix of classic and innovative dishes every Sunday. Don't miss out—tap the link below for our special menu and make every Sunday memorable with us.</p>
+            Start your Sundays with a VIP Easter Brunch from 8 AM to 2 PM! Enjoy a curated mix of classic and innovative dishes every Sunday. Don&#39;t miss out—tap the link below for our special menu and make every Sunday memorable with us.</p>
                 </div>
                 <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
                   <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">

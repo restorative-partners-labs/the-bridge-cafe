@@ -7,7 +7,7 @@
   }
   
   .lazySlide {
-    height: 300px;
+    height: 100px;
     background: rgb(255, 75, 64);
     background: linear-gradient(
       0deg,
@@ -27,5 +27,9 @@
     height: 100%;
     object-fit: cover;
     position: absolute;
+  }
+
+  .keen-slider {
+    height: auto !important;
   }
   
