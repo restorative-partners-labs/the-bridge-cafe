@@ -1,5 +1,3 @@
-module.exports = {
-  singleQuote: true,
-  semi: false,
-  plugins: [require('prettier-plugin-tailwindcss')],
-}
+export const singleQuote = true;
+export const semi = false;
+export const plugins = [require('prettier-plugin-tailwindcss')];

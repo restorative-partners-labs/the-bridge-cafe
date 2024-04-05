@@ -31,6 +31,7 @@
 
   .keen-slider {
     transition: height 0.3s;
+    height: auto !important;
   }
   
   .keen-slider .keen-slider__slide {

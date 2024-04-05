@@ -6,17 +6,10 @@ import { SundayBrunch } from '@/components/SundayBrunch'
 import { Hero } from '@/components/Hero'
 import { ImageSlide } from '@/components/ImageSlide'
 
-const slides = [{component: <ImageSlide/>, key:1},{component: <SundayBrunch/>, key:2},{component: <Hero/>, key:3}
+const slides = [{component: <SundayBrunch/>, key:1},{component: <Hero/>, key:2}
 ]
 
-const AdaptiveHeight = (slider) => {
-  function updateHeight() {
-    slider.container.style.height =
-      slider.slides[slider.track.details.rel].offsetHeight + "px"
-  }
-  slider.on("created", updateHeight)
-  slider.on("slideChanged", updateHeight)
-}
+
 
 function Arrow(props) {
   const disabled = props.disabled ? " arrow--disabled" : ""
@@ -75,8 +68,7 @@ export default function HeroSlider () {
         slider.on("dragStarted", clearNextTimeout)
         slider.on("animationEnded", nextTimeout)
         slider.on("updated", nextTimeout)
-      },
-      AdaptiveHeight
+      }
     ]
   )
 

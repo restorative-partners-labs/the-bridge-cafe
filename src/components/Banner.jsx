@@ -20,14 +20,23 @@ export function Banner() {
               </a>
             </span>
             <p className="ml-3 truncate text-xl text-white">
-              <span className="text-xs md:hidden">
-                Now Open! 7AM - 3PM Mon-Fri
-              </span>
-              <span className="hidden md:inline">
-                Come visit us 7 AM to 3 PM Monday
-                thru Friday
-              </span>
+              <div> <span className="text-xs md:hidden">
+                7AM - 3PM Mon-Fri
+              </span></div>
+              <div> <span className="text-xs md:hidden">
+              8AM - 2PM Sun
+              </span></div>
+             
+             
+     
+              <div class=""> <span className="hidden md:inline">
+               Monday-Friday 7 AM to 3 PM
+              </span></div> 
+  <div class="">         <span className="hidden md:inline">
+               Sunday 8AM to 2PM
+              </span></div> 
             </p>
+            
           </div>
           <Button
             href="https://goo.gl/maps/xPmTbPBCEjicUs3g7"
