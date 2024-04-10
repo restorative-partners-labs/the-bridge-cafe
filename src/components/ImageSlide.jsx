@@ -8,7 +8,7 @@ import { Button } from '@/components/Button'
         <div aria-hidden="true" className="">
           <div className="xl:px-8">
             <img
-              src="/vip-sunday-brunch.png"
+              src="/brunch-menu.png"
               alt=""
               className="h-full w-full object-cover object-center"
             />
