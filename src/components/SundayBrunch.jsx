@@ -486,7 +486,8 @@ export function SundayBrunch() {
               Join us for Sunday Brunch!
             </h1>
             <p className="mt-6 text-2xl text-gray-600">
-            Elevate your Sundays starting with a spectacular VIP event on the very first Sunday—Easter Sunday! We&#39;re ecstatic to present an exclusive Brunch from 8 AM to 2 PM. This isn&#39;t just any brunch; it&#39;s a curated experience blending classic favorites with innovative culinary twists, making every Sunday an occasion to cherish. Don&#39;t miss this premier Easter Sunday brunch, a celebration of taste and tradition in VIP style. Tap the link below to secure your spot and explore our special menu. Transform your Sundays into a routine culinary adventure with us, where exquisite cuisine and memorable moments await.           </p>
+  Elevate your Sundays with our spectacular Sunday Brunch from 8 AM to 2 PM. This isn&#39;t just any brunch; it&#39;s a curated experience blending classic favorites with innovative culinary twists, making every Sunday an occasion to cherish. Don&#39;t miss this premier brunch, a celebration of taste and tradition. Tap the link below to secure your spot and explore our special menu. Transform your Sundays into a routine culinary adventure with us, where exquisite cuisine and memorable moments await.
+</p>
             <div className="mt-8 flex flex-col flex-wrap items-center gap-x-4 gap-y-4 sm:flex-row">
               <Button
                 href="/brunch-menu.png"
