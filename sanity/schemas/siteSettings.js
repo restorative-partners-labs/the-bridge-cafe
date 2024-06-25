@@ -2,7 +2,6 @@ export const siteSettings = {
   name: 'siteSettings',
   type: 'document',
   title: 'Site Settings',
-  // Use a single object for site-wide settings
   __experimental_actions: ['update', /* 'create', 'delete', */ 'publish'],
   fields: [
     {
@@ -45,6 +44,66 @@ export const siteSettings = {
               description: 'The URL to your profile on this platform.',
             },
           ],
+        },
+      ],
+    },
+    {
+      name: 'hoursOfOperation',
+      title: 'Hours of Operation',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              name: 'day',
+              type: 'string',
+              title: 'Day of the Week',
+              options: {
+                list: [
+                  {title: 'Monday', value: 'Monday'},
+                  {title: 'Tuesday', value: 'Tuesday'},
+                  {title: 'Wednesday', value: 'Wednesday'},
+                  {title: 'Thursday', value: 'Thursday'},
+                  {title: 'Friday', value: 'Friday'},
+                  {title: 'Saturday', value: 'Saturday'},
+                  {title: 'Sunday', value: 'Sunday'},
+                ],
+              },
+            },
+            {
+              name: 'openTime',
+              type: 'string',
+              title: 'Opening Time',
+              description: 'Time the business opens (e.g., 09:00 AM)',
+            },
+            {
+              name: 'closeTime',
+              type: 'string',
+              title: 'Closing Time',
+              description: 'Time the business closes (e.g., 05:00 PM)',
+            },
+            {
+              name: 'isClosed',
+              type: 'boolean',
+              title: 'Closed',
+              description: 'Check if the business is closed on this day',
+              initialValue: false,
+            },
+          ],
+          preview: {
+            select: {
+              title: 'day',
+              subtitle: 'openTime',
+              media: 'isClosed',
+            },
+            prepare({title, subtitle, media}) {
+              return {
+                title: title,
+                subtitle: media ? 'Closed' : `Open: ${subtitle}`,
+              }
+            },
+          },
         },
       ],
     },
