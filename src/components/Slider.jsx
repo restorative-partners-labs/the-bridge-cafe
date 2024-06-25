@@ -5,8 +5,7 @@ import "./Slider.module.css"
 import { SundayBrunch } from '@/components/SundayBrunch'
 import { Hero } from '@/components/Hero'
 import { ImageSlide } from '@/components/ImageSlide'
-
-const slides = [{component: <SundayBrunch/>, key:1},{component: <Hero/>, key:2}
+const slides = [{component: <Hero/>, key:1}
 ]
 
 

@@ -23,18 +23,14 @@ export function Banner() {
               <div> <span className="text-xs md:hidden">
                 7AM - 3PM Mon-Fri
               </span></div>
-              <div> <span className="text-xs md:hidden">
-              8AM - 2PM Sun
-              </span></div>
+
              
              
      
               <div class=""> <span className="hidden md:inline">
                Monday-Friday 7 AM to 3 PM
               </span></div> 
-  <div class="">         <span className="hidden md:inline">
-               Sunday 8AM to 2PM
-              </span></div> 
+
             </p>
             
           </div>
