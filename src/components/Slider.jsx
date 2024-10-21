@@ -37,7 +37,7 @@ export default function HeroSlider () {
 
   const [sliderRef,instanceRef] = useKeenSlider(
     {
-      loop: true,
+      loop: false,
     },
     [
       (slider) => {
@@ -51,7 +51,7 @@ export default function HeroSlider () {
           if (mouseOver) return
           timeout = setTimeout(() => {
             slider.next()
-          }, 7000)
+          }, 7000000)
         }
         slider.on("created", () => {
           slider.container.addEventListener("mouseover", () => {
