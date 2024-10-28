@@ -75,12 +75,12 @@ const solutions = [
     icon: BellAlertIcon,
   },
 
-  {
-    name: 'Brunch Menu',
-    description: 'Checkout our new Sunday Brunch menu',
-    href: '/brunch-menu.png',
-    icon: SunIcon,
-  },
+  // {
+  //   name: 'Brunch Menu',
+  //   description: 'Checkout our new Sunday Brunch menu',
+  //   href: '/brunch-menu.png',
+  //   icon: SunIcon,
+  // },
 ]
 
 export function Header() {
