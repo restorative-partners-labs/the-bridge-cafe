@@ -1,7 +1,15 @@
 import React from 'react'
-import Image from 'next/image'
+import PDFViewer from '../components/PDFViewer'
+
 const Menu = () => {
-  return <Image href="/menu.png"></Image>
+  return (
+    <iframe
+      src="/menu.png"
+      width="100%"
+      height="100%"
+      allow="clipboard-write"
+    ></iframe>
+  )
 }
 
-export default Menu 
+export default Menu
