@@ -19,19 +19,14 @@ export function Banner() {
                 />
               </a>
             </span>
-            <p className="ml-3 truncate text-xl text-white">
-              <div> <span className="text-xs md:hidden">
+            <div className="ml-3 truncate text-xl text-white">
+              <span className="text-xs md:hidden">
                 7AM - 3PM Mon-Fri
-              </span></div>
-
-             
-             
-     
-              <div class=""> <span className="hidden md:inline">
-               Monday-Friday 7 AM to 3 PM
-              </span></div> 
-
-            </p>
+              </span>
+              <span className="hidden md:inline">
+                Monday-Friday 7 AM to 3 PM
+              </span>
+            </div>
             
           </div>
           <Button

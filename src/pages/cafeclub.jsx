@@ -316,7 +316,6 @@ export default function Contact() {
                       href="https://order.toasttab.com/online/the-bridge-cafe"
                       variant="outline"
                       color="themecta"
-                      type="button"
                       className="inline-flex w-full justify-center rounded-md px-3 py-2 text-xl font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:col-start-2"
                       onClick={() => setOpen(false)}
                     >

@@ -4,6 +4,7 @@ import 'focus-visible'
 import Link from 'next/link'
 import { GoogleAnalytics, event } from 'nextjs-google-analytics'
 import { Analytics } from '@vercel/analytics/react'
+import HolidayClosureBanner from '@/components/HolidayClosureBanner'
 
 export function reportWebVitals({ id, name, label, value }) {
   event(name, {
@@ -19,6 +20,7 @@ export default function App({ Component, pageProps }) {
     <>
       <GoogleAnalytics trackPageViews />
       <Component {...pageProps} />
+      <HolidayClosureBanner />
       <Analytics />
     </>
   )

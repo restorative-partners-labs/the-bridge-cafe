@@ -36,9 +36,11 @@ export const Button = forwardRef(function Button(
     className
   )
 
-  return href ? (
-    <Link ref={ref} href={href} className={className} {...props} />
-  ) : (
-    <button ref={ref} className={className} {...props} />
-  )
+  if (href) {
+    // Filter out button-specific props that shouldn't be on a Link
+    const { type, ...linkProps } = props
+    return <Link ref={ref} href={href} className={className} {...linkProps} />
+  }
+
+  return <button ref={ref} className={className} {...props} />
 })
