@@ -1,6 +1,13 @@
 import { useState, useEffect } from 'react'
 
 export default function HolidayClosureBanner() {
+  // Toggle this to true to enable the closure banner
+  const BANNER_ENABLED = false
+
+  // Early return to prevent any state initialization when banner is disabled
+  // This ensures consistent server/client rendering
+  if (!BANNER_ENABLED) return null
+
   const [isVisible, setIsVisible] = useState(true)
   const [mounted, setMounted] = useState(false)
 
@@ -25,6 +32,11 @@ export default function HolidayClosureBanner() {
       {/* 
         Make sure you add some bottom padding to pages that include a sticky banner like this to prevent
         your content from being obscured when the user scrolls to the bottom of the page.
+        
+        To re-enable this banner:
+        1. Set BANNER_ENABLED to true at the top of this component
+        2. Update the dates and message below as needed
+        3. Optionally update the localStorage key if you want to reset dismissal state
       */}
       <div className="pointer-events-none fixed inset-x-0 bottom-0 z-50 sm:flex sm:justify-center sm:px-6 sm:pb-5 lg:px-8">
         <div className="pointer-events-auto flex items-center gap-x-3 overflow-hidden bg-bridge px-4 py-2.5 sm:gap-x-6 sm:rounded-xl sm:px-6 sm:py-3">

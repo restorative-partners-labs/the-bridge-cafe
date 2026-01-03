@@ -259,13 +259,9 @@ export function Header() {
 
               <Popover className="relative">
                 <Popover.Button className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
-                  <Button
-                    variant="outline"
-                    color="theme"
-                    className="hidden w-32 text-center text-xl lg:block"
-                  >
+                  <span className="inline-flex justify-center rounded-lg border border-bridge py-[calc(theme(spacing.2)-1px)] px-[calc(theme(spacing.3)-1px)] text-sm text-gray-700 outline-2 outline-offset-2 transition-colors hover:border-bridge hover:bg-bridge hover:text-white active:text-gray-700/80 hidden w-32 text-center text-xl lg:block">
                     View Menu
-                  </Button>
+                  </span>
                 </Popover.Button>
 
                 <Transition
